@@ -4,3 +4,25 @@ spring:
   mvc:
     view:
       suffix: .html
+  application:
+    name: tmall-security
+
+
+logging:
+  file:
+    path: /logs/
+    name: ${spring.application.name}.log
+  level:
+    com : debug
+
+
+#jwt
+jwt:
+  header: Authorization
+  # 令牌前缀
+  token-start-with: Bearer
+  # 使用Base64对该令牌进行编码
+  base64-secret: uaa123
+  # 令牌过期时间 此处单位/毫秒
+  token-validity-in-seconds: 14400000
+
