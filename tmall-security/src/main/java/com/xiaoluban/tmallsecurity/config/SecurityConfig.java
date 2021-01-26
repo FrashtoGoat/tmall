@@ -57,6 +57,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
 
+
+
+
 //    @Override
 //    protected void configure(HttpSecurity http) throws Exception {
 //
@@ -117,10 +120,22 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //
 //    }
 
+
+    String[] SWAGGER_WHITELIST = {
+            "/swagger-ui.html",
+            "/doc.html",
+            "/swagger-ui/*",
+            "/swagger-resources/**",
+            "/v2/api-docs",
+            "/v3/api-docs",
+            "/webjars/**"
+    };
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
         http.authorizeRequests()
+                .antMatchers(SWAGGER_WHITELIST).permitAll()
                 .antMatchers("/admin/**").hasRole("admin")
                 .antMatchers("/db/**").hasAnyRole("admin","user")
                 .antMatchers("/user/**").access("hasAnyRole('admin','user')")
