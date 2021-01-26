@@ -16,6 +16,15 @@ logging:
     com : debug
 
 
+
+# ===== 自定义swagger配置 ===== #
+swagger:
+  enable: true
+  application-name: ${spring.application.name}
+  application-version: 1.0
+  application-description: spring-security-integration
+#  try-host: http://localhost:${server.port}
+
 #jwt
 jwt:
   header: Authorization
@@ -26,3 +35,6 @@ jwt:
   # 令牌过期时间 此处单位/毫秒
   token-validity-in-seconds: 14400000
 
+
+server:
+  port: 8080

@@ -21,14 +21,13 @@ public class TestController {
         return "demo/loginpage";
     }
 
-    @RequestMapping("index")
+    @RequestMapping("/index")
     public String dologin(){
         return "demo/index";
     }
 
     @ApiOperation(value = "swagger测试")
-    @ApiResponse()
-    @RequestMapping
+    @RequestMapping("swaggerTest")
     @ResponseBody
     public String swaggerTest(){
         return "hello,swagger";
