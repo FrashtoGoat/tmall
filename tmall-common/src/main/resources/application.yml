@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: tmall-common
+
+mybatis:
+  mapper-locations:
+    - classpath:dao/*.xml
+    - classpath*:com/**/mapper/*.xml
