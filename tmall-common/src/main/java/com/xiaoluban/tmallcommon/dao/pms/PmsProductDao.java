@@ -1,6 +1,6 @@
-package com.xiaoluban.tmallcommon.dao;
+package com.xiaoluban.tmallcommon.dao.pms;
 
-import com.xiaoluban.tmallcommon.vo.PmsProduct;
+import com.xiaoluban.tmallcommon.vo.pms.PmsProduct;
 
 public interface PmsProductDao {
     int deleteByPrimaryKey(Long id);
