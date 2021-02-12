@@ -60,6 +60,18 @@
     from pms_product
     where id = #{id,jdbcType=BIGINT}
   </select>
+
+  <select id="getProducts" parameterType="com.xiaoluban.tmallcommon.vo.QueryVO" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from pms_product
+    <where>
+      <if test="categoryId!=null">
+        product_category_id=#{categoryId}
+      </if>
+    </where>
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from pms_product
     where id = #{id,jdbcType=BIGINT}

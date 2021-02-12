@@ -1,19 +1,20 @@
 package com.xiaoluban.tmallprotal.service;
 
-import com.xiaoluban.tmallcommon.dao.pms.PmsProductDao;
+
+import com.github.pagehelper.PageInfo;
+import com.xiaoluban.tmallcommon.vo.QueryVO;
 import com.xiaoluban.tmallcommon.vo.pms.PmsProduct;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-import java.util.List;
+public interface ProductService {
 
-@Service
-public class ProductService {
 
-    @Autowired
-    private PmsProductDao pmsProductDao;
+    //分页查询商品
 
-    public PmsProduct findProduct(Long id){
-        return pmsProductDao.selectByPrimaryKey(id);
-    }
+    //根据类别查询
+    PageInfo<PmsProduct> getProducts(QueryVO queryVO);
+
+    //根据名称查询
+
+    //
+
 }

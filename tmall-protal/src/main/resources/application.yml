@@ -7,7 +7,7 @@ spring:
   application:
     name: tmall-protal
   datasource:
-    url: jdbc:mysql://121.36.75.169:3306/tmall
+    url: jdbc:mysql://121.36.75.169:3306/mymalll
     username: root
     password: Kobe111!
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -28,6 +28,14 @@ spring:
       max-pool-prepared-statement-per-connection-size: 20
       filters: stat
       connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+  redis:
+#    host: localhost
+    host: 121.36.75.169 # Redis服务器地址
+    database: 0 # Redis数据库索引（默认为0）
+    port: 6379 # Redis服务器连接端口
+#    password: # Redis服务器连接密码（默认为空）
+    password: kobe111
+    timeout: 300ms # 连接超时时间（毫秒）
 
 
 logging:

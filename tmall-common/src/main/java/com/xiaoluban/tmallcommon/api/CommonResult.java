@@ -101,6 +101,13 @@ public class CommonResult<T> {
     }
 
     /**
+     * 系统异常
+     */
+    public static <T> CommonResult<T> syserror(T data) {
+        return new CommonResult<T>(ResultCode.SYSERROR.getCode(), ResultCode.SYSERROR.getMessage(), data);
+    }
+
+    /**
      * 未授权返回结果
      */
     public static <T> CommonResult<T> forbidden(T data) {
