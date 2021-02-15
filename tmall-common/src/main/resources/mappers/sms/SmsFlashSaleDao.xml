@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaoluban.tmallcommon.dao.sms.SmsFlashSaleDao">
+  <resultMap id="BaseResultMap" type="com.xiaoluban.tmallcommon.vo.sms.SmsFlashSale">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="startTime" jdbcType="VARCHAR" property="starttime" />
+    <result column="endTime" jdbcType="VARCHAR" property="endtime" />
+    <result column="nextStartTime" jdbcType="VARCHAR" property="nextstarttime" />
+    <result column="status" jdbcType="CHAR" property="status" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, startTime, endTime, nextStartTime, `status`
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from sms_flash_sale
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+
+  <select id="getMonitorActis" parameterType="com.xiaoluban.tmallcommon.vo.sms.SmsFlashSale" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from sms_flash_sale
+    where status='0' or status='1'
+  </select>
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from sms_flash_sale
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.xiaoluban.tmallcommon.vo.sms.SmsFlashSale" useGeneratedKeys="true">
+    insert into sms_flash_sale (startTime, endTime, nextStartTime, 
+      `status`)
+    values (#{starttime,jdbcType=VARCHAR}, #{endtime,jdbcType=VARCHAR}, #{nextstarttime,jdbcType=VARCHAR}, 
+      #{status,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.xiaoluban.tmallcommon.vo.sms.SmsFlashSale" useGeneratedKeys="true">
+    insert into sms_flash_sale
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="starttime != null">
+        startTime,
+      </if>
+      <if test="endtime != null">
+        endTime,
+      </if>
+      <if test="nextstarttime != null">
+        nextStartTime,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="starttime != null">
+        #{starttime,jdbcType=VARCHAR},
+      </if>
+      <if test="endtime != null">
+        #{endtime,jdbcType=VARCHAR},
+      </if>
+      <if test="nextstarttime != null">
+        #{nextstarttime,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xiaoluban.tmallcommon.vo.sms.SmsFlashSale">
+    update sms_flash_sale
+    <set>
+      <if test="starttime != null">
+        startTime = #{starttime,jdbcType=VARCHAR},
+      </if>
+      <if test="endtime != null">
+        endTime = #{endtime,jdbcType=VARCHAR},
+      </if>
+      <if test="nextstarttime != null">
+        nextStartTime = #{nextstarttime,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        `status` = #{status,jdbcType=CHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xiaoluban.tmallcommon.vo.sms.SmsFlashSale">
+    update sms_flash_sale
+    set startTime = #{starttime,jdbcType=VARCHAR},
+      endTime = #{endtime,jdbcType=VARCHAR},
+      nextStartTime = #{nextstarttime,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=CHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -39,8 +39,8 @@ public class TmallProtalApplicationTest {
     @Autowired
     private RedisService redisService;
 
-    @Test
-    public void service(){
-        System.out.println(redisService.hasKey("222"));
-    }
+//    @Test
+//    public void service(){
+//        System.out.println(redisService.hasKey("222"));
+//    }
 }
