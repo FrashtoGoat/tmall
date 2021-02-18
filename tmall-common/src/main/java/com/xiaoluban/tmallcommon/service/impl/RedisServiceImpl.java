@@ -4,6 +4,7 @@ import com.xiaoluban.tmallcommon.service.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -194,5 +195,13 @@ public class RedisServiceImpl implements RedisService {
     @Override
     public Long lRemove(String key, long count, Object value) {
         return redisTemplate.opsForList().remove(key, count, value);
+    }
+
+
+    //新增
+    //获取锁
+    @Override
+    public boolean gainLock(String lockName,long time,TimeUnit timeUnit){
+        return redisTemplate.opsForValue().setIfAbsent(lockName,"lock",time,timeUnit);
     }
 }

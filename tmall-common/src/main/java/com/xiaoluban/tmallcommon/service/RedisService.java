@@ -3,6 +3,7 @@ package com.xiaoluban.tmallcommon.service;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 /**
  * redis操作Service
@@ -179,4 +180,6 @@ public interface RedisService {
      * 从List结构中移除属性
      */
     Long lRemove(String key, long count, Object value);
+
+    boolean gainLock(String lockName,long time,TimeUnit timeUnit);
 }

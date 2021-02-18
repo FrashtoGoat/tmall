@@ -40,10 +40,10 @@ spring:
 
 logging:
   file:
-    path: /logs/
+    path: d:/logs/
     name: ${spring.application.name}.log
   level:
-    com : debug
+    com : info
 
 
 

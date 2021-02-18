@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * @Author: txb
  * @Date: 20210128
@@ -39,8 +41,8 @@ public class TmallProtalApplicationTest {
     @Autowired
     private RedisService redisService;
 
-//    @Test
-//    public void service(){
-//        System.out.println(redisService.hasKey("222"));
-//    }
+    @Test
+    public void service(){
+        System.out.println(redisService.gainLock("lockName",100L, TimeUnit.SECONDS));
+    }
 }
