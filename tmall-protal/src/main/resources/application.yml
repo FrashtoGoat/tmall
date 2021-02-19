@@ -76,3 +76,4 @@ pagehelper:
 
 myRedis:
   flashsaleMonitorKey: flashsaleMonitorKey
+  flashsaleIncrKey: flashsaleIncrKey

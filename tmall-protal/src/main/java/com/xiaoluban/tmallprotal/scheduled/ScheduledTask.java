@@ -1,9 +1,13 @@
 package com.xiaoluban.tmallprotal.scheduled;
 
+import com.xiaoluban.tmallcommon.dao.pms.PmsProductDao;
+import com.xiaoluban.tmallcommon.dao.sms.SmsFlashProductDao;
 import com.xiaoluban.tmallcommon.dao.sms.SmsFlashSaleDao;
 import com.xiaoluban.tmallcommon.service.RedisService;
 import com.xiaoluban.tmallcommon.util.MyDateUtils;
+import com.xiaoluban.tmallcommon.vo.sms.SmsFlashProduct;
 import com.xiaoluban.tmallcommon.vo.sms.SmsFlashSale;
+import com.xiaoluban.tmallprotal.service.TransService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,6 +15,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+import java.math.BigDecimal;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
@@ -26,10 +31,18 @@ public class ScheduledTask {
     @Autowired
     private SmsFlashSaleDao smsFlashSaleDao;
     @Autowired
+    private PmsProductDao pmsProductDao;
+    @Autowired
+    private SmsFlashProductDao smsFlashProductDao;
+    @Autowired
     private RedisService redisService;
+    @Autowired
+    private TransService transService;
 
     @Value("${myRedis.flashsaleMonitorKey}")
     private String flashsaleMonitorKey;
+    @Value("${myRedis.flashsaleIncrKey}")
+    private String flashsaleIncrKey;
 
 
     @Scheduled(cron = "0/5 * * * * ?")
@@ -113,17 +126,59 @@ public class ScheduledTask {
     /**
      * 每天执行1次，生成活动
      * 将状态为0、1的活动加入缓存
+     * 瞎几把写，我也是服了我自己
      */
     @Scheduled(cron = "* * 0 * * ?")
     private void generateFlashSale() {
 
-        //        List<SmsFlashSale> acti=smsFlashSaleDao.getMonitorActis();
-//        Map<String,Object> map=new HashMap<>();
-//        for(SmsFlashSale flashsale:acti){
-//            map.put(flashsale.getId()+"",flashsale);
-//        }
-//        redisService.hSetAll(flashsaleMonitorKey,map);
-//
+        try {
+            int num=10;
+            Date todayStart=MyDateUtils.getTodayZero();
+            Date startTime,endTime;
+            SmsFlashSale flashSale;
+            List<SmsFlashProduct> saleProducts;
+            for(int i=0;i<num;i++){
+
+                Long saleId=redisService.incr(flashsaleIncrKey,1L);
+
+                startTime=MyDateUtils.getDateAfterHours(todayStart,i*2);
+                endTime=MyDateUtils.getDateAfterHours(todayStart,(i+1)*2);
+                flashSale=new SmsFlashSale();
+                flashSale.setStatus("0");
+                flashSale.setStarttime(MyDateUtils.formatDateTime_(startTime));
+                flashSale.setEndtime(MyDateUtils.formatDateTime_(endTime));
+                flashSale.setId(saleId);
+
+                saleProducts=new ArrayList<>();
+                Integer productId=new Random().nextInt(17);
+                //PmsProduct product=pmsProductDao.selectByPrimaryKey(productId.longValue());
+                SmsFlashProduct smsFlashProduct=new SmsFlashProduct();
+                smsFlashProduct.setSort(1);
+                smsFlashProduct.setFlashPromotionCount(50);
+                smsFlashProduct.setFlashPromotionPrice(BigDecimal.valueOf(50));
+                smsFlashProduct.setFlashPromotionLimit(5);
+                smsFlashProduct.setProductId(productId.longValue());
+                smsFlashProduct.setFlashPromotionId(saleId);
+
+                saleProducts.add(smsFlashProduct);
+
+                transService.createFlashSale(flashSale,saleProducts);
+
+            }
+
+
+            List<SmsFlashSale> acti=smsFlashSaleDao.getMonitorActis();
+            Map<String,Object> map=new HashMap<>();
+            for(SmsFlashSale flashsale:acti){
+                map.put(flashsale.getId()+"",flashsale);
+            }
+            redisService.hSetAll(flashsaleMonitorKey,map);
+
+
+        } catch (Exception e) {
+            log.error("模拟创建秒杀活动异常",e);
+        }
+
     }
 
 }

@@ -4,6 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -15,7 +18,7 @@ public class MyDateUtils {
 //    private static SimpleDateFormat sdf2=new SimpleDateFormat("HHmmss");
 
 //    private static SimpleDateFormat sdf3=new SimpleDateFormat("yyyyMMddHHmmss");
-    
+
 //    private static SimpleDateFormat sdf_ = new SimpleDateFormat("yyyy-MM-dd");
 
 //    public static String formatDateAndTime(Date date){
@@ -178,4 +181,31 @@ public class MyDateUtils {
 		now.add(Calendar.HOUR, hour);
 		return now.getTime();
 	}
+
+
+	//获取当前时间
+    public static String getNow(){
+	    return DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss").format(LocalDateTime.now());
+    }
+
+    //获取当前日期
+    public static String getDateNow(){
+        //return DateTimeFormatter.ofPattern("yyyyMMdd").format(LocalDateTime.now());
+        return getDate("yyyy-MM-dd",LocalDate.now());
+    }
+
+    public static String getDate(String pattern, LocalDate date){
+        return DateTimeFormatter.ofPattern(pattern).format(date);
+    }
+
+    public static Date getTodayZero(){
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(new Date());
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+       return calendar.getTime();
+    }
+
+
 }
