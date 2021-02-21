@@ -14,11 +14,9 @@ public interface PmsProductDao {
 
     PmsProduct selectByPrimaryKey(Long id);
 
-    //List<PmsProduct> getProducts(Integer categoryId);
-
-    List<PmsProduct> getProducts(QueryVO queryVO);
-
     int updateByPrimaryKeySelective(PmsProduct record);
 
     int updateByPrimaryKey(PmsProduct record);
+
+    List<PmsProduct> getProducts(QueryVO queryVO);
 }

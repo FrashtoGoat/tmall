@@ -2,7 +2,6 @@ package com.xiaoluban.tmallcommon.vo.pms;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Date;
 import lombok.Data;
 
 /**
@@ -13,11 +12,7 @@ import lombok.Data;
 public class PmsProduct implements Serializable {
     private Long id;
 
-    private Long brandId;
-
     private Long productCategoryId;
-
-    private Long feightTemplateId;
 
     private Long productAttributeCategoryId;
 
@@ -73,19 +68,9 @@ public class PmsProduct implements Serializable {
     private BigDecimal promotionPrice;
 
     /**
-     * 赠送的成长值
-     */
-    private Integer giftGrowth;
-
-    /**
      * 赠送的积分
      */
     private Integer giftPoint;
-
-    /**
-     * 限制使用的积分数
-     */
-    private Integer usePointLimit;
 
     /**
      * 副标题
@@ -108,11 +93,6 @@ public class PmsProduct implements Serializable {
     private Integer stock;
 
     /**
-     * 库存预警值
-     */
-    private Integer lowStock;
-
-    /**
      * 单位
      */
     private String unit;
@@ -127,19 +107,7 @@ public class PmsProduct implements Serializable {
      */
     private Integer previewStatus;
 
-    /**
-     * 以逗号分割的产品服务：1->无忧退货；2->快速退款；3->免费包邮
-     */
-    private String serviceIds;
-
     private String keywords;
-
-    private String note;
-
-    /**
-     * 画册图片，连产品图片限制为5张，以逗号分割
-     */
-    private String albumPics;
 
     private String detailTitle;
 
@@ -154,31 +122,6 @@ public class PmsProduct implements Serializable {
      * 移动端网页详情
      */
     private String detailMobileHtml;
-
-    /**
-     * 促销开始时间
-     */
-    private Date promotionStartTime;
-
-    /**
-     * 促销结束时间
-     */
-    private Date promotionEndTime;
-
-    /**
-     * 活动限购数量
-     */
-    private Integer promotionPerLimit;
-
-    /**
-     * 促销类型：0->没有促销使用原价;1->使用促销价；2->使用会员价；3->使用阶梯价格；4->使用满减价格；5->限时购
-     */
-    private Integer promotionType;
-
-    /**
-     * 品牌名称
-     */
-    private String brandName;
 
     /**
      * 商品分类名称

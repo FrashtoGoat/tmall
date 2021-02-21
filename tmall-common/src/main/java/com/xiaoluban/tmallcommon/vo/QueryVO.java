@@ -10,9 +10,11 @@ import lombok.Data;
 public class QueryVO {
 
     private Integer categoryId;
+    private Integer recommandStatus;
 
 
     private Integer pageSize;
     private Integer pageNum;
+
 
 }
