@@ -6,6 +6,7 @@ import com.xiaoluban.tmallcommon.vo.pms.PmsProduct;
 import java.util.List;
 
 public interface PmsProductDao {
+
     int deleteByPrimaryKey(Long id);
 
     int insert(PmsProduct record);
