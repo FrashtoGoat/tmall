@@ -16,5 +16,6 @@ public interface ProductService {
     //根据名称查询
 
     //
+    PmsProduct findProduct(Long productId);
 
 }

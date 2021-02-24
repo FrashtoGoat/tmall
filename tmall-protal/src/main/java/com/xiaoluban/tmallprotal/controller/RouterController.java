@@ -11,9 +11,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class RouterController {
 
-
     @RequestMapping("index")
     public String toIndex(){
         return "index";
+    }
+
+
+    @RequestMapping
+    public String toProductDetailPage(){
+        return "";
     }
 }

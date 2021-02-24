@@ -23,7 +23,7 @@ public class ProductServiceImpl implements ProductService {
     @Autowired
     private PmsProductDao pmsProductDao;
 
-
+    @Override
     public PmsProduct findProduct(Long id){
         return pmsProductDao.selectByPrimaryKey(id);
     }
@@ -35,6 +35,8 @@ public class ProductServiceImpl implements ProductService {
         PageInfo<PmsProduct> pageInfo=new PageInfo<>(list);
         return pageInfo;
     }
+
+
 
 
 }
