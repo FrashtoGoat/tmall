@@ -1,0 +1,21 @@
+2021-02-26 20:21:56.096  INFO 2424 --- [main] c.x.t.TmallProtalApplicationTest         : Starting TmallProtalApplicationTest on DESKTOP-EQS2HPF with PID 2424 (started by TXB in D:\project_backend\tmall\tmall-protal)
+2021-02-26 20:21:56.098  INFO 2424 --- [main] c.x.t.TmallProtalApplicationTest         : No active profile set, falling back to default profiles: default
+2021-02-26 20:21:59.752  INFO 2424 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-02-26 20:21:59.756  INFO 2424 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-02-26 20:22:00.000  INFO 2424 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72ms. Found 0 Redis repository interfaces.
+2021-02-26 20:22:02.567  INFO 2424 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2021-02-26 20:22:09.184  INFO 2424 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2021-02-26 20:22:22.531  INFO 2424 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-26 20:22:22.892  INFO 2424 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-02-26 20:22:25.816  INFO 2424 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 86cc28a2-ce6e-4aa9-83a3-9d72032dc4f5
+
+2021-02-26 20:22:27.713  INFO 2424 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@19ec5357, org.springframework.security.web.context.SecurityContextPersistenceFilter@4489f60f, org.springframework.security.web.header.HeaderWriterFilter@698ac187, org.springframework.security.web.csrf.CsrfFilter@4aeaff64, org.springframework.security.web.authentication.logout.LogoutFilter@4a4ff5ed, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@579f3c8e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@36871e98, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@351d93bd, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@59f76e56, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6fd9dbe6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d5574c7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@61c5fd78, org.springframework.security.web.session.SessionManagementFilter@65f5cae3, org.springframework.security.web.access.ExceptionTranslationFilter@32f308c6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@d4ecdb0]
+2021-02-26 20:22:28.455  INFO 2424 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2021-02-26 20:22:31.442  INFO 2424 --- [main] c.x.t.TmallProtalApplicationTest         : Started TmallProtalApplicationTest in 36.692 seconds (JVM running for 39.794)
+2021-02-26 20:22:36.336  INFO 2424 --- [scheduling-1] c.x.tmallprotal.scheduled.ScheduledTask  : ----没有需要监控的订单，退出监控任务----
+2021-02-26 20:22:36.392  INFO 2424 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2021-02-26 20:22:36.398  INFO 2424 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-02-26 20:22:36.603  INFO 2424 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2021-02-26 20:22:36.646  INFO 2424 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

@@ -3,6 +3,7 @@ package com.xiaoluban.tmallsecurity.config;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.*;
@@ -33,16 +34,17 @@ import java.util.Map;
  * @Author: txb
  * @Date: 20210124
  */
-@Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final static Logger log= LoggerFactory.getLogger(SecurityConfig.class);
 
 
 
+
     @Override
     @Bean
     public UserDetailsService userDetailsService(){
+
         InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
         manager.createUser(User.withUsername("zhangsan").password("123").authorities("p1").build());
         manager.createUser(User.withUsername("lisi").password("456").authorities("p2").build());
