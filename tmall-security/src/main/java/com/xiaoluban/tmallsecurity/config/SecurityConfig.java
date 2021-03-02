@@ -38,9 +38,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final static Logger log= LoggerFactory.getLogger(SecurityConfig.class);
 
-
-
-
     @Override
     @Bean
     public UserDetailsService userDetailsService(){

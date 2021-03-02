@@ -29,6 +29,11 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    public int updateNum(PmsProduct product) {
+        return pmsProductDao.updateNum(product);
+    }
+
+    @Override
     public PageInfo<PmsProduct> getProducts(QueryVO queryVO){
         PageUtil.startPage(queryVO.getPageNum(),queryVO.getPageSize());
         List<PmsProduct> list=pmsProductDao.getProducts(queryVO);

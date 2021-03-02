@@ -20,4 +20,6 @@ public interface PmsProductDao {
     int updateByPrimaryKey(PmsProduct record);
 
     List<PmsProduct> getProducts(QueryVO queryVO);
+
+    int updateNum(PmsProduct record);
 }

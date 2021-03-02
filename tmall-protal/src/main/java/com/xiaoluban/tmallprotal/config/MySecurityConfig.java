@@ -14,7 +14,6 @@ import java.util.List;
  * @Author: txb
  * @Date: 20210226
  */
-@Component
 public class MySecurityConfig extends SecurityConfig {
 
 

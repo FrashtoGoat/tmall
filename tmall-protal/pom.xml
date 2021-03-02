@@ -27,11 +27,6 @@
       <version>${project.version}</version>
     </dependency>
 
-    <dependency>
-      <groupId>com.xiaoluban</groupId>
-      <artifactId>tmall-security</artifactId>
-      <version>${project.version}</version>
-    </dependency>
 
     <dependency>
       <groupId>org.springframework.boot</groupId>

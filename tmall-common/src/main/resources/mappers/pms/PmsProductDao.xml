@@ -60,6 +60,13 @@
     </where>
   </select>
 
+  <update id="updateNum" parameterType="com.xiaoluban.tmallcommon.vo.pms.PmsProduct">
+     update pms_product
+     set stock=stock-#{stock,jdbcType=INTEGER}
+     where id = #{id,jdbcType=BIGINT}
+     AND stock-#{stock,jdbcType=INTEGER} &gt;= 0
+  </update>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from pms_product
     where id = #{id,jdbcType=BIGINT}

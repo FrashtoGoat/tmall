@@ -18,4 +18,7 @@ public interface ProductService {
     //
     PmsProduct findProduct(Long productId);
 
+    //更新商品库存
+    int updateNum(PmsProduct product);
+
 }
