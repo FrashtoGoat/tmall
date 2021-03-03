@@ -7,6 +7,7 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Component;
 
 /**
  * @Author: txb
@@ -20,11 +21,12 @@ public class UserAuthServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         UmsMember user=umsService.findUserByUserName(s);
-//        if(user == null){
-//            //如果用户查不到，返回null，由provider来抛出异常
-//            return null;
-//        }
-        UserDetails userDetails = User.withUsername(user.getUsername()).password(user.getPassword()).build();
+        //TODO 写死权限
+        String[] permissionArray=new String[]{"p","q"};
+        UserDetails userDetails = User.withUsername(user.getUsername())
+                .password(user.getPassword())
+                .authorities(permissionArray)
+                .build();
         return userDetails;
     }
 }

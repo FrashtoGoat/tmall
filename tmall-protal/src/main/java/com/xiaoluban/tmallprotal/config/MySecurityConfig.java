@@ -2,18 +2,19 @@ package com.xiaoluban.tmallprotal.config;
 
 import com.xiaoluban.tmallprotal.service.impl.UserAuthServiceImpl;
 import com.xiaoluban.tmallsecurity.config.SecurityConfig;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 /**
  * @Author: txb
  * @Date: 20210226
  */
+@Configuration
 public class MySecurityConfig extends SecurityConfig {
 
 
@@ -29,4 +30,6 @@ public class MySecurityConfig extends SecurityConfig {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
+
 }

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author txb
  * @date 2021/1/25 13:28
  */
-@Controller
+//@Controller
 @Api(value = "测试demo",tags = {"security","swagger"})
 public class TestController {
 

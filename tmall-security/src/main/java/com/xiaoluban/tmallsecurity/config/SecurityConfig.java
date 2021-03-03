@@ -40,15 +40,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private final static Logger log= LoggerFactory.getLogger(SecurityConfig.class);
 
 
-    @Override
-    @Bean
-    public UserDetailsService userDetailsService(){
-
-        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-        manager.createUser(User.withUsername("zhangsan").password("123").authorities("p1").build());
-        manager.createUser(User.withUsername("lisi").password("456").authorities("p2").build());
-        return manager;
-    }
+//    @Bean
+//    public UserDetailsService userDetailsService(){
+//
+//        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+//        manager.createUser(User.withUsername("zhangsan").password("123").authorities("p1").build());
+//        manager.createUser(User.withUsername("lisi").password("456").authorities("p2").build());
+//        return manager;
+//    }
 
 
     //密码编码器
@@ -156,6 +155,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         SavedRequest savedRequest=requestCache.getRequest(request,response);
 
                         String redirectUrl=savedRequest.getRedirectUrl();
+                        if(redirectUrl==null){
+                            response.sendRedirect("/index");
+                            return;
+                        }
                         log.info("初始访问路径："+redirectUrl);
                         response.sendRedirect(redirectUrl);
 

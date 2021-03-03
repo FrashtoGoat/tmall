@@ -50,7 +50,7 @@ public class ScheduledTask {
      * 将状态为0、1的活动加入缓存
      * 瞎几把写，我也是服了我自己
      */
-    @Scheduled(cron = "* * 0 * * ?")
+//    @Scheduled(cron = "* * 0 * * ?")
     private void generateFlashSale() {
        flashSaleTask.generateFlashSale();
     }
