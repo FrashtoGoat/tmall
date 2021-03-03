@@ -29,4 +29,10 @@ public class OrderController {
         return CommonResult.success(order);
     }
 
+    @RequestMapping("pay")
+    public CommonResult pay(OmsOrder omsOrder){
+        OmsOrder order=orderService.pay(omsOrder);
+        return CommonResult.success(order);
+    }
+
 }

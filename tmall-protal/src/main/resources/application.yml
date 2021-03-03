@@ -37,6 +37,13 @@ spring:
 #    password: kobe111
     timeout: 300ms # 连接超时时间（毫秒）
 
+  #热加载
+  devtools:
+    restart:
+      enabled: true
+      exclude: WEB-INF/**
+
+
 
 logging:
   file:
@@ -77,3 +84,7 @@ pagehelper:
 myRedis:
   flashsaleMonitorKey: flashsaleMonitorKey
   flashsaleIncrKey: flashsaleIncrKey
+  orderTimeout: 600
+  toPay: toPay
+  orderListPrefix: orderList
+  toPayOrderLockPrefix: toPayOrderLock

@@ -13,5 +13,6 @@ public interface OrderService {
 
     OmsOrder createOrder(UmsMember user, OmsOrder omsOrder, PmsProduct product);
 
+    OmsOrder pay(OmsOrder order);
 
 }

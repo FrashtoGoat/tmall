@@ -182,4 +182,11 @@ public interface RedisService {
     Long lRemove(String key, long count, Object value);
 
     boolean gainLock(String lockName,long time,TimeUnit timeUnit);
+
+    Boolean zSortSet(String key, Object value, Double score);
+
+    Set<Object> zRangByScore(String key,Double min,Double max);
+
+    Long zRemove(String key, Object... values);
+
 }

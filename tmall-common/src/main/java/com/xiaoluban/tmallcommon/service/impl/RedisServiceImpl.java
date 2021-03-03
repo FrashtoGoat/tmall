@@ -4,7 +4,6 @@ import com.xiaoluban.tmallcommon.service.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 
-import java.time.Duration;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -138,6 +137,8 @@ public class RedisServiceImpl implements RedisService {
         return count;
     }
 
+
+
     @Override
     public Boolean sIsMember(String key, Object value) {
         return redisTemplate.opsForSet().isMember(key, value);
@@ -203,5 +204,20 @@ public class RedisServiceImpl implements RedisService {
     @Override
     public boolean gainLock(String lockName,long time,TimeUnit timeUnit){
         return redisTemplate.opsForValue().setIfAbsent(lockName,"lock",time,timeUnit);
+    }
+
+    @Override
+    public Boolean zSortSet(String key, Object value, Double score) {
+        return redisTemplate.opsForZSet().add(key, value, score);
+    }
+
+    @Override
+    public Set<Object> zRangByScore(String key, Double min, Double max) {
+        return redisTemplate.opsForZSet().rangeByScore(key,min,max);
+    }
+
+    @Override
+    public Long zRemove(String key, Object... values) {
+        return redisTemplate.opsForZSet().remove(key,values);
     }
 }

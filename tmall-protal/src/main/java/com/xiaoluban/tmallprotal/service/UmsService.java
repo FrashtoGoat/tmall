@@ -10,4 +10,6 @@ public interface UmsService {
 
     UmsMember findUserByUserName(String name);
 
+    //获取用户的订单列表
+
 }
