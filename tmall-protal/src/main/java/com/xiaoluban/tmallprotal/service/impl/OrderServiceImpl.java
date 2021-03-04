@@ -2,6 +2,7 @@ package com.xiaoluban.tmallprotal.service.impl;
 
 import com.xiaoluban.tmallcommon.dao.oms.OmsOrderDao;
 import com.xiaoluban.tmallcommon.service.RedisService;
+import com.xiaoluban.tmallcommon.vo.oms.OmsCartItem;
 import com.xiaoluban.tmallcommon.vo.oms.OmsOrder;
 import com.xiaoluban.tmallcommon.vo.pms.PmsProduct;
 import com.xiaoluban.tmallcommon.vo.ums.UmsMember;
@@ -54,7 +55,7 @@ public class OrderServiceImpl  implements OrderService {
      *     4支付超时，库存补偿
      */
     @Override
-    public OmsOrder createOrder(UmsMember user, OmsOrder omsOrder, PmsProduct product) {
+    public OmsOrder createOrder(UmsMember user, OmsOrder omsOrder, List<OmsCartItem> orderItems, PmsProduct product) {
 
         int succ=productService.updateNum(product);
         if(succ==0){

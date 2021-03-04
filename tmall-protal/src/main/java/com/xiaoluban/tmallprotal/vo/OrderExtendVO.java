@@ -1,21 +1,23 @@
-package com.xiaoluban.tmallprotal.service;
+package com.xiaoluban.tmallprotal.vo;
 
 import com.xiaoluban.tmallcommon.vo.oms.OmsCartItem;
 import com.xiaoluban.tmallcommon.vo.oms.OmsOrder;
 import com.xiaoluban.tmallcommon.vo.pms.PmsProduct;
 import com.xiaoluban.tmallcommon.vo.ums.UmsMember;
+import lombok.Data;
 
 import java.util.List;
 
 /**
  * @Author: txb
- * @Date: 20210127
+ * @Date: 20210304
  */
-public interface OrderService {
+@Data
+public class OrderExtendVO {
 
-
-    OmsOrder createOrder(UmsMember user, OmsOrder omsOrder, List<OmsCartItem> orderItems, PmsProduct product);
-
-    OmsOrder pay(OmsOrder order);
+    private OmsOrder order;
+    private List<OmsCartItem> orderItems;
+    private PmsProduct product;
+    private UmsMember user;
 
 }
