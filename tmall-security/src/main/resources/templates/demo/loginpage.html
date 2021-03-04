@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <!--注意：引入thymeleaf的名称空间-->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>登录page</title>
 </head>
 <body>
-    <form  method="post" action="/dologin">
+    <form  method="post" th:action="@{/dologin}">
         <table>
             <tr>
                 <td>用户名：</td>

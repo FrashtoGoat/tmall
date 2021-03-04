@@ -21,7 +21,6 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
 import org.springframework.security.web.savedrequest.RequestCache;
 import org.springframework.security.web.savedrequest.SavedRequest;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -40,14 +39,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private final static Logger log= LoggerFactory.getLogger(SecurityConfig.class);
 
 
-//    @Bean
-//    public UserDetailsService userDetailsService(){
-//
-//        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-//        manager.createUser(User.withUsername("zhangsan").password("123").authorities("p1").build());
-//        manager.createUser(User.withUsername("lisi").password("456").authorities("p2").build());
-//        return manager;
-//    }
+    @Bean
+    public UserDetailsService userDetailsService(){
+
+        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+        manager.createUser(User.withUsername("zhangsan").password("123").authorities("p1").build());
+        manager.createUser(User.withUsername("lisi").password("456").authorities("p2").build());
+        return manager;
+    }
 
 
     //密码编码器
@@ -121,7 +120,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //    }
 
 
-    String[] SWAGGER_WHITELIST = {
+    private String[] SWAGGER_WHITELIST = {
             "/swagger-ui.html",
             "/doc.html",
             "/swagger-ui/*",
@@ -136,6 +135,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests()
                 .antMatchers(SWAGGER_WHITELIST).permitAll()
+                //TODO
+                .antMatchers("/product/**").permitAll()
+                .antMatchers("/order/**").permitAll()
+
                 .antMatchers("/admin/**").hasRole("admin")
                 .antMatchers("/db/**").hasAnyRole("admin","user")
                 .antMatchers("/user/**").access("hasAnyRole('admin','user')")
@@ -154,11 +157,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         RequestCache requestCache=new HttpSessionRequestCache();
                         SavedRequest savedRequest=requestCache.getRequest(request,response);
 
-                        String redirectUrl=savedRequest.getRedirectUrl();
-                        if(redirectUrl==null){
+                        String redirectUrl= null;
+                        try {
+                            redirectUrl = savedRequest.getRedirectUrl();
+                        } catch (Exception e) {
                             response.sendRedirect("/index");
                             return;
                         }
+
                         log.info("初始访问路径："+redirectUrl);
                         response.sendRedirect(redirectUrl);
 
@@ -191,7 +197,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 })
                 .permitAll()
                 .and()
+                .cors()
                 //不处理跨域
+                .and()
                 .csrf().disable();
 
     }
