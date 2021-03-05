@@ -5,6 +5,8 @@ import com.github.pagehelper.PageInfo;
 import com.xiaoluban.tmallcommon.vo.QueryVO;
 import com.xiaoluban.tmallcommon.vo.pms.PmsProduct;
 
+import java.util.List;
+
 public interface ProductService {
 
 
@@ -20,5 +22,7 @@ public interface ProductService {
 
     //更新商品库存
     int updateNum(PmsProduct product);
+
+    int batchUpdateNum(List<PmsProduct> productList);
 
 }

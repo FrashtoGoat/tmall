@@ -1,5 +1,6 @@
 package com.xiaoluban.tmallprotal;
 
+import com.xiaoluban.tmallcommon.util.IDUtils;
 import com.xiaoluban.tmallcommon.util.MyDateUtils;
 import org.junit.Test;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -33,5 +34,11 @@ public class NormalTest {
 
         boolean f = bcryptPasswordEncoder.matches("123456",hashPass);
         System.out.println(f);
+    }
+
+    @Test
+    public void snowflake(){
+        Long orderId= IDUtils.getNextIdBySnow();
+        System.out.println(orderId);
     }
 }

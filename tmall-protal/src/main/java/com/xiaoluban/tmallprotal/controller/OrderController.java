@@ -33,7 +33,8 @@ public class OrderController {
 
     @RequestMapping("createOrder")
     public CommonResult createOrder(@RequestBody OrderExtendVO orderExtendVO){
-        OmsOrder order=orderService.createOrder(orderExtendVO.getUser(),orderExtendVO.getOrder(),orderExtendVO.getOrderItems(),orderExtendVO.getProduct());
+//        OmsOrder order=orderService.createOrder(orderExtendVO.getUser(),orderExtendVO.getOrder(),orderExtendVO.getOrderItems(),orderExtendVO.getProducts());
+        OmsOrder order=orderService.createOrder(orderExtendVO.getUser(),orderExtendVO.getOrder(),orderExtendVO.getProducts());
         return CommonResult.success(order);
     }
 

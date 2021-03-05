@@ -1,7 +1,14 @@
 package com.xiaoluban.tmallprotal.service;
 
+import com.xiaoluban.tmallcommon.dao.oms.OmsOrderDao;
+import com.xiaoluban.tmallcommon.dao.oms.OmsOrderItemDao;
+import com.xiaoluban.tmallcommon.dao.pms.PmsProductDao;
 import com.xiaoluban.tmallcommon.dao.sms.SmsFlashProductDao;
 import com.xiaoluban.tmallcommon.dao.sms.SmsFlashSaleDao;
+import com.xiaoluban.tmallcommon.vo.oms.OmsCartItem;
+import com.xiaoluban.tmallcommon.vo.oms.OmsOrder;
+import com.xiaoluban.tmallcommon.vo.oms.OmsOrderItem;
+import com.xiaoluban.tmallcommon.vo.pms.PmsProduct;
 import com.xiaoluban.tmallcommon.vo.sms.SmsFlashProduct;
 import com.xiaoluban.tmallcommon.vo.sms.SmsFlashSale;
 import org.apache.ibatis.session.ExecutorType;
@@ -26,6 +33,12 @@ public class TransService {
 //    @Autowired
 //    private SmsFlashProductDao smsFlashProductDao;
     @Autowired
+    private OmsOrderDao omsOrderDao;
+    @Autowired
+    private OmsOrderItemDao omsOrderItemDao;
+    @Autowired
+    private PmsProductDao pmsProductDao;
+    @Autowired
     private SqlSessionFactory sqlSessionFactory;
 
     @Transactional(rollbackFor = {Exception.class})
@@ -43,5 +56,26 @@ public class TransService {
         session.flushStatements();
 
         smsFlashSaleDao.insertSelective(flashSale);
+    }
+
+    @Transactional(rollbackFor = {Exception.class})
+    public void createOrder(OmsOrder order, List<OmsOrderItem> orderItems, List<PmsProduct> products){
+
+        SqlSession session=sqlSessionFactory.openSession(ExecutorType.BATCH);
+        OmsOrderItemDao orderItemDao=session.getMapper(OmsOrderItemDao.class);
+        PmsProductDao productDao=session.getMapper(PmsProductDao.class);
+
+        omsOrderDao.insertSelective(order);
+
+        for(int i=0;i<orderItems.size();i++){
+            orderItemDao.insertSelective(orderItems.get(i));
+        }
+
+        for(int i=0;i<products.size();i++){
+            productDao.updateNum(products.get(i));
+        }
+
+        session.flushStatements();
+
     }
 }

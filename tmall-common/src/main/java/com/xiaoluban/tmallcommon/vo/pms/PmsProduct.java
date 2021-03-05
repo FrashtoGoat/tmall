@@ -128,5 +128,8 @@ public class PmsProduct implements Serializable {
      */
     private String productCategoryName;
 
+    //购买数量，不会映射到数据库字段
+    private Integer quantity;
+
     private static final long serialVersionUID = 1L;
 }

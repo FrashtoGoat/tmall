@@ -6,10 +6,12 @@ import com.xiaoluban.tmallcommon.service.RedisService;
 import com.xiaoluban.tmallcommon.util.PageUtil;
 import com.xiaoluban.tmallcommon.vo.QueryVO;
 import com.xiaoluban.tmallcommon.vo.pms.PmsProduct;
+import com.xiaoluban.tmallprotal.exception.TradeException;
 import com.xiaoluban.tmallprotal.service.ProductService;
 import net.bytebuddy.asm.Advice;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -31,6 +33,18 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public int updateNum(PmsProduct product) {
         return pmsProductDao.updateNum(product);
+    }
+
+    @Transactional(rollbackFor = {Exception.class})
+    @Override
+    public int batchUpdateNum(List<PmsProduct> productList) {
+        for(PmsProduct product:productList){
+            int result=pmsProductDao.updateNum(product);
+            if(result<=0){
+                throw new TradeException("库存更新失败");
+            }
+        }
+        return 1;
     }
 
     @Override
