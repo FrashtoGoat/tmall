@@ -5,6 +5,7 @@ import com.xiaoluban.tmallcommon.util.MyDateUtils;
 import org.junit.Test;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import java.math.BigDecimal;
 import java.time.Duration;
 
 /**
@@ -40,5 +41,13 @@ public class NormalTest {
     public void snowflake(){
         Long orderId= IDUtils.getNextIdBySnow();
         System.out.println(orderId);
+    }
+    
+    @Test
+    public void bigdecimalCaculate(){
+        BigDecimal totalAmount = new BigDecimal(0);
+        BigDecimal price = new BigDecimal(1.2);
+        totalAmount=totalAmount.add(price.multiply(new BigDecimal(2)));
+        System.out.println(totalAmount);
     }
 }

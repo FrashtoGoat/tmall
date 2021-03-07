@@ -39,6 +39,11 @@
     where username = #{username,jdbcType=VARCHAR}
   </select>
 
+  <update id="updateIntegration" parameterType="com.xiaoluban.tmallcommon.vo.ums.UmsMember">
+    update ums_member
+    set integration=integration+#{integration,jdbcType=INTEGER}
+  </update>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from ums_member
     where id = #{id,jdbcType=BIGINT}

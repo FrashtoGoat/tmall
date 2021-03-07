@@ -17,4 +17,6 @@ public interface UmsMemberDao {
     int updateByPrimaryKey(UmsMember record);
 
     UmsMember findUserByName(String userName);
+
+    int updateIntegration(UmsMember user);
 }

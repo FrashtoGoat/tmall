@@ -14,6 +14,8 @@ import com.xiaoluban.tmallprotal.service.OrderService;
 import com.xiaoluban.tmallprotal.service.ProductService;
 import com.xiaoluban.tmallprotal.service.TransService;
 import com.xiaoluban.tmallprotal.vo.OrderStatus;
+import com.xiaoluban.tmallprotal.vo.QueueEnum;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -41,6 +43,10 @@ public class OrderServiceImpl  implements OrderService {
 
     @Autowired
     private TransService transService;
+
+    //使用RabbitTemplate,这提供了接收/发送等等方法
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
 
     @Value("${myRedis.orderTimeout}")
     private Long orderTimeout;
@@ -77,7 +83,7 @@ public class OrderServiceImpl  implements OrderService {
         OmsOrderItem item;
         PmsProduct p;
 
-        BigDecimal totalAmount = null;
+        BigDecimal totalAmount = new BigDecimal(0);
         int totalPoint = 0;
 
 
@@ -108,6 +114,7 @@ public class OrderServiceImpl  implements OrderService {
         omsOrder.setMemberUsername(user.getUsername());
 
         omsOrder.setStatus(OrderStatus.TOPAY.getState());
+        omsOrder.setPayAmount(totalAmount);
         omsOrder.setTotalAmount(totalAmount);
         omsOrder.setIntegration(totalPoint);
 
@@ -127,7 +134,8 @@ public class OrderServiceImpl  implements OrderService {
                 redisService.zSortSet(toPayKey,omsOrder.getId(),score);
                 break;
             case 1:
-                //TODO 发布消息到队列
+                //发布消息到队列
+                rabbitTemplate.convertAndSend(QueueEnum.QUEUE_ORDER_PAY.getExchange(), "", omsOrder);
                 break;
             default:
 

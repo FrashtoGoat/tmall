@@ -82,6 +82,19 @@
       <optional>true</optional>
     </dependency>
 
+    <!--消息队列相关依赖-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-amqp</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>org.springframework.boot</groupId>
+<!--          //产生omitted for duplicate的依赖jar对应的a-->
+          <artifactId>spring-boot</artifactId>
+        </exclusion>
+    </exclusions>
+    </dependency>
+
 
 
   </dependencies>

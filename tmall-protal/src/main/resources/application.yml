@@ -35,7 +35,7 @@ spring:
     port: 6379 # Redis服务器连接端口
     password: # Redis服务器连接密码（默认为空）
 #    password: kobe111
-    timeout: 300ms # 连接超时时间（毫秒）
+    timeout: 3000ms # 连接超时时间（毫秒）
 
   #热加载
   devtools:
@@ -44,6 +44,13 @@ spring:
       exclude: WEB-INF/**
 
 
+  rabbitmq:
+    host: localhost # rabbitmq的连接地址
+    port: 5672 # rabbitmq的连接端口号
+    virtual-host: tmall # rabbitmq的虚拟host
+    username: tmall # rabbitmq的用户名
+    password: tmall # rabbitmq的密码
+    connection-timeout: 5000
 
 logging:
   file:
@@ -88,3 +95,6 @@ myRedis:
   toPay: toPay
   orderListPrefix: orderList
   toPayOrderLockPrefix: toPayOrderLock
+
+
+
