@@ -1,10 +1,7 @@
 package com.xiaoluban.tmallprotal.controller;
 
 import com.xiaoluban.tmallcommon.api.CommonResult;
-import com.xiaoluban.tmallcommon.vo.oms.OmsCartItem;
 import com.xiaoluban.tmallcommon.vo.oms.OmsOrder;
-import com.xiaoluban.tmallcommon.vo.pms.PmsProduct;
-import com.xiaoluban.tmallcommon.vo.ums.UmsMember;
 import com.xiaoluban.tmallprotal.service.OrderService;
 import com.xiaoluban.tmallprotal.vo.OrderExtendVO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,8 +36,8 @@ public class OrderController {
     }
 
     @RequestMapping("pay")
-    public CommonResult pay(OmsOrder omsOrder){
-        OmsOrder order=orderService.pay(omsOrder);
+    public CommonResult pay(@RequestBody OmsOrder order){
+        order=orderService.pay(order);
         return CommonResult.success(order);
     }
 

@@ -1,18 +1,22 @@
 package com.xiaoluban.tmallprotal;
 
+import com.xiaoluban.tmallcommon.dao.oms.OmsOrderDao;
 import com.xiaoluban.tmallcommon.dao.pms.PmsProductDao;
 import com.xiaoluban.tmallcommon.service.RedisService;
+import com.xiaoluban.tmallcommon.vo.oms.OmsOrder;
 import com.xiaoluban.tmallcommon.vo.pms.PmsProduct;
-import com.xiaoluban.tmallprotal.vo.QueueEnum;
+import com.xiaoluban.tmallprotal.scheduled.OrderTask;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -55,23 +59,29 @@ public class TmallProtalApplicationTest {
     }
 
     @Autowired
-    private RabbitTemplate rabbitTemplate;
-
-    @Scheduled(fixedDelay = 2000, initialDelay = 1000)
-    public void send() {
-
-        String message = "Hello World!";
-        try {
-            rabbitTemplate.convertAndSend(QueueEnum.QUEUE_ORDER_PAY.getName(), message);
-        }catch(Exception e) {
-            System.out.println("连接失败");
-            rabbitTemplate.convertAndSend(QueueEnum.QUEUE_ORDER_PAY.getName(), message);
-        }
-        System.out.println(" [x] Sent '" + message + "'");
-    }
+    private OrderTask orderTask;
 
     @Test
-    public void test(){
-        send();
+    public void toPayOrder(){
+        orderTask.timeoutHande();
+    }
+
+
+    @Value("${myRedis.toPay}")
+    private String toPayKey;
+    @Test
+    public void impl(){
+        double score=(double)new Date().getTime();
+        redisService.zSortSet(toPayKey,"123456",score);
+    }
+
+    @Autowired
+    private OmsOrderDao omsOrderDao;
+
+    @Test
+    public void getOrderList(){
+        List<OmsOrder> list=omsOrderDao.getOrderList(1);
+        System.out.println(list.size());
+
     }
 }

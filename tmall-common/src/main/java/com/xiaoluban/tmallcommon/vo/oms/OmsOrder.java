@@ -3,6 +3,10 @@ package com.xiaoluban.tmallcommon.vo.oms;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
+
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.Data;
 
 /**
@@ -11,9 +15,14 @@ import lombok.Data;
  */
 @Data
 public class OmsOrder implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     /**
      * 订单id
+     * 防止精度丢失
      */
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long id;
 
     private Long memberId;
@@ -183,5 +192,7 @@ public class OmsOrder implements Serializable {
      */
     private Date modifyTime;
 
-    private static final long serialVersionUID = 1L;
+    private List<OmsOrderItem> orderItems;
+
+
 }

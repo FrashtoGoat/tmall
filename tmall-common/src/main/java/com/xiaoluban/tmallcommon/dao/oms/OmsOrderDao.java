@@ -2,6 +2,8 @@ package com.xiaoluban.tmallcommon.dao.oms;
 
 import com.xiaoluban.tmallcommon.vo.oms.OmsOrder;
 
+import java.util.List;
+
 public interface OmsOrderDao {
     int deleteByPrimaryKey(Long id);
 
@@ -14,4 +16,6 @@ public interface OmsOrderDao {
     int updateByPrimaryKeySelective(OmsOrder record);
 
     int updateByPrimaryKey(OmsOrder record);
+
+    List<OmsOrder> getOrderList(Integer userId);
 }

@@ -1,20 +1,17 @@
 package com.xiaoluban.tmallprotal.service.impl;
 
-import cn.hutool.core.lang.Snowflake;
 import com.xiaoluban.tmallcommon.dao.oms.OmsOrderDao;
 import com.xiaoluban.tmallcommon.service.RedisService;
 import com.xiaoluban.tmallcommon.util.IDUtils;
-import com.xiaoluban.tmallcommon.vo.oms.OmsCartItem;
 import com.xiaoluban.tmallcommon.vo.oms.OmsOrder;
 import com.xiaoluban.tmallcommon.vo.oms.OmsOrderItem;
 import com.xiaoluban.tmallcommon.vo.pms.PmsProduct;
 import com.xiaoluban.tmallcommon.vo.ums.UmsMember;
-import com.xiaoluban.tmallprotal.exception.TradeException;
 import com.xiaoluban.tmallprotal.service.OrderService;
-import com.xiaoluban.tmallprotal.service.ProductService;
 import com.xiaoluban.tmallprotal.service.TransService;
 import com.xiaoluban.tmallprotal.vo.OrderStatus;
 import com.xiaoluban.tmallprotal.vo.QueueEnum;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -24,16 +21,18 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @Author: txb
  * @Date: 20210201
  */
 @Service
+@Slf4j
 public class OrderServiceImpl  implements OrderService {
 
-    @Autowired
-    private ProductService productService;
+//    @Autowired
+//    private ProductService productService;
 
     @Autowired
     private OmsOrderDao omsOrderDao;
@@ -59,6 +58,12 @@ public class OrderServiceImpl  implements OrderService {
 
     @Value("${myRedis.orderListPrefix}")
     private String orderListPrefix;
+
+    @Value("${myRedis.toPayOrderLockPrefix}")
+    private String toPayOrderLockPrefix;
+
+    @Value("${myRedis.toPay}")
+    private String toPay;
 
 
     /**
@@ -92,13 +97,22 @@ public class OrderServiceImpl  implements OrderService {
             item=new OmsOrderItem();
             p=new PmsProduct();
 
+
             item.setOrderId(orderId);
+
             item.setProductId(product.getId());
             item.setProductName(product.getName());
             item.setProductQuantity(product.getQuantity());
-            item.setIntegrationAmount(new BigDecimal(product.getGiftPoint()));
+            item.setGiftGrowth(product.getGiftPoint());
+            item.setProductPrice(product.getPrice());
+            item.setProductCategoryId(product.getProductCategoryId());
+            item.setProductPic(product.getPic());
 
-            totalAmount=totalAmount.add(product.getPrice().multiply(new BigDecimal(product.getQuantity())));
+
+            item.setIntegrationAmount(new BigDecimal(product.getGiftPoint()));
+            BigDecimal itemAmout=product.getPrice().multiply(new BigDecimal(product.getQuantity()));
+            item.setRealAmount(itemAmout);
+            totalAmount=totalAmount.add(itemAmout);
             totalPoint+=product.getGiftPoint();
 
 
@@ -113,7 +127,7 @@ public class OrderServiceImpl  implements OrderService {
         omsOrder.setMemberId(user.getId());
         omsOrder.setMemberUsername(user.getUsername());
 
-        omsOrder.setStatus(OrderStatus.TOPAY.getState());
+        //omsOrder.setStatus(OrderStatus.TOPAY.getState());
         omsOrder.setPayAmount(totalAmount);
         omsOrder.setTotalAmount(totalAmount);
         omsOrder.setIntegration(totalPoint);
@@ -122,7 +136,7 @@ public class OrderServiceImpl  implements OrderService {
 
         //根据订单状态进行下一步
 //        int status=omsOrder.getStatus();
-        switch (OrderStatus.TOSEND.getState()){
+        switch (omsOrder.getStatus()){
             case 0:
                 /**
                  * 订单倒计时
@@ -134,6 +148,8 @@ public class OrderServiceImpl  implements OrderService {
                 redisService.zSortSet(toPayKey,omsOrder.getId(),score);
                 break;
             case 1:
+            case 3:
+                //中间状态都省略了
                 //发布消息到队列
                 rabbitTemplate.convertAndSend(QueueEnum.QUEUE_ORDER_PAY.getExchange(), "", omsOrder);
                 break;
@@ -151,13 +167,43 @@ public class OrderServiceImpl  implements OrderService {
     @Override
     public OmsOrder pay(OmsOrder order) {
 
-        /**
-         * 1更新订单状态
-         * 2发布消息到消息队列
-         */
-        omsOrderDao.updateByPrimaryKeySelective(order);
+        Long orderId=order.getId();
+        log.info("进入未支付订单->支付逻辑："+orderId);
 
-        return null;
+        String lockName=toPayOrderLockPrefix+orderId;
+        int times=3;
+        while (times>0){
+            if(redisService.gainLock(lockName,10L, TimeUnit.SECONDS)){
+
+                log.info("订单获取到锁："+orderId);
+                /**
+                 * 1更新订单状态
+                 * 2发布消息到消息队列
+                 */
+                order.setStatus(OrderStatus.FINISH.getState());
+                order.setModifyTime(new Date());
+
+                int flag=omsOrderDao.updateByPrimaryKeySelective(order);
+
+                if(flag==1){
+                    //移除
+                    redisService.zRemove(toPay,orderId);
+
+                    //消息通知
+                    rabbitTemplate.convertAndSend(QueueEnum.QUEUE_ORDER_PAY.getExchange(), "", order);
+
+                    //解锁
+                    redisService.del(lockName);
+                }
+
+                times=0;
+
+            }else{
+                times--;
+            }
+        }
+
+        return order;
     }
 
 

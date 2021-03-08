@@ -138,6 +138,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //TODO
                 .antMatchers("/product/**").permitAll()
                 .antMatchers("/order/**").permitAll()
+                .antMatchers("/ums/**").permitAll()
 
                 .antMatchers("/admin/**").hasRole("admin")
                 .antMatchers("/db/**").hasAnyRole("admin","user")

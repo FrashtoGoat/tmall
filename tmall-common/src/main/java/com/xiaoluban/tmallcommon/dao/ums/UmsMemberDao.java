@@ -1,6 +1,9 @@
 package com.xiaoluban.tmallcommon.dao.ums;
 
+import com.xiaoluban.tmallcommon.vo.oms.OmsOrder;
 import com.xiaoluban.tmallcommon.vo.ums.UmsMember;
+
+import java.util.List;
 
 public interface UmsMemberDao {
 
@@ -19,4 +22,6 @@ public interface UmsMemberDao {
     UmsMember findUserByName(String userName);
 
     int updateIntegration(UmsMember user);
+
+
 }

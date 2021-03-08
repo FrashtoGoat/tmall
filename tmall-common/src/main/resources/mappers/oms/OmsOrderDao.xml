@@ -38,6 +38,70 @@
     <result column="comment_time" jdbcType="TIMESTAMP" property="commentTime" />
     <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
   </resultMap>
+
+  <resultMap id="orderDetailsMap" type="com.xiaoluban.tmallcommon.vo.oms.OmsOrder">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="member_id" jdbcType="BIGINT" property="memberId" />
+    <result column="order_sn" jdbcType="VARCHAR" property="orderSn" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="member_username" jdbcType="VARCHAR" property="memberUsername" />
+    <result column="total_amount" jdbcType="DECIMAL" property="totalAmount" />
+    <result column="pay_amount" jdbcType="DECIMAL" property="payAmount" />
+    <result column="freight_amount" jdbcType="DECIMAL" property="freightAmount" />
+    <result column="promotion_amount" jdbcType="DECIMAL" property="promotionAmount" />
+    <result column="integration_amount" jdbcType="DECIMAL" property="integrationAmount" />
+    <result column="discount_amount" jdbcType="DECIMAL" property="discountAmount" />
+    <result column="pay_type" jdbcType="INTEGER" property="payType" />
+    <result column="source_type" jdbcType="INTEGER" property="sourceType" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="order_type" jdbcType="INTEGER" property="orderType" />
+    <result column="delivery_company" jdbcType="VARCHAR" property="deliveryCompany" />
+    <result column="delivery_sn" jdbcType="VARCHAR" property="deliverySn" />
+    <result column="auto_confirm_day" jdbcType="INTEGER" property="autoConfirmDay" />
+    <result column="integration" jdbcType="INTEGER" property="integration" />
+    <result column="promotion_info" jdbcType="VARCHAR" property="promotionInfo" />
+    <result column="receiver_name" jdbcType="VARCHAR" property="receiverName" />
+    <result column="receiver_phone" jdbcType="VARCHAR" property="receiverPhone" />
+    <result column="receiver_post_code" jdbcType="VARCHAR" property="receiverPostCode" />
+    <result column="receiver_province" jdbcType="VARCHAR" property="receiverProvince" />
+    <result column="receiver_city" jdbcType="VARCHAR" property="receiverCity" />
+    <result column="receiver_region" jdbcType="VARCHAR" property="receiverRegion" />
+    <result column="receiver_detail_address" jdbcType="VARCHAR" property="receiverDetailAddress" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+    <result column="confirm_status" jdbcType="INTEGER" property="confirmStatus" />
+    <result column="delete_status" jdbcType="INTEGER" property="deleteStatus" />
+    <result column="payment_time" jdbcType="TIMESTAMP" property="paymentTime" />
+    <result column="delivery_time" jdbcType="TIMESTAMP" property="deliveryTime" />
+    <result column="receive_time" jdbcType="TIMESTAMP" property="receiveTime" />
+    <result column="comment_time" jdbcType="TIMESTAMP" property="commentTime" />
+    <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+
+    <collection property="orderItems" javaType="java.util.ArrayList" ofType="com.xiaoluban.tmallcommon.vo.oms.OmsOrderItem">
+      <id column="item_id" jdbcType="BIGINT" property="id" />
+      <result column="order_id" jdbcType="BIGINT" property="orderId" />
+      <result column="order_sn" jdbcType="VARCHAR" property="orderSn" />
+      <result column="product_id" jdbcType="BIGINT" property="productId" />
+      <result column="product_pic" jdbcType="VARCHAR" property="productPic" />
+      <result column="product_name" jdbcType="VARCHAR" property="productName" />
+      <result column="product_brand" jdbcType="VARCHAR" property="productBrand" />
+      <result column="product_sn" jdbcType="VARCHAR" property="productSn" />
+      <result column="product_price" jdbcType="DECIMAL" property="productPrice" />
+      <result column="product_quantity" jdbcType="INTEGER" property="productQuantity" />
+      <result column="product_sku_id" jdbcType="BIGINT" property="productSkuId" />
+      <result column="product_sku_code" jdbcType="VARCHAR" property="productSkuCode" />
+      <result column="product_category_id" jdbcType="BIGINT" property="productCategoryId" />
+      <result column="promotion_name" jdbcType="VARCHAR" property="promotionName" />
+      <result column="promotion_amount" jdbcType="DECIMAL" property="promotionAmount" />
+      <result column="coupon_amount" jdbcType="DECIMAL" property="couponAmount" />
+      <result column="integration_amount" jdbcType="DECIMAL" property="integrationAmount" />
+      <result column="real_amount" jdbcType="DECIMAL" property="realAmount" />
+      <result column="gift_integration" jdbcType="INTEGER" property="giftIntegration" />
+      <result column="gift_growth" jdbcType="INTEGER" property="giftGrowth" />
+      <result column="product_attr" jdbcType="VARCHAR" property="productAttr" />
+    </collection>
+
+  </resultMap>
+
   <sql id="Base_Column_List">
     id, member_id, order_sn, create_time, member_username, total_amount, pay_amount, 
     freight_amount, promotion_amount, integration_amount, discount_amount, pay_type, 
@@ -46,12 +110,33 @@
     receiver_city, receiver_region, receiver_detail_address, note, confirm_status, delete_status, 
     payment_time, delivery_time, receive_time, comment_time, modify_time
   </sql>
+
+
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
-    select 
+    select
     <include refid="Base_Column_List" />
     from oms_order
     where id = #{id,jdbcType=BIGINT}
   </select>
+
+  <select id="getOrderList" parameterType="java.lang.Integer" resultMap="orderDetailsMap">
+    select
+    o.id,  o.member_id,  o.order_sn,  o.create_time, o.member_username, o.total_amount, o.pay_amount,
+    o.freight_amount, o.promotion_amount, o.integration_amount, o.discount_amount, o.pay_type,
+    o.source_type, o.`status`, o.order_type, o.delivery_company, o.delivery_sn, o.auto_confirm_day,
+    o.integration, o.promotion_info, o.receiver_name, o.receiver_phone, o.receiver_post_code, o.receiver_province,
+    o.receiver_city, o.receiver_region, o.receiver_detail_address, o.note, o.confirm_status, o.delete_status,
+    o.payment_time, o.delivery_time, o.receive_time, o.comment_time, o.modify_time,
+    oitem.id as item_id, oitem.order_id, oitem.order_sn, oitem.product_id, oitem.product_pic, oitem.product_name, oitem.product_brand, oitem.product_sn,
+    oitem.product_price, oitem.product_quantity, oitem.product_sku_id, oitem.product_sku_code, oitem.product_category_id,
+    oitem.promotion_name, oitem.promotion_amount, oitem.coupon_amount, oitem.integration_amount, oitem.real_amount,
+    gift_integration, gift_growth, product_attr
+    from oms_order o
+    LEFT JOIN oms_order_item oitem
+    on o.id=oitem.order_id
+    where o.member_id = #{userId,jdbcType=INTEGER}
+  </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from oms_order
     where id = #{id,jdbcType=BIGINT}

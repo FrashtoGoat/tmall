@@ -39,6 +39,8 @@
     where username = #{username,jdbcType=VARCHAR}
   </select>
 
+
+
   <update id="updateIntegration" parameterType="com.xiaoluban.tmallcommon.vo.ums.UmsMember">
     update ums_member
     set integration=integration+#{integration,jdbcType=INTEGER}
