@@ -21,6 +21,8 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
 import org.springframework.security.web.savedrequest.RequestCache;
 import org.springframework.security.web.savedrequest.SavedRequest;
+import org.springframework.util.ResourceUtils;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -56,85 +58,37 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
 
-
-
-
-//    @Override
-//    protected void configure(HttpSecurity http) throws Exception {
-//
-//        http.authorizeRequests()
-//                .antMatchers("/admin/**").hasRole("admin")
-//                .antMatchers("/db/**").hasAnyRole("admin","user")
-//                .antMatchers("/user/**").access("hasAnyRole('admin','user')")
-//                //剩下的其他路径请求验证之后就可以访问
-//                .anyRequest().authenticated()
-//                .and()
-//                .formLogin()
-//                .loginPage("/login")
-//                .loginProcessingUrl("/dologin")
-//                .usernameParameter("uname")
-//                .passwordParameter("pwd")
-//                .successHandler(new AuthenticationSuccessHandler() {
-//                    @Override
-//                    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
-//                        response.setContentType("application/json;charset=utf-8");
-//                        PrintWriter pw = response.getWriter();
-//                        Map<String, Object> map = new HashMap<>();
-//                        map.put("status", 200);
-//                        map.put("msg", authentication.getPrincipal());
-//                        pw.write(new ObjectMapper().writeValueAsString(map));
-//                        pw.flush();
-//                        pw.close();
-//                    }
-//                })
-//                .failureHandler(new AuthenticationFailureHandler() {
-//                    @Override
-//                    public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
-//                        response.setContentType("application/json;charset=utf-8");
-//                        PrintWriter pw = response.getWriter();
-//                        Map<String, Object> map = new HashMap<String, Object>();
-//                        map.put("status", 401);
-//                        if (exception instanceof LockedException) {
-//                            map.put("msg", "账户被锁定，登陆失败！");
-//                        } else if (exception instanceof BadCredentialsException) {
-//                            map.put("msg", "账户或者密码错误，登陆失败！");
-//                        } else if (exception instanceof DisabledException) {
-//                            map.put("msg", "账户被禁用，登陆失败！");
-//                        } else if (exception instanceof AccountExpiredException) {
-//                            map.put("msg", "账户已过期，登陆失败！");
-//                        } else if (exception instanceof CredentialsExpiredException) {
-//                            map.put("msg", "密码已过期，登陆失败！");
-//                        } else {
-//                            map.put("msg", "登陆失败！");
-//                        }
-//                        pw.write(new ObjectMapper().writeValueAsString(map));
-//                        pw.flush();
-//                        pw.close();
-//                    }
-//                })
-//                .permitAll()
-//                .and()
-//                //不处理跨域
-//                .csrf().disable();
-//
+//    public void addResourceHandlers(ResourceHandlerRegistry registry){
+//        registry.addResourceHandler("/**").addResourceLocations(ResourceUtils.CLASSPATH_URL_PREFIX+"/templates/");
+//        registry.addResourceHandler("/**").addResourceLocations(ResourceUtils.CLASSPATH_URL_PREFIX+"/statics/");
 //    }
 
 
-    private String[] SWAGGER_WHITELIST = {
+    private String[] STATIC_WHITELIST = {
+            //swagger
             "/swagger-ui.html",
             "/doc.html",
             "/swagger-ui/*",
             "/swagger-resources/**",
             "/v2/api-docs",
             "/v3/api-docs",
-            "/webjars/**"
+            "/webjars/**",
+            //静态资源
+            "/css/**",
+            "/fonts/**",
+            "/image/**",
+            "/js/**",
+            "/mycss/**",
+            "/myjs/**",
+            //另一种写法
+            "/**/*.js"
     };
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
         http.authorizeRequests()
-                .antMatchers(SWAGGER_WHITELIST).permitAll()
+                .antMatchers(STATIC_WHITELIST).permitAll()
                 //TODO
                 .antMatchers("/product/**").permitAll()
                 .antMatchers("/order/**").permitAll()

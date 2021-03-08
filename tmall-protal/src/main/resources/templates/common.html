@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--<head th:fragment="common_header(title,links,styles)">-->
+<head th:fragment="common_header">
+
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--/*@thymesVar id="title" type="templates"*/-->
+<!--        <title th:replace="${title}">默认系统名称</title>-->
+
+        <link type="text/css" th:href="@{/static/mycss/index.css}" >
+        <link type="text/css" th:href="@{/static/mycss/mine.css}" >
+
+        <link type="text/css" th:href="@{/static/css/bootstrap/v4/bootstrap.css}">
+        <script th:src="@{/static/js/jquery.min.js}"></script>
+        <script th:src="@{/static/js/bootstrap/v4/bootstrap.js}"></script>
+
+        <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+       <script th:src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js}"></script>
+       <script th:src="https://cdn.staticfile.org/popper.js}/1.15.0/umd/popper.min.js}"></script>
+       <script th:src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js}"></script> -->
+        <!-- 轮播效果 -->
+        <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+
+        <!-- vue -->
+        <script th:src="@{/static/js/vue.js}"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+</head>
+<body>
+<h5>公共页面</h5>
+</body>
+</html>

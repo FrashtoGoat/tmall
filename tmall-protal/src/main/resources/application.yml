@@ -1,6 +1,9 @@
 spring:
   thymeleaf:
     cache: false
+    prefix: classpath:/templates/
+    mode: HTML5 #设置模板类型
+    encoding: utf-8  #设置编码
   mvc:
     view:
       suffix: .html

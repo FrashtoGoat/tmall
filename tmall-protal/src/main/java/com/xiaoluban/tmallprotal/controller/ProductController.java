@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @Author: txb
  * @Date: 20210128
+ * 商品管理
  */
 @RestController
 @RequestMapping("product/")

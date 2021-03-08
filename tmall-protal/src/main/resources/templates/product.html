@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>商品详情</title>
+
+        <link href="./../static/mycss/product.css" rel="stylesheet">
+
+        <link href="./../static/css/bootstrap/v4/bootstrap.css" rel="stylesheet">
+         <script src="./../static/js/jquery.min.js"></script>
+         <script src="./../static/js/bootstrap/v4/bootstrap.js"></script>
+
+        <script src="./../static/js/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        
+
+    </head>
+    <body>
+        <!-- .container （固定宽度）或 .container-fluid （100% 宽度） style最后渲染，优先级最高-->
+        <div id="box" class="container-fluid i-container" style="padding-left: 0px;padding-right: 0px;">
+           
+            <div class="i-header">
+                <img :src="product.pic">
+            </div>
+
+            <div class="i-body">
+                <p>{{product.name}}</p>
+                <p>{{product.subTitle}}</p>
+                <p>{{product.price}}元</p>
+            </div>
+
+            <div class="i-footer">
+
+              <div class="i-footer-part">
+                  <div class="glyphicon glyphicon-home" style="top:30%;" @click="toMyCart()">购物车</div>
+              </div>
+
+              <div class="i-footer-part" style="background-color: orange;" @click="addProductToCart(product.id)">
+                 <div style="position: relative;top:30%;">加入购物车</div>
+              </div>
+
+
+              <div data-toggle="modal" data-target="#myModal" class="i-footer-part" style="background-color: green;">
+                <div style="position: relative;top:30%;">立即购买</div>
+              </div>
+
+            </div> 
+
+
+            <!-- 按钮：用于打开模态框
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                打开模态框
+            </button> -->
+            
+            <!-- 模态框 -->
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+            
+                        <!-- 模态框头部 -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">订单</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+            
+                        <!-- 模态框主体 -->
+                        <div class="modal-body">
+                            <p>{{product.name}}</p>
+                            <p>{{product.subTitle}}</p>
+                            <ul id="num" style="height: 40px;text-align: left;">
+                                <li>宝贝数量：</li>
+                                <li><button @click="subtract()">-</button></li>
+                                <li><input type="text" value="0" size="1" v-model="count"></li>
+                                <li><button @click="add()">+</button></li>
+                            </ul>
+                            <div style="clear: both;">总价：{{computeSumPrice}} 元</div>
+                        </div>
+            
+                        <!-- 模态框底部 -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" @click="payNow()">立即支付</button>
+                            <button type="button" class="btn btn-info" @click="createOrder()" >稍后支付</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+
+          </div>
+    </body>
+    <script src="./../static/myjs/common.js"></script>
+    <script src="./../static/myjs/product.js"></script>
+</html>

@@ -1,0 +1,3 @@
+// turnToMineDetail(){
+//     alert("test vue");
+// }

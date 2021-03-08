@@ -31,9 +31,6 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class OrderServiceImpl  implements OrderService {
 
-//    @Autowired
-//    private ProductService productService;
-
     @Autowired
     private OmsOrderDao omsOrderDao;
 
@@ -49,9 +46,6 @@ public class OrderServiceImpl  implements OrderService {
 
     @Value("${myRedis.orderTimeout}")
     private Long orderTimeout;
-
-//    @Value("${myRedis.toPayPrefix}")
-//    private String toPayPrefix;
 
     @Value("${myRedis.toPay}")
     private String toPayKey;

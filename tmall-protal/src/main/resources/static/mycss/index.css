@@ -1,0 +1,108 @@
+/*媒体查询：注意and后面空格的添加*/
+/*iphone: w < 768px*/
+@media screen and (max-width: 768px){
+    .container{
+        width:100%;
+       /* background-color: green;*/
+    }
+}
+/*pad: w >= 768  && w< 992*/
+@media screen and (max-width: 992px) and (min-width: 768px) {
+    .container{
+        width:750px;
+        background-color: blue;
+    }
+}
+/*中等屏幕   w >= 992  && w<1200*/
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+    .container{
+        width:970px;
+        background-color: pink;
+    }
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+}
+
+.i-container{
+  width: 100%;
+  height: 100%;
+  padding-right:0px;
+  padding-left: 0px;
+  /* height: 1200px; */
+  
+}
+
+
+
+.i-header {
+  /* background-color: red; */
+  /* width: 100%; */
+  margin: 5px 5px;
+  padding:5px 0px;
+  /* height: 10%; */
+}
+
+.i-body{
+  /* width: 100%; */
+  /* height: 80%; */
+  /* height: 800px; */
+  margin: 5px 5px;
+  overflow: scroll;
+}
+
+/* .i-flashsale{
+  
+} */
+
+.i-mid2{
+   margin:5px 0px;
+   /* width:100%; */
+   /* height: 200px; */
+   /* background-color:bisque; */
+}
+
+.i-mid2-title{
+  margin: 15px 5px 0px 5px;
+}
+
+.i-mid2-body{
+
+}
+
+
+.i-mid3{
+  margin: 5px 10px;
+  /* background-color: blue; */
+}
+
+.i-footer{
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+  /* height: 50px; */
+  height: 8%;
+  margin-top:10px;
+  text-align: center;
+  border-top:1px solid grey; 
+  
+}
+
+.i-footer-part{
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  margin:auto auto;
+  text-align: center;
+}
+
+ /* Make the image fully responsive */
+ .carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+

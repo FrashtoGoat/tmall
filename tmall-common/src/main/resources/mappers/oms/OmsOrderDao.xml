@@ -135,6 +135,7 @@
     LEFT JOIN oms_order_item oitem
     on o.id=oitem.order_id
     where o.member_id = #{userId,jdbcType=INTEGER}
+    ORDER BY o.id desc
   </select>
 
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">

@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>我的订单</title>
+
+        <link href="./../static/mycss/product.css" rel="stylesheet">
+
+        <link href="./../static/css/bootstrap/v4/bootstrap.css" rel="stylesheet">
+         <script src="./../static/js/jquery.min.js"></script>
+         <script src="./../static/js/bootstrap/v4/bootstrap.js"></script>
+
+        <script src="./../static/js/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        
+
+    </head>
+    <body>
+        <!-- .container （固定宽度）或 .container-fluid （100% 宽度） style最后渲染，优先级最高-->
+        <div id="box" class="container-fluid i-container" style="padding-left: 0px;padding-right: 0px;">
+
+
+            <div style="margin: 10px 15px;">
+
+
+                <ul class="list-group" v-for="(order,index) in orderList" v-bind:key="order.id">
+
+                    <li class="list-group-item">
+                        <ul v-for="(item,zindex) in order['orderItems']" v-bind:key="item.id">
+                            <li>
+                                <div>
+                                    <div style="display: inline-block;">
+                                        <img :src="item.productPic" style="width: 80px;height: 80px;"/>
+                                    </div>
+                                    <span>序号：{{item.id}}</span>
+                                </div>
+                                <p>{{item.productName}}</p>
+                                <div>
+                                        <span>单价：{{item.productPrice}}</span>
+                                        <span>数量：{{item.productQuantity}}</span>
+                                </div>
+                                
+                                
+                            </li>
+                            
+                        </ul>
+
+
+                        <div style="clear:both;">
+                            <span>总价:￥{{order.totalAmount}}</span>
+                            <span v-if="order.status==0">
+                               <button class="btn btn-info"  @click="orderPay(order)">去支付</button>
+                            </span>
+                            <span v-else-if="order.status==1">
+                                支付成功
+                            </span>
+                            <span v-else-if="order.status==4">
+                                已完成
+                            </span>
+                            <span v-else>
+                                订单状态{{order.status}}
+                            </span>
+                            
+                        </div>
+                    </li>
+                   
+                </ul>
+
+            </div>
+
+            
+           
+            
+
+        </div>
+    </body>
+    <script src="./../static/myjs/common.js"></script>
+    <script src="./../static/myjs/myorders.js"></script>
+</html>
