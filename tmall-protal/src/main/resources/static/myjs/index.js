@@ -158,7 +158,8 @@
         },
 
         jumpDetailPage(product){
-            window.location.href=protal_url+"";
+            let productId=product.id;
+            window.location.href=protal_url+"product/productDetails/"+productId;
         }
 
      },

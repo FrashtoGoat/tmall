@@ -1,31 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>index</title>
-
-        <link href="@{/statics/mycss/index.css}" rel="stylesheet">
-        <link href="@{/statics/mycss/mine.css" rel="stylesheet">
-
-        <link href="@{/statics/css/bootstrap/v4/bootstrap.css" rel="stylesheet">
-         <script th:src=@{/statics/js/jquery.min.js}"></script>
-         <script th:src="@{/statics/js/bootstrap/v4/bootstrap.js}"></script>
-
-         <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-        <script th:src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js}"></script>
-        <script th:src="https://cdn.staticfile.org/popper.js}/1.15.0/umd/popper.min.js}"></script>
-        <script th:src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js}"></script> -->
-        <!-- 轮播效果 -->
-         <script src="https://cdn.staticfile.org/popper.js}/1.15.0/umd/popper.min.js"></script>
-         
-          <!-- vue -->
-        <script th:src="@{/statics/js/vue.js}"></script>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head th:include="common::common_header">
+        <title>首页</title>
 
     </head>
     <body>
+
+        <link type="text/css" th:href="@{/static/mycss/index.css}" rel="stylesheet">
+        <link type="text/css" th:href="@{/static/mycss/mine.css}" rel="stylesheet">
+
         <!-- .container （固定宽度）或 .container-fluid （100% 宽度） style最后渲染，优先级最高-->
         <div id="box" class="container-fluid i-container" style="padding-left: 0px;padding-right: 0px;">
            
@@ -61,13 +44,13 @@
                     <!-- 轮播 -->
                     <div class="carousel-inner">
                       <div class="carousel-item active" @click="scrollPic()">
-                        <img th:src="../statics/image/lunbo/2.jpg">
+                        <img th:src="@{static/image/lunbo/2.jpg}">
                       </div>
                       <div class="carousel-item" @click="scrollPic()">
-                        <img th:src="../statics/image/lunbo/3.jpg">
+                        <img th:src="@{static/image/lunbo/3.jpg}">
                       </div>
                       <div class="carousel-item" @click="scrollPic()">
-                        <img th:src="../statics/image/lunbo/4.jpg">
+                        <img th:src="@{static/image/lunbo/4.jpg}">
                       </div>
                     </div>
                    
@@ -101,25 +84,25 @@
 
                         <div style="width: 98%;margin: 5px 0px;" >
                             <div style="width: 31%;display: inline-block;">
-                              <img th:src="../statics/image/flashsale/01.jpg" style="width: 100%;"/>
+                              <img th:src="@{static/image/flashsale/01.jpg}" style="width: 100%;"/>
                             </div>
                             <div style="width: 31%;display: inline-block;">
-                              <img th:src="../statics/image/flashsale/02.jpg" style="width: 100%;"/>
+                              <img th:src="@{static/image/flashsale/02.jpg}" style="width: 100%;"/>
                             </div>
                             <div style="width: 31%;display: inline-block;">
-                              <img th:src="../statics/image/flashsale/03.jpg" style="width: 100%;"/>
+                              <img th:src="@{static/image/flashsale/03.jpg}" style="width: 100%;"/>
                             </div>
                         </div>
 
                         <div style="width: 98%;margin: 5px 0px;" >
                           <div style="width: 31%;display: inline-block;">
-                            <img th:src="../statics/image/flashsale/04.jpg" style="width: 100%;"/>
+                            <img th:src="@{static/image/flashsale/04.jpg}" style="width: 100%;"/>
                           </div>
                           <div style="width: 31%;display: inline-block;">
-                            <img th:src="../statics/image/flashsale/05.jpg" style="width: 100%;"/>
+                            <img th:src="@{static/image/flashsale/05.jpg}" style="width: 100%;"/>
                           </div>
                           <div style="width: 31%;display: inline-block;">
-                            <img th:src="../statics/image/flashsale/06.jpg" style="width: 100%;"/>
+                            <img th:src="@{static/image/flashsale/06.jpg}" style="width: 100%;"/>
                           </div>
                         </div>
 
@@ -141,8 +124,7 @@
 
                           <tr v-for="product in recommandList" v-bind:key="product.id" style="cursor: pointer;" @click="jumpDetailPage(product)">
                             <td style="height: 130px;width: 100px;">
-                             <!-- <img th:src=product.pic style="width: 90%;height: 80%;"/> -->
-                             <img :th:src="product.pic" style="width: 90%;height: 80%;"/>
+                             <img :src="product.pic" style="width: 90%;height: 80%;"/>
                             </td>
                             <td>
                               <div>
@@ -160,7 +142,7 @@
 
                            <!-- <tr>
                              <td style="height: 130px;width: 100px;">
-                              <img th:src="../statics/image/recommend/01.jpg" style="width: 90%;height: 80%;"/>
+                              <img th:src="@{staticimage/recommend/01.jpg}" style="width: 90%;height: 80%;"/>
                              </td>
                              <td>
                                <div>
@@ -189,7 +171,7 @@
                  <div class="mine1">
                     <div class="mini1-core">
                       <div style="float: left;">
-                        <img th:src="../statics/image/headImg/sanli2.jpg" class="round_icon"/>
+                        <img th:src="@{static/image/headImg/sanli2.jpg}" class="round_icon"/>
                       </div>
                        <div class="nickName" >
                            <p>三笠阿克曼</p>
@@ -260,8 +242,8 @@
 
           </div>
     </body>
-    <script th:src="@{/statics/myjs/common.js}"></script>
-    <script th:src="@{/statics/myjs/index.js}"></script>
-    <script th:src="@{/statics/myjs/mine.js}"></script>
+    <script th:src="@{/static/myjs/common.js}"></script>
+    <script th:src="@{/static/myjs/index.js}"></script>
+    <script th:src="@{/static/myjs/mine.js}"></script>
    
 </html>

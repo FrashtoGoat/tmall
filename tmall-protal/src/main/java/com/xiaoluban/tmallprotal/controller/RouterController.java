@@ -3,8 +3,13 @@ package com.xiaoluban.tmallprotal.controller;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @Author: txb
@@ -34,10 +39,14 @@ public class RouterController {
     }
 
 
-//    @RequestMapping
-//    public String toProductDetailPage(){
-//        return "";
-//    }
+    @RequestMapping("product/productDetails/{productId}")
+    public ModelAndView toProductDetailPage(@PathVariable Long productId){
+
+        Map<String,Object> model = new HashMap<>();
+        model.put("productId",productId);
+        return new ModelAndView("product",model);
+
+    }
 
     @RequestMapping("order/common")
     public String commonPage(){

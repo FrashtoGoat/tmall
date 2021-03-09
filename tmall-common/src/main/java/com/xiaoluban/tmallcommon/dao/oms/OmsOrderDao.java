@@ -18,4 +18,6 @@ public interface OmsOrderDao {
     int updateByPrimaryKey(OmsOrder record);
 
     List<OmsOrder> getOrderList(Integer userId);
+
+    int updateOrderStatus(OmsOrder record);
 }

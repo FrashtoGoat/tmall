@@ -79,8 +79,9 @@ let app = new Vue({
         }
     },
     mounted() {
-        let productId=1;
-        this.findProduct(productId);
+
+        let productId=[[${productId}]];
+        console.log(productId);
     },
     computed: {
         computeSumPrice: function () {

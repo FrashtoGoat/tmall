@@ -6,6 +6,7 @@ import com.xiaoluban.tmallcommon.service.RedisService;
 import com.xiaoluban.tmallcommon.vo.oms.OmsOrder;
 import com.xiaoluban.tmallcommon.vo.pms.PmsProduct;
 import com.xiaoluban.tmallprotal.scheduled.OrderTask;
+import com.xiaoluban.tmallprotal.vo.OrderStatus;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -83,5 +84,15 @@ public class TmallProtalApplicationTest {
         List<OmsOrder> list=omsOrderDao.getOrderList(1);
         System.out.println(list.size());
 
+    }
+
+    @Test
+    public void updateOrder(){
+        OmsOrder order=new OmsOrder();
+        Long orderId=1369213125686460416L;
+        order.setId(orderId);
+        order.setStatus(OrderStatus.CLOSE.getState());
+        int result=omsOrderDao.updateByPrimaryKeySelective(order);
+        System.out.println(result);
     }
 }

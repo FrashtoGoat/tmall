@@ -7,6 +7,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.math.BigDecimal;
 import java.time.Duration;
+import java.util.Date;
 
 /**
  * @Author: txb
@@ -49,5 +50,10 @@ public class NormalTest {
         BigDecimal price = new BigDecimal(1.2);
         totalAmount=totalAmount.add(price.multiply(new BigDecimal(2)));
         System.out.println(totalAmount);
+    }
+
+    @Test
+    public void now(){
+        System.out.println(new Date());
     }
 }

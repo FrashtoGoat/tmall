@@ -66,26 +66,30 @@ public class OrderTask {
                 order.setId(Long.parseLong(orderId));
                 order.setStatus(OrderStatus.CLOSE.getState());
 
-                omsOrderDao.updateByPrimaryKeySelective(order);
+                int result=omsOrderDao.updateByPrimaryKeySelective(order);
 
-                //库存回滚
-                List<OmsOrderItem> items=omsOrderItemDao.getList(order.getId());
-                List<PmsProduct> updateProList=new ArrayList<>();
-                PmsProduct p;
-                for(OmsOrderItem item:items){
-                    p=new PmsProduct();
-                    p.setId(item.getProductId());
-                    p.setStock(-item.getProductQuantity());
+                if(result==1){
+                    //库存回滚
+                    List<OmsOrderItem> items=omsOrderItemDao.getList(order.getId());
+                    List<PmsProduct> updateProList=new ArrayList<>();
+                    PmsProduct p;
+                    for(OmsOrderItem item:items){
+                        p=new PmsProduct();
+                        p.setId(item.getProductId());
+                        p.setStock(-item.getProductQuantity());
 
-                    updateProList.add(p);
+                        updateProList.add(p);
+                    }
+                    productService.batchUpdateNum(updateProList);
+
+                    //移除
+                    redisService.zRemove(toPay,orderId);
+
+                    //解锁
+                    redisService.del(lockName);
+
+                    log.info("订单关闭成功"+orderId);
                 }
-                productService.batchUpdateNum(updateProList);
-
-                //移除
-                redisService.zRemove(toPay,orderId);
-
-                //解锁
-                redisService.del(lockName);
             }
         }
     }

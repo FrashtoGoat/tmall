@@ -138,6 +138,11 @@
     ORDER BY o.id desc
   </select>
 
+  <update id="updateOrderStatus" parameterType="com.xiaoluban.tmallcommon.vo.oms.OmsOrder" >
+    update oms_order
+    set status=#{status,}
+  </update>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from oms_order
     where id = #{id,jdbcType=BIGINT}

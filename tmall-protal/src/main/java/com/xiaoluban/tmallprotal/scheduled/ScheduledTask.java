@@ -56,7 +56,7 @@ public class ScheduledTask {
     }
 
 
-//    @Scheduled(cron = "0/5 * * * * ?")
+    @Scheduled(cron = "0/5 * * * * ?")
     private void orderTimeoutHander(){
         orderTask.timeoutHande();
     }

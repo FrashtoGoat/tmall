@@ -21,8 +21,6 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
 import org.springframework.security.web.savedrequest.RequestCache;
 import org.springframework.security.web.savedrequest.SavedRequest;
-import org.springframework.util.ResourceUtils;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -41,6 +39,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private final static Logger log= LoggerFactory.getLogger(SecurityConfig.class);
 
 
+    @Override
     @Bean
     public UserDetailsService userDetailsService(){
 
@@ -58,12 +57,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
 
-//    public void addResourceHandlers(ResourceHandlerRegistry registry){
-//        registry.addResourceHandler("/**").addResourceLocations(ResourceUtils.CLASSPATH_URL_PREFIX+"/templates/");
-//        registry.addResourceHandler("/**").addResourceLocations(ResourceUtils.CLASSPATH_URL_PREFIX+"/statics/");
-//    }
-
-
     private String[] STATIC_WHITELIST = {
             //swagger
             "/swagger-ui.html",
@@ -74,14 +67,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             "/v3/api-docs",
             "/webjars/**",
             //静态资源
-            "/css/**",
-            "/fonts/**",
-            "/image/**",
-            "/js/**",
-            "/mycss/**",
-            "/myjs/**",
+            "/static/css/**",
+            "/static/fonts/**",
+            "/static/image/**",
+            "/static/js/**",
+            "/static/mycss/**",
+            "/static/myjs/**",
             //另一种写法
-            "/**/*.js"
+//            "/**/*.js",
+//            "/**/*.css",
+//            "/**/*.jpg"
     };
 
     @Override

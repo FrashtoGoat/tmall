@@ -1,14 +1,19 @@
 spring:
   thymeleaf:
     cache: false
-    prefix: classpath:/templates/
-    mode: HTML5 #设置模板类型
+#    prefix: classpath:/templates/
+    mode: HTML #设置模板类型
     encoding: utf-8  #设置编码
   mvc:
     view:
       suffix: .html
+    # 应该以什么样的路径来访问静态资源
+    static-path-pattern: /static/**
+
+
   application:
     name: tmall-protal
+
   datasource:
     url: jdbc:mysql://121.36.75.169:3306/mymalll
     username: root
