@@ -28,6 +28,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -57,41 +58,59 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
 
-    private String[] STATIC_WHITELIST = {
-            //swagger
-            "/swagger-ui.html",
-            "/doc.html",
-            "/swagger-ui/*",
-            "/swagger-resources/**",
-            "/v2/api-docs",
-            "/v3/api-docs",
-            "/webjars/**",
-            //静态资源
-            "/static/css/**",
-            "/static/fonts/**",
-            "/static/image/**",
-            "/static/js/**",
-            "/static/mycss/**",
-            "/static/myjs/**",
-            //另一种写法
-//            "/**/*.js",
-//            "/**/*.css",
-//            "/**/*.jpg"
-    };
+//    private String[] STATIC_WHITELIST = {
+//            //swagger
+//            "/swagger-ui.html",
+//            "/doc.html",
+//            "/swagger-ui/*",
+//            "/swagger-resources/**",
+//            "/v2/api-docs",
+//            "/v3/api-docs",
+//            "/webjars/**",
+//            //静态资源
+//            "/static/css/**",
+//            "/static/fonts/**",
+//            "/static/image/**",
+//            "/static/js/**",
+//            "/static/mycss/**",
+//            "/static/myjs/**",
+//            //另一种写法
+////            "/**/*.js",
+////            "/**/*.css",
+////            "/**/*.jpg"
+//    };
+
+
+    @Bean
+    public IgnoreUrlsConfig ignoreUrlsConfig() {
+        return new IgnoreUrlsConfig();
+    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
+
+        List<String> whiteList=ignoreUrlsConfig().getUrls();
+        String[] urls=new String[whiteList.size()];
+        for(int i=0;i<whiteList.size();i++){
+            urls[i]=whiteList.get(i);
+        }
+//        String[] STATIC_WHITELIST= (String[]) whiteList.toArray();
+
         http.authorizeRequests()
-                .antMatchers(STATIC_WHITELIST).permitAll()
-                //TODO
-                .antMatchers("/product/**").permitAll()
-                .antMatchers("/order/**").permitAll()
-                .antMatchers("/ums/**").permitAll()
+
+                //静态资源
+                .antMatchers(urls).permitAll()
+
+                 //开发测试放开
+//                .antMatchers("/product/**").permitAll()
+//                .antMatchers("/order/**").permitAll()
+//                .antMatchers("/ums/**").permitAll()
 
                 .antMatchers("/admin/**").hasRole("admin")
                 .antMatchers("/db/**").hasAnyRole("admin","user")
                 .antMatchers("/user/**").access("hasAnyRole('admin','user')")
+
                 //剩下的其他路径请求验证之后就可以访问
                 .anyRequest().authenticated()
                 .and()

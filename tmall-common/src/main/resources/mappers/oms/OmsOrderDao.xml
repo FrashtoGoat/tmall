@@ -140,7 +140,9 @@
 
   <update id="updateOrderStatus" parameterType="com.xiaoluban.tmallcommon.vo.oms.OmsOrder" >
     update oms_order
-    set status=#{status,}
+    set status=#{status,jdbcType=INTEGER}
+    where status=#{beforeStatus,jdbcType=INTEGER}
+    and id = #{id,jdbcType=BIGINT}
   </update>
 
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">

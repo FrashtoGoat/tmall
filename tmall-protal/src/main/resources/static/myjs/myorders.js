@@ -21,7 +21,9 @@ let app = new Vue({
              axios.post(protal_url+'order/pay', order
             )
             .then(function (response) {
-                console.log(response);
+
+                getOrderList(order.memberId);
+                // console.log(response);
             })
             .catch(function (error) {
                 console.log(error);

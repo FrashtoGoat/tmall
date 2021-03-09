@@ -58,15 +58,16 @@ public class OrderTask {
         Set<Object> timeoutSet=redisService.zRangByScore(toPay, start,now-orderTimeout);
         Iterator iterator=timeoutSet.iterator();
         while (iterator.hasNext()){
-            String orderId= String.valueOf(iterator.next());
-            String lockName=toPayOrderLockPrefix+orderId;
+            String orderIdStr= String.valueOf(iterator.next());
+            String lockName=toPayOrderLockPrefix+orderIdStr;
+            Long orderId=Long.parseLong(orderIdStr);
             if(redisService.gainLock(lockName,10L, TimeUnit.SECONDS)){
                 //关闭订单
                 OmsOrder order=new OmsOrder();
-                order.setId(Long.parseLong(orderId));
+                order.setId(orderId);
                 order.setStatus(OrderStatus.CLOSE.getState());
-
-                int result=omsOrderDao.updateByPrimaryKeySelective(order);
+                order.setBeforeStatus(OrderStatus.TOPAY.getState());
+                int result=omsOrderDao.updateOrderStatus(order);
 
                 if(result==1){
                     //库存回滚
@@ -83,7 +84,9 @@ public class OrderTask {
                     productService.batchUpdateNum(updateProList);
 
                     //移除
-                    redisService.zRemove(toPay,orderId);
+                    Long count=redisService.zRemove(toPay,orderId);
+
+                    log.info("删除数量："+count);
 
                     //解锁
                     redisService.del(lockName);

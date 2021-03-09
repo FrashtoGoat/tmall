@@ -68,10 +68,14 @@ let app = new Vue({
                     id:1,
                 },
             };
-            axios.post(protal_url+'order/createOrder', orderExtendVO
-            )
+            axios.post(protal_url+'order/createOrder', orderExtendVO)
             .then(function (response) {
+
                 console.log(response);
+                let order=response.data.data;
+                alert(order);
+                window.location.href=protal_url+"ums/orderList/"+order.memberId;
+
             })
             .catch(function (error) {
                 console.log(error);

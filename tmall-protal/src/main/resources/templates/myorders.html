@@ -1,21 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>我的订单</title>
-
-        <link href="./../static/mycss/product.css" rel="stylesheet">
-
-        <link href="./../static/css/bootstrap/v4/bootstrap.css" rel="stylesheet">
-         <script src="./../static/js/jquery.min.js"></script>
-         <script src="./../static/js/bootstrap/v4/bootstrap.js"></script>
-
-        <script src="./../static/js/vue.js"></script>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        
+    <head th:include="common::common_header">
 
     </head>
     <body>
@@ -77,6 +63,48 @@
 
         </div>
     </body>
-    <script src="./../static/myjs/common.js"></script>
-    <script src="./../static/myjs/myorders.js"></script>
+
+    <script th:src="@{/static/myjs/common.js}"></script>
+    <script th:inline="javascript">
+        let app = new Vue({
+            el: "#box",
+            data: {
+                orderList:[],
+            },
+
+            methods: {
+                getOrderList(userId){
+                    axios.get(protal_url + 'ums/getOrderList/' + userId)
+                        .then(function (response) {
+                            console.log(response);
+                            app.$data.orderList = response.data.data;
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+                },
+                orderPay(order){
+                    let that=this;//JS可以多层嵌套代码
+                    axios.post(protal_url+'order/pay', order
+                    )
+                        .then(function (response) {
+                            console.log(response);
+                            that.getOrderList(order.memberId);
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+                }
+            },
+            mounted() {
+                let userId=[[${userId}]];
+                this.getOrderList(userId);
+            },
+            computed: {
+
+            },
+
+        })
+    </script>
+<!--    <script src="./../static/myjs/myorders.js"></script>-->
 </html>

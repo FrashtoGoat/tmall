@@ -89,10 +89,56 @@ public class TmallProtalApplicationTest {
     @Test
     public void updateOrder(){
         OmsOrder order=new OmsOrder();
+
+
         Long orderId=1369213125686460416L;
+
+        orderId=1368902465633648640L;
         order.setId(orderId);
         order.setStatus(OrderStatus.CLOSE.getState());
-        int result=omsOrderDao.updateByPrimaryKeySelective(order);
+
+        int result;
+
+//        result=omsOrderDao.updateByPrimaryKeySelective(order);
+//        System.out.println(result);
+
+        order.setBeforeStatus(OrderStatus.TOPAY.getState());
+        result=omsOrderDao.updateOrderStatus(order);
         System.out.println(result);
     }
+
+    @Value("${myRedis.toPay}")
+    private String toPay;
+    @Test
+    public void redisHdel(){
+
+//        Long orderId=1369213125686460416L;
+
+        Long orderId=1368902465633648640L;
+        orderId=1369278568428732416L;
+        //移除
+        Long count=redisService.zRemove(toPay,orderId);
+
+        System.out.println("删除数量："+count);
+        //移除
+        count=redisService.zRemove(toPay,orderId+"");
+        System.out.println("删除数量："+count);
+
+    }
+
+
+    @Test
+    public void OrderTask(){
+        orderTask.timeoutHande();
+    }
+    @Value("${myRedis.orderTimeout}")
+    private long orderTimeout;
+
+    @Test
+    public void timeCalculate(){
+        double now=(double)System.currentTimeMillis();
+        System.out.println(now-orderTimeout);
+
+    }
+
 }

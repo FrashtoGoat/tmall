@@ -174,8 +174,8 @@
                         <img th:src="@{static/image/headImg/sanli2.jpg}" class="round_icon"/>
                       </div>
                        <div class="nickName" >
-                           <p>三笠阿克曼</p>
-                           <p>黄金会员</p>
+                           <p>{{userInfo.memberLevelId}}</p>
+                           <p>{{userInfo.username}}</p>
                        </div>
                        <div class="turnMine" @click="turnToMineDetail">
                           <

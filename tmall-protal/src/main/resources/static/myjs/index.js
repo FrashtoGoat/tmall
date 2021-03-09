@@ -18,6 +18,8 @@
          recommandPageSize:5,
          recommandList:[],
 
+         userInfo:{},
+
         //  items: [
         //     // { message: 'Foo',pic:12 },
         //     // { message: 'Bar',pic:13}
@@ -27,8 +29,8 @@
      },
      methods:{
         showPage(flag){
-
-            if(flag!=this.currentPage){
+            let that=this;
+            if(flag!=that.currentPage){
                 switch(flag){
                     case 0:
                         this.showProduct=false;
@@ -44,6 +46,11 @@
                         this.showProduct=false;
                         this.showIndex=false;
                         this.showMine=true;
+                        //获取用户信息并展示 getUserInfo
+                        console.log(that.userInfo);
+                        if(JSON.stringify(that.userInfo) == "{}"){
+                            that.getUserInfo();
+                        }
                         break;
                     default:
                         this.showProduct=false;
@@ -79,6 +86,19 @@
         //product
         scrollPic(){
             alert("暂未开发");
+        },
+
+        getUserInfo(){
+            console.log("执行查询");
+            let that=this;
+            axios.post(protal_url+'ums/getUserInfo')
+            .then(function (response) {
+                that.userInfo=response.data.data;
+                console.log(that.userInfo);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
         },
 
         //

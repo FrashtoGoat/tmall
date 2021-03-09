@@ -47,9 +47,12 @@ spring:
 
   #热加载
   devtools:
+#    additional-paths: static/**,templates/**
     restart:
       enabled: true
       exclude: WEB-INF/**
+#    livereload:
+#      enabled: true
 
 
   rabbitmq:
@@ -66,18 +69,6 @@ logging:
     name: ${spring.application.name}.log
   level:
     com : info
-
-
-
-# ===== 自定义swagger配置 ===== #
-swagger:
-  enable: true
-  application-name: ${spring.application.name}
-  application-version: 1.0
-  application-description: spring-security-integration
-#  try-host: http://localhost:${server.port}
-
-
 
 server:
   port: 8082
@@ -96,13 +87,40 @@ pagehelper:
   reasonable: true
   supportMethodsArguments: true
 
+
+
+
+# ===== 自定义配置 ===== #
+
+swagger:
+  enable: true
+  application-name: ${spring.application.name}
+  application-version: 1.0
+  application-description: spring-security-integration
+#  try-host: http://localhost:${server.port}
+
 myRedis:
   flashsaleMonitorKey: flashsaleMonitorKey
   flashsaleIncrKey: flashsaleIncrKey
-  orderTimeout: 600
+  orderTimeout: 600000
   toPay: toPay
   orderListPrefix: orderList
   toPayOrderLockPrefix: toPayOrderLock
 
-
-
+#security白名单
+secure:
+  ignored:
+    urls:
+      - /swagger-ui.html
+      - /doc.html
+      - /swagger-ui/*
+      - /swagger-resources/**
+      - /v2/api-docs
+      - /v3/api-docs
+      - /webjars/**
+      - /static/css/**
+      - /static/fonts/**
+      - /static/image/**
+      - /static/js/**
+      - /static/mycss/**
+      - /static/myjs/**

@@ -194,5 +194,8 @@ public class OmsOrder implements Serializable {
 
     private List<OmsOrderItem> orderItems;
 
+    //原状态
+    private Integer beforeStatus;
+
 
 }
