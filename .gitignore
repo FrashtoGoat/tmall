@@ -2,5 +2,7 @@
 /tmall-protal/target/
 /tmall-security/target/
 /tmall-security/tmall-security.iml
+/tmall-common/tmall-common.iml
+/tmall-protal/tmall-protal.iml
 /*.log
 /*.gz
