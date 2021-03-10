@@ -3,6 +3,8 @@ package com.xiaoluban.tmallprotal.controller;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -10,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
@@ -83,5 +86,18 @@ public class RouterController {
         }else{
             return "未能获取该用户信息";
         }
+    }
+
+
+    @Autowired
+    private RestTemplate restTemplate;
+
+    @Value("${service-url.nacos-order-server}")
+    private String reqUrl;
+
+    @RequestMapping(value = "order/createOrder/{id}")
+    @ResponseBody
+    public String testCreatOrder(@PathVariable Long id){
+        return restTemplate.getForObject(reqUrl+"/order/createOrder/"+id,String.class);
     }
 }

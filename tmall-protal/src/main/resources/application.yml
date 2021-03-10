@@ -54,6 +54,12 @@ spring:
 #    livereload:
 #      enabled: true
 
+  #cloud-nacos
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
 
   rabbitmq:
     host: localhost # rabbitmq的连接地址
@@ -71,7 +77,7 @@ logging:
     com : info
 
 server:
-  port: 8082
+  port: 8080
   servlet:
     context-path: /${spring.application.name}
 
@@ -124,3 +130,7 @@ secure:
       - /static/js/**
       - /static/mycss/**
       - /static/myjs/**
+
+
+service-url:
+  nacos-order-server: http://tmall-cloud-order
