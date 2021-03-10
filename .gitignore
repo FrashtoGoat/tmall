@@ -1,6 +1,10 @@
 /tmall-common/target/
 /tmall-protal/target/
 /tmall-security/target/
+/tmall-cloud-nacos-config/target/
+/tmall-cloud-order/target/
+/tmall-cloud-order//tmall-cloud-order.iml
+/tmall-cloud-nacos-config/tmall-cloud-nacos-config.iml
 /tmall-security/tmall-security.iml
 /tmall-common/tmall-common.iml
 /tmall-protal/tmall-protal.iml
