@@ -17,6 +17,7 @@
         <module>tmall-cloud-nacos-config</module>
         <module>tmall-cloud-order</module>
         <module>tmall-cloud-order-loadbalance</module>
+        <module>tmall-cloud-gateway</module>
     </modules>
 
     <!--统一管理jar包版本-->
@@ -163,11 +164,7 @@
         </dependency>
 
 
-        <!--mybatis-->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-        </dependency>
+
 
 
         <dependency>
