@@ -4,7 +4,9 @@
 /tmall-cloud-nacos-config/target/
 /tmall-cloud-order/target/
 /tmall-cloud-order-loadbalance/target
-/tmall-cloud-order//tmall-cloud-order.iml
+/tmall-cloud-gateway/target
+/tmall-cloud-gateway/tmall-cloud-gateway.iml
+/tmall-cloud-order/tmall-cloud-order.iml
 /tmall-cloud-nacos-config/tmall-cloud-nacos-config.iml
 /tmall-cloud-order-loadbalance/tmall-cloud-order-loadbalance
 /tmall-security/tmall-security.iml
