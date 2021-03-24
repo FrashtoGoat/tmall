@@ -7,6 +7,7 @@ import java.util.List;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
@@ -30,6 +31,7 @@ public class OmsOrder implements Serializable {
     /**
      * 订单编号
      */
+    @ApiModelProperty(value = "订单编号")
     private String orderSn;
 
     /**

@@ -15,6 +15,7 @@ spring:
           predicates:
             - Path=/order/createOrder/**
             - After=2021-03-11T11:26:47.897+08:00[Asia/Shanghai]
+            #between before prormapping
 #      discovery:
 #        locator:
 #          enabled: true

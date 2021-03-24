@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 商品管理
  */
 @RestController
-@RequestMapping("product/")
+@RequestMapping("/product/")
 public class ProductController {
 
     @Autowired

@@ -45,11 +45,11 @@
       <artifactId>spring-boot-starter-thymeleaf</artifactId>
     </dependency>
 
-    <!-- swagger -->
-    <dependency>
-      <groupId>io.springfox</groupId>
-      <artifactId>springfox-boot-starter</artifactId>
-    </dependency>
+<!--    &lt;!&ndash; swagger &ndash;&gt;-->
+<!--    <dependency>-->
+<!--      <groupId>io.springfox</groupId>-->
+<!--      <artifactId>springfox-boot-starter</artifactId>-->
+<!--    </dependency>-->
 
     <!--mybatis-->
     <dependency>

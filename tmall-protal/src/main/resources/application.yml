@@ -7,8 +7,9 @@ spring:
   mvc:
     view:
       suffix: .html
-    # 应该以什么样的路径来访问静态资源
-    static-path-pattern: /static/**
+    # 应该以什么样的路径来访问静态资源,粗暴放开swagger
+#    static-path-pattern: /static/**
+    static-path-pattern: /*/**
 
 
   application:
@@ -79,7 +80,7 @@ logging:
 server:
   port: 8080
   servlet:
-    context-path: /${spring.application.name}
+#    context-path: /${spring.application.name}
 
 
 mybatis:
