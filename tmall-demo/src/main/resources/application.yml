@@ -1,0 +1,41 @@
+spring:
+  thymeleaf:
+    cache: false
+  mvc:
+    view:
+      suffix: .html
+  application:
+    name: tmall-demo
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    schema: classpath:db/schema-h2.sql
+    data: classpath:db/data-h2.sql
+    url: jdbc:h2:mem:test
+    username: root
+    password: test
+
+logging:
+  file:
+    path: /logs/
+    name: ${spring.application.name}.log
+  level:
+    com : debug
+
+
+
+# ===== 自定义swagger配置 ===== #
+swagger:
+  enable: true
+  application-name: ${spring.application.name}
+  application-version: 1.0
+  application-description: spring-security-integration
+#  try-host: http://localhost:${server.port}
+
+jwt:
+  tokenHeader: Authorization #JWT存储的请求头
+  secret: mall-portal-secret #JWT加解密使用的密钥
+  expiration: 604800 #JWT的超期限时间(60*60*24*7)
+  tokenHead: 'Bearer '  #JWT负载中拿到开头
+
+

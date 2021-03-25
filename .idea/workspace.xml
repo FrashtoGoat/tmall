@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5dac3152-19e1-400b-9020-a0bb62dc67d7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tmall-demo/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/tmallsecurity/TmallDemoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/tmallsecurity/config/IgnoreUrlsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/tmallsecurity/config/swagger/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/tmallsecurity/dto/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/tmallsecurity/interceptor/AuthenticationInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/tmallsecurity/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/resources/db/data-h2.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/resources/db/schema-h2.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/test/java/com/xiaoluban/tmallsecurity/SampleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/tmall-demo.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="prod" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\maven_dependencies" />
+        <option name="mavenHome" value="D:/Program Files for work/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\Program Files for work\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1qFm2pW8ewixhhvmFZAbOsZXkUo" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.SampleTest.testSelect">
+    <configuration name="SampleTest.testSelect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tmall-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xiaoluban.tmallsecurity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.xiaoluban.tmallsecurity" />
+      <option name="MAIN_CLASS_NAME" value="com.xiaoluban.tmallsecurity.SampleTest" />
+      <option name="METHOD_NAME" value="testSelect" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TmallCloudGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="tmall-cloud-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoluban.cloudgateway.TmallCloudGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TmallCloudOrderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="tmall-cloud-order" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoluban.cloudorder.TmallCloudOrderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TmallCloudOrderLoadBalanceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="tmall-cloud-order-loadbalance" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoluban.cloudorder.TmallCloudOrderLoadBalanceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TmallDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="tmall-demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoluban.tmallsecurity.TmallDemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TmallProtalApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="tmall-protal" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoluban.tmallprotal.TmallProtalApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TmallSecurityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="tmall-security" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoluban.tmallsecurity.TmallSecurityApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SampleTest.testSelect" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5dac3152-19e1-400b-9020-a0bb62dc67d7" name="Default Changelist" comment="" />
+      <created>1616683507155</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616683507155</updated>
+      <workItem from="1616683509140" duration="2102000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

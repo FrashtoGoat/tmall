@@ -1,0 +1,659 @@
+2021-03-25 23:14:28.284  INFO 17232 --- [main] com.xiaoluban.tmallsecurity.SampleTest   : Starting SampleTest on DESKTOP-EQS2HPF with PID 17232 (started by TXB in D:\project_backend\tmall\tmall-demo)
+2021-03-25 23:14:28.284 DEBUG 17232 --- [main] com.xiaoluban.tmallsecurity.SampleTest   : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2021-03-25 23:14:28.284  INFO 17232 --- [main] com.xiaoluban.tmallsecurity.SampleTest   : No active profile set, falling back to default profiles: default
+2021-03-25 23:14:29.581  WARN 17232 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.baomidou.mybatisplus.samples.quickstart.mapper]' package. Please check your configuration.
+2021-03-25 23:14:30.378 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : Driver class org.h2.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@1f89ab83
+2021-03-25 23:14:30.503 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - configuration:
+2021-03-25 23:14:30.503 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : allowPoolSuspension.............false
+2021-03-25 23:14:30.503 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : autoCommit......................true
+2021-03-25 23:14:30.503 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : catalog.........................none
+2021-03-25 23:14:30.503 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : connectionInitSql...............none
+2021-03-25 23:14:30.503 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTestQuery.............none
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTimeout...............30000
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : dataSource......................none
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceClassName.............none
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceJNDI..................none
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceProperties............{password=<masked>}
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : driverClassName................."org.h2.Driver"
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : exceptionOverrideClassName......none
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckProperties...........{}
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckRegistry.............none
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : idleTimeout.....................600000
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : initializationFailTimeout.......1
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : isolateInternalQueries..........false
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : jdbcUrl.........................jdbc:h2:mem:test
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : leakDetectionThreshold..........0
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : maxLifetime.....................1800000
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : maximumPoolSize.................10
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : metricRegistry..................none
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : metricsTrackerFactory...........none
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : minimumIdle.....................10
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : password........................<masked>
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : poolName........................"HikariPool-1"
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : readOnly........................false
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : registerMbeans..................false
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : scheduledExecutor...............none
+2021-03-25 23:14:30.518 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : schema..........................none
+2021-03-25 23:14:30.534 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : threadFactory...................internal
+2021-03-25 23:14:30.534 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : transactionIsolation............default
+2021-03-25 23:14:30.534 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : username........................"root"
+2021-03-25 23:14:30.534 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : validationTimeout...............5000
+2021-03-25 23:14:30.534  INFO 17232 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-25 23:14:31.003 DEBUG 17232 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:14:31.018  INFO 17232 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-25 23:14:31.128 DEBUG 17232 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=1, active=1, idle=0, waiting=0)
+2021-03-25 23:14:31.143 DEBUG 17232 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:14:31.159 DEBUG 17232 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn2: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:14:31.159 DEBUG 17232 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn3: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:14:31.159 DEBUG 17232 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn4: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:14:31.159 DEBUG 17232 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn5: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:14:31.159 DEBUG 17232 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn6: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:14:31.159 DEBUG 17232 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn7: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:14:31.159 DEBUG 17232 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn8: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:14:31.159 DEBUG 17232 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn9: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:14:31.159 DEBUG 17232 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2021-03-25 23:14:31.159  WARN 17232 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker': Invocation of init method failed; nested exception is org.springframework.boot.context.properties.source.InvalidConfigurationPropertyValueException: Property spring.datasource.data with value 'class path resource [db/data-h2.sql]' is invalid: The specified resource does not exist.
+2021-03-25 23:14:31.190  INFO 17232 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-03-25 23:14:31.221 ERROR 17232 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker': Invocation of init method failed; nested exception is org.springframework.boot.context.properties.source.InvalidConfigurationPropertyValueException: Property spring.datasource.data with value 'class path resource [db/data-h2.sql]' is invalid: The specified resource does not exist.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:893) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) ~[spring-boot-test-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43) ~[spring-boot-test-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker': Invocation of init method failed; nested exception is org.springframework.boot.context.properties.source.InvalidConfigurationPropertyValueException: Property spring.datasource.data with value 'class path resource [db/data-h2.sql]' is invalid: The specified resource does not exist.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:227) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1172) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:420) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:350) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:343) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerPostProcessor.postProcessAfterInitialization(DataSourceInitializerPostProcessor.java:52) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	... 40 common frames omitted
+Caused by: org.springframework.boot.context.properties.source.InvalidConfigurationPropertyValueException: Property spring.datasource.data with value 'class path resource [db/data-h2.sql]' is invalid: The specified resource does not exist.
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.getResources(DataSourceInitializer.java:164) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.getScripts(DataSourceInitializer.java:147) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.initSchema(DataSourceInitializer.java:112) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:91) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:38) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.initialize(DataSourceInitializerInvoker.java:72) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.afterPropertiesSet(DataSourceInitializerInvoker.java:65) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	... 54 common frames omitted
+
+2021-03-25 23:14:31.315  INFO 17232 --- [main] com.xiaoluban.tmallsecurity.SampleTest   : Starting SampleTest on DESKTOP-EQS2HPF with PID 17232 (started by TXB in D:\project_backend\tmall\tmall-demo)
+2021-03-25 23:14:31.315 DEBUG 17232 --- [main] com.xiaoluban.tmallsecurity.SampleTest   : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2021-03-25 23:14:31.331  INFO 17232 --- [main] com.xiaoluban.tmallsecurity.SampleTest   : No active profile set, falling back to default profiles: default
+2021-03-25 23:14:31.784  WARN 17232 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.baomidou.mybatisplus.samples.quickstart.mapper]' package. Please check your configuration.
+2021-03-25 23:14:31.956 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : Driver class org.h2.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@1f89ab83
+2021-03-25 23:14:32.018 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : HikariPool-2 - configuration:
+2021-03-25 23:14:32.018 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : allowPoolSuspension.............false
+2021-03-25 23:14:32.018 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : autoCommit......................true
+2021-03-25 23:14:32.018 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : catalog.........................none
+2021-03-25 23:14:32.018 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : connectionInitSql...............none
+2021-03-25 23:14:32.018 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTestQuery.............none
+2021-03-25 23:14:32.018 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTimeout...............30000
+2021-03-25 23:14:32.018 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : dataSource......................none
+2021-03-25 23:14:32.018 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceClassName.............none
+2021-03-25 23:14:32.018 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceJNDI..................none
+2021-03-25 23:14:32.018 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceProperties............{password=<masked>}
+2021-03-25 23:14:32.018 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : driverClassName................."org.h2.Driver"
+2021-03-25 23:14:32.018 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : exceptionOverrideClassName......none
+2021-03-25 23:14:32.018 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckProperties...........{}
+2021-03-25 23:14:32.034 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckRegistry.............none
+2021-03-25 23:14:32.034 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : idleTimeout.....................600000
+2021-03-25 23:14:32.034 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : initializationFailTimeout.......1
+2021-03-25 23:14:32.034 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : isolateInternalQueries..........false
+2021-03-25 23:14:32.034 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : jdbcUrl.........................jdbc:h2:mem:test
+2021-03-25 23:14:32.034 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : leakDetectionThreshold..........0
+2021-03-25 23:14:32.034 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : maxLifetime.....................1800000
+2021-03-25 23:14:32.034 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : maximumPoolSize.................10
+2021-03-25 23:14:32.034 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : metricRegistry..................none
+2021-03-25 23:14:32.034 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : metricsTrackerFactory...........none
+2021-03-25 23:14:32.034 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : minimumIdle.....................10
+2021-03-25 23:14:32.034 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : password........................<masked>
+2021-03-25 23:14:32.034 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : poolName........................"HikariPool-2"
+2021-03-25 23:14:32.034 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : readOnly........................false
+2021-03-25 23:14:32.034 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : registerMbeans..................false
+2021-03-25 23:14:32.034 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : scheduledExecutor...............none
+2021-03-25 23:14:32.034 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : schema..........................none
+2021-03-25 23:14:32.034 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : threadFactory...................internal
+2021-03-25 23:14:32.034 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : transactionIsolation............default
+2021-03-25 23:14:32.034 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : username........................"root"
+2021-03-25 23:14:32.034 DEBUG 17232 --- [main] com.zaxxer.hikari.HikariConfig           : validationTimeout...............5000
+2021-03-25 23:14:32.034  INFO 17232 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-03-25 23:14:32.034 DEBUG 17232 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:14:32.034  INFO 17232 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-03-25 23:14:32.050  WARN 17232 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker': Invocation of init method failed; nested exception is org.springframework.boot.context.properties.source.InvalidConfigurationPropertyValueException: Property spring.datasource.data with value 'class path resource [db/data-h2.sql]' is invalid: The specified resource does not exist.
+2021-03-25 23:14:32.050  INFO 17232 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-03-25 23:14:32.065 ERROR 17232 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker': Invocation of init method failed; nested exception is org.springframework.boot.context.properties.source.InvalidConfigurationPropertyValueException: Property spring.datasource.data with value 'class path resource [db/data-h2.sql]' is invalid: The specified resource does not exist.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:893) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) ~[spring-boot-test-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.outputConditionEvaluationReport(SpringBootDependencyInjectionTestExecutionListener.java:53) ~[spring-boot-test-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:46) ~[spring-boot-test-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker': Invocation of init method failed; nested exception is org.springframework.boot.context.properties.source.InvalidConfigurationPropertyValueException: Property spring.datasource.data with value 'class path resource [db/data-h2.sql]' is invalid: The specified resource does not exist.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:227) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1172) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:420) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:350) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:343) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerPostProcessor.postProcessAfterInitialization(DataSourceInitializerPostProcessor.java:52) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	... 39 common frames omitted
+Caused by: org.springframework.boot.context.properties.source.InvalidConfigurationPropertyValueException: Property spring.datasource.data with value 'class path resource [db/data-h2.sql]' is invalid: The specified resource does not exist.
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.getResources(DataSourceInitializer.java:164) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.getScripts(DataSourceInitializer.java:147) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.initSchema(DataSourceInitializer.java:112) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:91) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:38) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.initialize(DataSourceInitializerInvoker.java:72) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.afterPropertiesSet(DataSourceInitializerInvoker.java:65) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	... 53 common frames omitted
+
+2021-03-25 23:14:32.065 ERROR 17232 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@479cbee5] to prepare test instance [com.xiaoluban.tmallsecurity.SampleTest@5e403b4a]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43) ~[spring-boot-test-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker': Invocation of init method failed; nested exception is org.springframework.boot.context.properties.source.InvalidConfigurationPropertyValueException: Property spring.datasource.data with value 'class path resource [db/data-h2.sql]' is invalid: The specified resource does not exist.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:893) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120) ~[spring-boot-test-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker': Invocation of init method failed; nested exception is org.springframework.boot.context.properties.source.InvalidConfigurationPropertyValueException: Property spring.datasource.data with value 'class path resource [db/data-h2.sql]' is invalid: The specified resource does not exist.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:227) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1172) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:420) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:350) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:343) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerPostProcessor.postProcessAfterInitialization(DataSourceInitializerPostProcessor.java:52) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:431) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	... 40 common frames omitted
+Caused by: org.springframework.boot.context.properties.source.InvalidConfigurationPropertyValueException: Property spring.datasource.data with value 'class path resource [db/data-h2.sql]' is invalid: The specified resource does not exist.
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.getResources(DataSourceInitializer.java:164) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.getScripts(DataSourceInitializer.java:147) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.initSchema(DataSourceInitializer.java:112) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:91) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:38) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:404) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:361) ~[spring-context-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.initialize(DataSourceInitializerInvoker.java:72) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.afterPropertiesSet(DataSourceInitializerInvoker.java:65) ~[spring-boot-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	... 54 common frames omitted
+
+2021-03-25 23:14:32.175 DEBUG 17232 --- [HikariPool-2 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2021-03-25 23:14:32.190 DEBUG 17232 --- [HikariPool-2 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn11: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:14:32.190 DEBUG 17232 --- [HikariPool-2 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn12: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:14:32.190 DEBUG 17232 --- [HikariPool-2 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn13: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:14:32.190 DEBUG 17232 --- [HikariPool-2 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn14: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:14:32.206 DEBUG 17232 --- [HikariPool-2 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn15: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:14:32.206 DEBUG 17232 --- [HikariPool-2 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn16: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:14:32.206 DEBUG 17232 --- [HikariPool-2 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn17: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:14:32.206 DEBUG 17232 --- [HikariPool-2 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn18: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:14:32.206 DEBUG 17232 --- [HikariPool-2 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn19: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:14:32.221 DEBUG 17232 --- [HikariPool-2 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2021-03-25 23:15:19.506  INFO 8884 --- [main] com.xiaoluban.tmallsecurity.SampleTest   : Starting SampleTest on DESKTOP-EQS2HPF with PID 8884 (started by TXB in D:\project_backend\tmall\tmall-demo)
+2021-03-25 23:15:19.506 DEBUG 8884 --- [main] com.xiaoluban.tmallsecurity.SampleTest   : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2021-03-25 23:15:19.506  INFO 8884 --- [main] com.xiaoluban.tmallsecurity.SampleTest   : No active profile set, falling back to default profiles: default
+2021-03-25 23:15:21.021  WARN 8884 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.baomidou.mybatisplus.samples.quickstart.mapper]' package. Please check your configuration.
+2021-03-25 23:15:21.615 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : Driver class org.h2.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@1f89ab83
+2021-03-25 23:15:21.693 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - configuration:
+2021-03-25 23:15:21.693 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : allowPoolSuspension.............false
+2021-03-25 23:15:21.693 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : autoCommit......................true
+2021-03-25 23:15:21.709 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : catalog.........................none
+2021-03-25 23:15:21.709 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : connectionInitSql...............none
+2021-03-25 23:15:21.709 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTestQuery.............none
+2021-03-25 23:15:21.709 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTimeout...............30000
+2021-03-25 23:15:21.709 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : dataSource......................none
+2021-03-25 23:15:21.709 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceClassName.............none
+2021-03-25 23:15:21.709 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceJNDI..................none
+2021-03-25 23:15:21.709 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceProperties............{password=<masked>}
+2021-03-25 23:15:21.709 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : driverClassName................."org.h2.Driver"
+2021-03-25 23:15:21.709 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : exceptionOverrideClassName......none
+2021-03-25 23:15:21.709 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckProperties...........{}
+2021-03-25 23:15:21.709 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckRegistry.............none
+2021-03-25 23:15:21.709 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : idleTimeout.....................600000
+2021-03-25 23:15:21.709 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : initializationFailTimeout.......1
+2021-03-25 23:15:21.709 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : isolateInternalQueries..........false
+2021-03-25 23:15:21.709 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : jdbcUrl.........................jdbc:h2:mem:test
+2021-03-25 23:15:21.709 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : leakDetectionThreshold..........0
+2021-03-25 23:15:21.709 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : maxLifetime.....................1800000
+2021-03-25 23:15:21.709 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : maximumPoolSize.................10
+2021-03-25 23:15:21.709 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : metricRegistry..................none
+2021-03-25 23:15:21.724 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : metricsTrackerFactory...........none
+2021-03-25 23:15:21.724 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : minimumIdle.....................10
+2021-03-25 23:15:21.724 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : password........................<masked>
+2021-03-25 23:15:21.724 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : poolName........................"HikariPool-1"
+2021-03-25 23:15:21.724 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : readOnly........................false
+2021-03-25 23:15:21.724 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : registerMbeans..................false
+2021-03-25 23:15:21.724 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : scheduledExecutor...............none
+2021-03-25 23:15:21.724 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : schema..........................none
+2021-03-25 23:15:21.724 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : threadFactory...................internal
+2021-03-25 23:15:21.724 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : transactionIsolation............default
+2021-03-25 23:15:21.724 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : username........................"root"
+2021-03-25 23:15:21.724 DEBUG 8884 --- [main] com.zaxxer.hikari.HikariConfig           : validationTimeout...............5000
+2021-03-25 23:15:21.724  INFO 8884 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-25 23:15:22.302 DEBUG 8884 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:15:22.302  INFO 8884 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-25 23:15:22.412 DEBUG 8884 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2021-03-25 23:15:22.427 DEBUG 8884 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:15:22.427 DEBUG 8884 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn2: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:15:22.427 DEBUG 8884 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn3: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:15:22.427 DEBUG 8884 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn4: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:15:22.443 DEBUG 8884 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn5: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:15:22.443 DEBUG 8884 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn6: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:15:22.443 DEBUG 8884 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn7: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:15:22.443 DEBUG 8884 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn8: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:15:22.443 DEBUG 8884 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn9: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:15:22.443 DEBUG 8884 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2021-03-25 23:15:22.771 DEBUG 8884 --- [main] c.b.m.e.s.MybatisSqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2021-03-25 23:15:24.349  INFO 8884 --- [main] com.xiaoluban.tmallsecurity.SampleTest   : Started SampleTest in 5.751 seconds (JVM running for 7.924)
+2021-03-25 23:15:24.490 ERROR 8884 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@479cbee5] to prepare test instance [com.xiaoluban.tmallsecurity.SampleTest@5e403b4a]
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.xiaoluban.tmallsecurity.SampleTest': Unsatisfied dependency expressed through field 'userMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.xiaoluban.tmallsecurity.mapper.UserMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:393) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43) ~[spring-boot-test-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.xiaoluban.tmallsecurity.mapper.UserMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1714) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1270) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1224) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	... 28 common frames omitted
+
+2021-03-25 23:15:24.505  INFO 8884 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-25 23:15:24.505 DEBUG 8884 --- [SpringContextShutdownHook] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2021-03-25 23:15:24.521 DEBUG 8884 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn0: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:15:24.521 DEBUG 8884 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn1: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:15:24.521 DEBUG 8884 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn2: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:15:24.521 DEBUG 8884 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn3: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:15:24.521 DEBUG 8884 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn4: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:15:24.521 DEBUG 8884 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn5: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:15:24.521 DEBUG 8884 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn6: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:15:24.521 DEBUG 8884 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn7: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:15:24.521 DEBUG 8884 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn8: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:15:24.521 DEBUG 8884 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn9: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:15:24.521 DEBUG 8884 --- [SpringContextShutdownHook] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2021-03-25 23:15:24.521  INFO 8884 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-03-25 23:19:50.097  INFO 7452 --- [main] com.xiaoluban.tmallsecurity.SampleTest   : Starting SampleTest on DESKTOP-EQS2HPF with PID 7452 (started by TXB in D:\project_backend\tmall\tmall-demo)
+2021-03-25 23:19:50.097 DEBUG 7452 --- [main] com.xiaoluban.tmallsecurity.SampleTest   : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2021-03-25 23:19:50.112  INFO 7452 --- [main] com.xiaoluban.tmallsecurity.SampleTest   : No active profile set, falling back to default profiles: default
+2021-03-25 23:19:51.409  WARN 7452 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.xiaoluban.tamllsecurity.mapper]' package. Please check your configuration.
+2021-03-25 23:19:52.518 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : Driver class org.h2.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@1f89ab83
+2021-03-25 23:19:52.706 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - configuration:
+2021-03-25 23:19:52.706 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : allowPoolSuspension.............false
+2021-03-25 23:19:52.706 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : autoCommit......................true
+2021-03-25 23:19:52.706 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : catalog.........................none
+2021-03-25 23:19:52.706 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : connectionInitSql...............none
+2021-03-25 23:19:52.706 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTestQuery.............none
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTimeout...............30000
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : dataSource......................none
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceClassName.............none
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceJNDI..................none
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceProperties............{password=<masked>}
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : driverClassName................."org.h2.Driver"
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : exceptionOverrideClassName......none
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckProperties...........{}
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckRegistry.............none
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : idleTimeout.....................600000
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : initializationFailTimeout.......1
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : isolateInternalQueries..........false
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : jdbcUrl.........................jdbc:h2:mem:test
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : leakDetectionThreshold..........0
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : maxLifetime.....................1800000
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : maximumPoolSize.................10
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : metricRegistry..................none
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : metricsTrackerFactory...........none
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : minimumIdle.....................10
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : password........................<masked>
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : poolName........................"HikariPool-1"
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : readOnly........................false
+2021-03-25 23:19:52.721 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : registerMbeans..................false
+2021-03-25 23:19:52.737 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : scheduledExecutor...............none
+2021-03-25 23:19:52.737 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : schema..........................none
+2021-03-25 23:19:52.737 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : threadFactory...................internal
+2021-03-25 23:19:52.753 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : transactionIsolation............default
+2021-03-25 23:19:52.753 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : username........................"root"
+2021-03-25 23:19:52.753 DEBUG 7452 --- [main] com.zaxxer.hikari.HikariConfig           : validationTimeout...............5000
+2021-03-25 23:19:52.753  INFO 7452 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-25 23:19:53.143 DEBUG 7452 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:19:53.143  INFO 7452 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-25 23:19:53.253 DEBUG 7452 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2021-03-25 23:19:53.268 DEBUG 7452 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:19:53.268 DEBUG 7452 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn2: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:19:53.268 DEBUG 7452 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn3: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:19:53.268 DEBUG 7452 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn4: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:19:53.268 DEBUG 7452 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn5: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:19:53.268 DEBUG 7452 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn6: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:19:53.268 DEBUG 7452 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn7: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:19:53.284 DEBUG 7452 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn8: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:19:53.284 DEBUG 7452 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn9: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:19:53.284 DEBUG 7452 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2021-03-25 23:19:53.471 DEBUG 7452 --- [main] c.b.m.e.s.MybatisSqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2021-03-25 23:19:55.096  INFO 7452 --- [main] com.xiaoluban.tmallsecurity.SampleTest   : Started SampleTest in 5.997 seconds (JVM running for 9.465)
+2021-03-25 23:19:55.174 ERROR 7452 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4bd31064] to prepare test instance [com.xiaoluban.tmallsecurity.SampleTest@5170bcf4]
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.xiaoluban.tmallsecurity.SampleTest': Unsatisfied dependency expressed through field 'userMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.xiaoluban.tmallsecurity.mapper.UserMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:393) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:119) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener.prepareTestInstance(SpringBootDependencyInjectionTestExecutionListener.java:43) ~[spring-boot-test-autoconfigure-2.3.1.RELEASE.jar:2.3.1.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) ~[junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) ~[junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) ~[spring-test-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) ~[junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) ~[junit-rt.jar:na]
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.xiaoluban.tmallsecurity.mapper.UserMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1714) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1270) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1224) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.7.RELEASE.jar:5.2.7.RELEASE]
+	... 28 common frames omitted
+
+2021-03-25 23:19:55.206  INFO 7452 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-25 23:19:55.206 DEBUG 7452 --- [SpringContextShutdownHook] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2021-03-25 23:19:55.206 DEBUG 7452 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn0: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:19:55.221 DEBUG 7452 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn1: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:19:55.221 DEBUG 7452 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn2: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:19:55.221 DEBUG 7452 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn3: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:19:55.221 DEBUG 7452 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn4: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:19:55.221 DEBUG 7452 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn5: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:19:55.221 DEBUG 7452 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn6: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:19:55.221 DEBUG 7452 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn7: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:19:55.221 DEBUG 7452 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn8: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:19:55.221 DEBUG 7452 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn9: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:19:55.221 DEBUG 7452 --- [SpringContextShutdownHook] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2021-03-25 23:19:55.221  INFO 7452 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-03-25 23:21:05.623  INFO 8804 --- [main] com.xiaoluban.tmallsecurity.SampleTest   : Starting SampleTest on DESKTOP-EQS2HPF with PID 8804 (started by TXB in D:\project_backend\tmall\tmall-demo)
+2021-03-25 23:21:05.623 DEBUG 8804 --- [main] com.xiaoluban.tmallsecurity.SampleTest   : Running with Spring Boot v2.3.1.RELEASE, Spring v5.2.7.RELEASE
+2021-03-25 23:21:05.623  INFO 8804 --- [main] com.xiaoluban.tmallsecurity.SampleTest   : No active profile set, falling back to default profiles: default
+2021-03-25 23:21:07.872 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : Driver class org.h2.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@1f89ab83
+2021-03-25 23:21:07.950 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - configuration:
+2021-03-25 23:21:07.950 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : allowPoolSuspension.............false
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : autoCommit......................true
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : catalog.........................none
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : connectionInitSql...............none
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTestQuery.............none
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : connectionTimeout...............30000
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : dataSource......................none
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceClassName.............none
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceJNDI..................none
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : dataSourceProperties............{password=<masked>}
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : driverClassName................."org.h2.Driver"
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : exceptionOverrideClassName......none
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckProperties...........{}
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : healthCheckRegistry.............none
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : idleTimeout.....................600000
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : initializationFailTimeout.......1
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : isolateInternalQueries..........false
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : jdbcUrl.........................jdbc:h2:mem:test
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : leakDetectionThreshold..........0
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : maxLifetime.....................1800000
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : maximumPoolSize.................10
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : metricRegistry..................none
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : metricsTrackerFactory...........none
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : minimumIdle.....................10
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : password........................<masked>
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : poolName........................"HikariPool-1"
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : readOnly........................false
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : registerMbeans..................false
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : scheduledExecutor...............none
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : schema..........................none
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : threadFactory...................internal
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : transactionIsolation............default
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : username........................"root"
+2021-03-25 23:21:07.966 DEBUG 8804 --- [main] com.zaxxer.hikari.HikariConfig           : validationTimeout...............5000
+2021-03-25 23:21:07.966  INFO 8804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-25 23:21:08.325 DEBUG 8804 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:21:08.325  INFO 8804 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-25 23:21:08.466 DEBUG 8804 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2021-03-25 23:21:08.482 DEBUG 8804 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn1: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:21:08.482 DEBUG 8804 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn2: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:21:08.482 DEBUG 8804 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn3: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:21:08.482 DEBUG 8804 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn4: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:21:08.482 DEBUG 8804 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn5: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:21:08.482 DEBUG 8804 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn6: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:21:08.482 DEBUG 8804 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn7: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:21:08.482 DEBUG 8804 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn8: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:21:08.482 DEBUG 8804 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn9: url=jdbc:h2:mem:test user=ROOT
+2021-03-25 23:21:08.482 DEBUG 8804 --- [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+2021-03-25 23:21:08.654 DEBUG 8804 --- [main] c.b.m.e.s.MybatisSqlSessionFactoryBean   : Property 'mapperLocations' was not specified.
+2021-03-25 23:21:10.528 DEBUG 8804 --- [main] c.b.m.core.MybatisConfiguration          : addMappedStatement: com.xiaoluban.tmallsecurity.mapper.UserMapper.insert
+2021-03-25 23:21:10.560 DEBUG 8804 --- [main] c.b.m.core.MybatisConfiguration          : addMappedStatement: com.xiaoluban.tmallsecurity.mapper.UserMapper.delete
+2021-03-25 23:21:10.575 DEBUG 8804 --- [main] c.b.m.core.MybatisConfiguration          : addMappedStatement: com.xiaoluban.tmallsecurity.mapper.UserMapper.deleteByMap
+2021-03-25 23:21:10.700 DEBUG 8804 --- [main] c.b.m.core.MybatisConfiguration          : addMappedStatement: com.xiaoluban.tmallsecurity.mapper.UserMapper.deleteById
+2021-03-25 23:21:10.716 DEBUG 8804 --- [main] c.b.m.core.MybatisConfiguration          : addMappedStatement: com.xiaoluban.tmallsecurity.mapper.UserMapper.deleteBatchIds
+2021-03-25 23:21:10.716 DEBUG 8804 --- [main] c.b.m.core.MybatisConfiguration          : addMappedStatement: com.xiaoluban.tmallsecurity.mapper.UserMapper.update
+2021-03-25 23:21:10.716 DEBUG 8804 --- [main] c.b.m.core.MybatisConfiguration          : addMappedStatement: com.xiaoluban.tmallsecurity.mapper.UserMapper.updateById
+2021-03-25 23:21:10.732 DEBUG 8804 --- [main] c.b.m.core.MybatisConfiguration          : addMappedStatement: com.xiaoluban.tmallsecurity.mapper.UserMapper.selectById
+2021-03-25 23:21:10.732 DEBUG 8804 --- [main] c.b.m.core.MybatisConfiguration          : addMappedStatement: com.xiaoluban.tmallsecurity.mapper.UserMapper.selectBatchIds
+2021-03-25 23:21:10.732 DEBUG 8804 --- [main] c.b.m.core.MybatisConfiguration          : addMappedStatement: com.xiaoluban.tmallsecurity.mapper.UserMapper.selectByMap
+2021-03-25 23:21:10.732 DEBUG 8804 --- [main] c.b.m.core.MybatisConfiguration          : addMappedStatement: com.xiaoluban.tmallsecurity.mapper.UserMapper.selectOne
+2021-03-25 23:21:10.732 DEBUG 8804 --- [main] c.b.m.core.MybatisConfiguration          : addMappedStatement: com.xiaoluban.tmallsecurity.mapper.UserMapper.selectCount
+2021-03-25 23:21:10.747 DEBUG 8804 --- [main] c.b.m.core.MybatisConfiguration          : addMappedStatement: com.xiaoluban.tmallsecurity.mapper.UserMapper.selectMaps
+2021-03-25 23:21:10.747 DEBUG 8804 --- [main] c.b.m.core.MybatisConfiguration          : addMappedStatement: com.xiaoluban.tmallsecurity.mapper.UserMapper.selectMapsPage
+2021-03-25 23:21:10.747 DEBUG 8804 --- [main] c.b.m.core.MybatisConfiguration          : addMappedStatement: com.xiaoluban.tmallsecurity.mapper.UserMapper.selectObjs
+2021-03-25 23:21:10.763 DEBUG 8804 --- [main] c.b.m.core.MybatisConfiguration          : addMappedStatement: com.xiaoluban.tmallsecurity.mapper.UserMapper.selectList
+2021-03-25 23:21:10.763 DEBUG 8804 --- [main] c.b.m.core.MybatisConfiguration          : addMappedStatement: com.xiaoluban.tmallsecurity.mapper.UserMapper.selectPage
+2021-03-25 23:21:10.810  INFO 8804 --- [main] com.xiaoluban.tmallsecurity.SampleTest   : Started SampleTest in 6.073 seconds (JVM running for 8.413)
+2021-03-25 23:21:11.778 DEBUG 8804 --- [main] c.x.t.mapper.UserMapper.selectList       : ==>  Preparing: SELECT id,name,age,email FROM user
+2021-03-25 23:21:11.810 DEBUG 8804 --- [main] c.x.t.mapper.UserMapper.selectList       : ==> Parameters: 
+2021-03-25 23:21:11.825 DEBUG 8804 --- [main] c.x.t.mapper.UserMapper.selectList       : <==      Total: 0
+2021-03-25 23:21:11.872  INFO 8804 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-25 23:21:11.872 DEBUG 8804 --- [SpringContextShutdownHook] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before shutdown stats (total=10, active=0, idle=10, waiting=0)
+2021-03-25 23:21:11.872 DEBUG 8804 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn0: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:21:11.872 DEBUG 8804 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn1: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:21:11.872 DEBUG 8804 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn2: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:21:11.872 DEBUG 8804 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn3: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:21:11.872 DEBUG 8804 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn4: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:21:11.872 DEBUG 8804 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn5: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:21:11.872 DEBUG 8804 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn6: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:21:11.872 DEBUG 8804 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn7: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:21:11.872 DEBUG 8804 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn8: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:21:11.872 DEBUG 8804 --- [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection conn9: url=jdbc:h2:mem:test user=ROOT: (connection evicted)
+2021-03-25 23:21:11.872 DEBUG 8804 --- [SpringContextShutdownHook] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2021-03-25 23:21:11.872  INFO 8804 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

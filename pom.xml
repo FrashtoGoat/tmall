@@ -13,6 +13,7 @@
         <module>tmall-common</module>
         <module>tmall-protal</module>
         <module>tmall-security</module>
+        <module>tmall-demo</module>
         <!--微服务-->
         <module>tmall-cloud-nacos-config</module>
         <module>tmall-cloud-order</module>

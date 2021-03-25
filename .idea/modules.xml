@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/tmall.iml" filepath="$PROJECT_DIR$/tmall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tmall-cloud-gateway/tmall-cloud-gateway.iml" filepath="$PROJECT_DIR$/tmall-cloud-gateway/tmall-cloud-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tmall-cloud-nacos-config/tmall-cloud-nacos-config.iml" filepath="$PROJECT_DIR$/tmall-cloud-nacos-config/tmall-cloud-nacos-config.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tmall-cloud-order/tmall-cloud-order.iml" filepath="$PROJECT_DIR$/tmall-cloud-order/tmall-cloud-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tmall-cloud-order-loadbalance/tmall-cloud-order-loadbalance.iml" filepath="$PROJECT_DIR$/tmall-cloud-order-loadbalance/tmall-cloud-order-loadbalance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tmall-common/tmall-common.iml" filepath="$PROJECT_DIR$/tmall-common/tmall-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tmall-demo/tmall-demo.iml" filepath="$PROJECT_DIR$/tmall-demo/tmall-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tmall-protal/tmall-protal.iml" filepath="$PROJECT_DIR$/tmall-protal/tmall-protal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tmall-security/tmall-security.iml" filepath="$PROJECT_DIR$/tmall-security/tmall-security.iml" />
+    </modules>
+  </component>
+</project>
