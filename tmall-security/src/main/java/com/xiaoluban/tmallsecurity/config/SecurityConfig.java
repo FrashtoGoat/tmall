@@ -1,43 +1,34 @@
 package com.xiaoluban.tmallsecurity.config;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.xiaoluban.tmallsecurity.config.jwt.JwtAuthenticationTokenFilter;
+import com.xiaoluban.tmallsecurity.config.jwt.RestAuthenticationEntryPoint;
+import com.xiaoluban.tmallsecurity.config.jwt.RestfulAccessDeniedHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.*;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
-import org.springframework.security.web.authentication.AuthenticationFailureHandler;
-import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
-import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
-import org.springframework.security.web.savedrequest.RequestCache;
-import org.springframework.security.web.savedrequest.SavedRequest;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 /**
  * @Author: txb
  * @Date: 20210124
  */
+@Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private final static Logger log= LoggerFactory.getLogger(SecurityConfig.class);
+    @Autowired
+    private RestfulAccessDeniedHandler restfulAccessDeniedHandler;
+    @Autowired
+    private RestAuthenticationEntryPoint restAuthenticationEntryPoint;
 
 
     @Override
@@ -58,27 +49,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
 
-//    private String[] STATIC_WHITELIST = {
-//            //swagger
-//            "/swagger-ui.html",
-//            "/doc.html",
-//            "/swagger-ui/*",
-//            "/swagger-resources/**",
-//            "/v2/api-docs",
-//            "/v3/api-docs",
-//            "/webjars/**",
-//            //静态资源
-//            "/static/css/**",
-//            "/static/fonts/**",
-//            "/static/image/**",
-//            "/static/js/**",
-//            "/static/mycss/**",
-//            "/static/myjs/**",
-//            //另一种写法
-////            "/**/*.js",
-////            "/**/*.css",
-////            "/**/*.jpg"
-//    };
 
 
     @Bean
@@ -87,89 +57,60 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Override
-    protected void configure(HttpSecurity http) throws Exception {
+    protected void configure(HttpSecurity httpSecurity) throws Exception {
 
 
-        List<String> whiteList=ignoreUrlsConfig().getUrls();
-        String[] urls=new String[whiteList.size()];
-        for(int i=0;i<whiteList.size();i++){
-            urls[i]=whiteList.get(i);
-        }
-//        String[] STATIC_WHITELIST= (String[]) whiteList.toArray();
-
-        http.authorizeRequests()
-
-                //静态资源
-                .antMatchers(urls).permitAll()
-
-                 //开发测试放开
-//                .antMatchers("/product/**").permitAll()
-//                .antMatchers("/order/**").permitAll()
-//                .antMatchers("/ums/**").permitAll()
-
-                .antMatchers("/admin/**").hasRole("admin")
-                .antMatchers("/db/**").hasAnyRole("admin","user")
-                .antMatchers("/user/**").access("hasAnyRole('admin','user')")
-
-                //剩下的其他路径请求验证之后就可以访问
+        httpSecurity.csrf()// 由于使用的是JWT，我们这里不需要csrf
+                .disable()
+                .sessionManagement()// 基于token，所以不需要session
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and()
+                .authorizeRequests()
+                .antMatchers(HttpMethod.GET, // 允许对于网站静态资源的无授权访问
+                        "/",
+                        "/*.html",
+                        "/favicon.ico",
+                        "/**/*.html",
+                        "/**/*.css",
+                        "/**/*.js",
+                        "/swagger-resources/**",
+                        "/v2/api-docs/**"
+                )
+                .permitAll()
+                .antMatchers("/login", "/dologin")// 对登录注册要允许匿名访问
+                .permitAll()
+                .antMatchers(HttpMethod.OPTIONS)//跨域请求会先进行一次options请求
+                .permitAll()
+//                .antMatchers("/**")//测试时全部运行访问
+//                .permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/login")
                 .loginProcessingUrl("/dologin")
                 .usernameParameter("uname")
-                .passwordParameter("pwd")
-                .successHandler(new AuthenticationSuccessHandler() {
-                    @Override
-                    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
-                        response.setContentType("application/json;charset=utf-8");
-                        RequestCache requestCache=new HttpSessionRequestCache();
-                        SavedRequest savedRequest=requestCache.getRequest(request,response);
-
-                        String redirectUrl= null;
-                        try {
-                            redirectUrl = savedRequest.getRedirectUrl();
-                        } catch (Exception e) {
-                            response.sendRedirect("/index");
-                            return;
-                        }
-
-                        log.info("初始访问路径："+redirectUrl);
-                        response.sendRedirect(redirectUrl);
-
-                    }
-                })
-                .failureHandler(new AuthenticationFailureHandler() {
-                    @Override
-                    public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
-                        response.setContentType("application/json;charset=utf-8");
-                        PrintWriter pw = response.getWriter();
-                        Map<String, Object> map = new HashMap<String, Object>();
-                        map.put("status", 401);
-                        if (exception instanceof LockedException) {
-                            map.put("msg", "账户被锁定，登陆失败！");
-                        } else if (exception instanceof BadCredentialsException) {
-                            map.put("msg", "账户或者密码错误，登陆失败！");
-                        } else if (exception instanceof DisabledException) {
-                            map.put("msg", "账户被禁用，登陆失败！");
-                        } else if (exception instanceof AccountExpiredException) {
-                            map.put("msg", "账户已过期，登陆失败！");
-                        } else if (exception instanceof CredentialsExpiredException) {
-                            map.put("msg", "密码已过期，登陆失败！");
-                        } else {
-                            map.put("msg", "登陆失败！");
-                        }
-                        pw.write(new ObjectMapper().writeValueAsString(map));
-                        pw.flush();
-                        pw.close();
-                    }
-                })
-                .permitAll()
-                .and()
-                .cors()
-                //不处理跨域
-                .and()
-                .csrf().disable();
+                .passwordParameter("pwd");
+        // 禁用缓存
+        httpSecurity.headers().cacheControl();
+        // 添加JWT filter
+        httpSecurity.addFilterBefore(jwtAuthenticationTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+        //添加自定义未授权和未登录结果返回
+        httpSecurity.exceptionHandling()
+                .accessDeniedHandler(restfulAccessDeniedHandler)
+                .authenticationEntryPoint(restAuthenticationEntryPoint);
 
     }
+
+
+    @Bean
+    public JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter(){
+        return new JwtAuthenticationTokenFilter();
+    }
+
+    @Bean
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
+
 }

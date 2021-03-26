@@ -1,9 +1,10 @@
-package com.xiaoluban.tmallsecurity.config.component;
+package com.xiaoluban.tmallsecurity.config.jwt;
 
 import cn.hutool.json.JSONUtil;
 import com.xiaoluban.tmallcommon.api.CommonResult;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
+import org.springframework.stereotype.Component;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -14,6 +15,7 @@ import java.io.IOException;
  * 自定义返回结果：没有权限访问时
  * Created by macro on 2018/4/26.
  */
+@Component
 public class RestfulAccessDeniedHandler implements AccessDeniedHandler{
     @Override
     public void handle(HttpServletRequest request,
