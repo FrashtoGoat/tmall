@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5dac3152-19e1-400b-9020-a0bb62dc67d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tmall-protal/tmall-protal.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmall-security/src/main/java/com/xiaoluban/tmallsecurity/config/SecurityConfig3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmall-security/src/main/java/com/xiaoluban/tmallsecurity/config/jwt/JwtAuthenticationTokenFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmall-security/src/main/java/com/xiaoluban/tmallsecurity/config/jwt/JwtTokenUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmall-security/src/main/java/com/xiaoluban/tmallsecurity/config/jwt/RestAuthenticationEntryPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmall-cloud-order/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-cloud-order/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmall-cloud-order/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-cloud-order/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmall-common/src/main/java/com/xiaoluban/tmallcommon/api/ResultCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-common/src/main/java/com/xiaoluban/tmallcommon/api/ResultCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmall-security/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-security/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmall-security/src/main/java/com/xiaoluban/tmallsecurity/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-security/src/main/java/com/xiaoluban/tmallsecurity/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmall-security/src/main/java/com/xiaoluban/tmallsecurity/config/component/JwtAuthenticationTokenFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmall-security/src/main/java/com/xiaoluban/tmallsecurity/config/component/RestAuthenticationEntryPoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmall-security/src/main/java/com/xiaoluban/tmallsecurity/config/component/RestfulAccessDeniedHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-security/src/main/java/com/xiaoluban/tmallsecurity/config/jwt/RestfulAccessDeniedHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmall-security/src/main/java/com/xiaoluban/tmallsecurity/config/jwt/JwtAccessDeniedHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-security/src/main/java/com/xiaoluban/tmallsecurity/config/jwt/JwtAccessDeniedHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmall-security/src/main/java/com/xiaoluban/tmallsecurity/config/jwt/JwtAuthenticationEntryPoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmall-security/src/main/java/com/xiaoluban/tmallsecurity/config/jwt/JwtSecurityProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmall-security/src/main/java/com/xiaoluban/tmallsecurity/config/jwt/JwtTokenUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmall-security/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-security/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmall.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tmall.iml" afterDir="false" />
-    </list>
+    <list default="true" id="5dac3152-19e1-400b-9020-a0bb62dc67d7" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +181,8 @@
       <workItem from="1616683509140" duration="2102000" />
       <workItem from="1616768100834" duration="3003000" />
       <workItem from="1616771781031" duration="479000" />
-      <workItem from="1616772310409" duration="1145000" />
+      <workItem from="1616772310409" duration="1448000" />
+      <workItem from="1617025449532" duration="2146000" />
     </task>
     <servers />
   </component>
@@ -223,5 +204,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tmall-security/src/main/java/com/xiaoluban/tmallsecurity/config/jwt/JwtAuthenticationTokenFilter.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

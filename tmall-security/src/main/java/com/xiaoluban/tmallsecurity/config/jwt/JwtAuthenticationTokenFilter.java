@@ -51,6 +51,13 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
                     SecurityContextHolder.getContext().setAuthentication(authentication);
                 }
             }
+        }else{
+            System.out.println(request.getContextPath());
+            System.out.println(request.getServletPath());
+            System.out.println(request.getRequestURI());
+//            response.sendRedirect("/tmall-security/login");
+
+            request.getRequestDispatcher("/tmall-security/login").forward(request,response);
         }
         chain.doFilter(request, response);
     }

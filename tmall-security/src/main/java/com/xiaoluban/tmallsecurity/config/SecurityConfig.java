@@ -1,8 +1,13 @@
 package com.xiaoluban.tmallsecurity.config;
 
+import cn.hutool.json.JSONUtil;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.xiaoluban.tmallcommon.api.CommonResult;
 import com.xiaoluban.tmallsecurity.config.jwt.JwtAuthenticationTokenFilter;
+import com.xiaoluban.tmallsecurity.config.jwt.JwtTokenUtil;
 import com.xiaoluban.tmallsecurity.config.jwt.RestAuthenticationEntryPoint;
 import com.xiaoluban.tmallsecurity.config.jwt.RestfulAccessDeniedHandler;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,24 +16,44 @@ import org.springframework.security.authentication.*;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.savedrequest.HttpSessionRequestCache;
+import org.springframework.security.web.savedrequest.RequestCache;
+import org.springframework.security.web.savedrequest.SavedRequest;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @Author: txb
  * @Date: 20210124
  */
 @Configuration
+@Slf4j
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private RestfulAccessDeniedHandler restfulAccessDeniedHandler;
     @Autowired
     private RestAuthenticationEntryPoint restAuthenticationEntryPoint;
+
+    @Autowired
+    private JwtTokenUtil jwtTokenUtil;
 
 
     @Override
@@ -89,7 +114,59 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginPage("/login")
                 .loginProcessingUrl("/dologin")
                 .usernameParameter("uname")
-                .passwordParameter("pwd");
+                .passwordParameter("pwd")
+                .successHandler(new AuthenticationSuccessHandler() {
+                    @Override
+                    public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
+
+//                        response.setContentType("application/json;charset=utf-8");
+//                        RequestCache requestCache=new HttpSessionRequestCache();
+//                        SavedRequest savedRequest=requestCache.getRequest(request,response);
+//
+//                        String redirectUrl= null;
+//                        try {
+//                            redirectUrl = savedRequest.getRedirectUrl();
+//                        } catch (Exception e) {
+//                            response.sendRedirect("/index");
+//                            return;
+//                        }
+//
+//                        log.info("初始访问路径："+redirectUrl);
+//                        response.sendRedirect(redirectUrl);
+                        String token=jwtTokenUtil.generateToken(authentication.getName());
+
+                        response.setCharacterEncoding("UTF-8");
+                        response.setContentType("application/json");
+                        response.getWriter().println(JSONUtil.parse(CommonResult.success(token)));
+                        response.getWriter().flush();
+
+                    }
+                })
+                .failureHandler(new AuthenticationFailureHandler() {
+                    @Override
+                    public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException, ServletException {
+                        response.setContentType("application/json;charset=utf-8");
+                        PrintWriter pw = response.getWriter();
+                        Map<String, Object> map = new HashMap<String, Object>();
+                        map.put("status", 401);
+                        if (exception instanceof LockedException) {
+                            map.put("msg", "账户被锁定，登陆失败！");
+                        } else if (exception instanceof BadCredentialsException) {
+                            map.put("msg", "账户或者密码错误，登陆失败！");
+                        } else if (exception instanceof DisabledException) {
+                            map.put("msg", "账户被禁用，登陆失败！");
+                        } else if (exception instanceof AccountExpiredException) {
+                            map.put("msg", "账户已过期，登陆失败！");
+                        } else if (exception instanceof CredentialsExpiredException) {
+                            map.put("msg", "密码已过期，登陆失败！");
+                        } else {
+                            map.put("msg", "登陆失败！");
+                        }
+                        pw.write(new ObjectMapper().writeValueAsString(map));
+                        pw.flush();
+                        pw.close();
+                    }
+                });
         // 禁用缓存
         httpSecurity.headers().cacheControl();
         // 添加JWT filter
