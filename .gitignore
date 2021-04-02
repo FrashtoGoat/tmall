@@ -4,3 +4,4 @@
 /tmall-security/tmall-security.iml
 /*.log
 /*.gz
+/tmall-demo/target/

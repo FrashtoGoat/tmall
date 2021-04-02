@@ -5,7 +5,20 @@ spring:
     view:
       suffix: .html
   application:
-    name: tmall-security
+    name: tmall-demo
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    schema: classpath:db/schema-h2.sql
+    data: classpath:db/data-h2.sql
+    url: jdbc:h2:mem:test
+    username: root
+    password: test
+
+#  kafka:
+#    bootstrap-servers: localhost:9092
+#    consumer:
+#      group-id: myGroup
 
 
 logging:
@@ -36,3 +49,6 @@ server:
   port: 8081
   servlet:
     context-path: /${spring.application.name}
+
+
+

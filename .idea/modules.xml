@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/tmall.iml" filepath="$PROJECT_DIR$/tmall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tmall-common/tmall-common.iml" filepath="$PROJECT_DIR$/tmall-common/tmall-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tmall-demo/tmall-demo.iml" filepath="$PROJECT_DIR$/tmall-demo/tmall-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tmall-protal/tmall-protal.iml" filepath="$PROJECT_DIR$/tmall-protal/tmall-protal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tmall-security/tmall-security.iml" filepath="$PROJECT_DIR$/tmall-security/tmall-security.iml" />
+    </modules>
+  </component>
+</project>

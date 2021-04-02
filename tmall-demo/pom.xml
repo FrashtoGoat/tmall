@@ -21,37 +21,12 @@
 
   <dependencies>
 
-    <dependency>
-      <groupId>com.xiaoluban</groupId>
-      <artifactId>tmall-common</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-
-      <!-- ... other dependency elements ... -->
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-security</artifactId>
-      </dependency>
-
-      <!--JWT(Json Web Token)登录支持-->
-      <dependency>
-        <groupId>io.jsonwebtoken</groupId>
-        <artifactId>jjwt</artifactId>
-        <version>0.9.0</version>
-      </dependency>
-
-<!--      &lt;!&ndash;引入thymeleaf依赖&ndash;&gt;-->
-<!--      <dependency>-->
-<!--        <groupId>org.springframework.boot</groupId>-->
-<!--        <artifactId>spring-boot-starter-thymeleaf</artifactId>-->
-<!--      </dependency>-->
 
       <dependency>
         <groupId>org.projectlombok</groupId>
         <artifactId>lombok</artifactId>
         <scope>provided</scope>
       </dependency>
-git
 
     <!--自定义元注解?-->
     <dependency>
@@ -61,12 +36,48 @@ git
     </dependency>
 
 
-
-
     <dependency>
       <groupId>cn.hutool</groupId>
       <artifactId>hutool-all</artifactId>
     </dependency>
+
+
+    <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-boot-starter -->
+    <dependency>
+      <groupId>com.baomidou</groupId>
+      <artifactId>mybatis-plus-boot-starter</artifactId>
+      <version>3.4.2</version>
+    </dependency>
+
+    <!--内存数据库-->
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+
+
+    <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus-generator  官网文档误我-->
+    <dependency>
+      <groupId>com.baomidou</groupId>
+      <artifactId>mybatis-plus-generator</artifactId>
+      <version>3.4.1</version>
+    </dependency>
+
+    <!--    添加 模板引擎 依赖-->
+    <dependency>
+      <groupId>org.freemarker</groupId>
+      <artifactId>freemarker</artifactId>
+      <version>2.3.31</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+
 
 
   </dependencies>
