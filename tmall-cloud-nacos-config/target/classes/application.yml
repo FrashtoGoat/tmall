@@ -1,0 +1,10 @@
+spring:
+  profiles: dev
+  application:
+    name: tmall-nacos-config
+
+
+  cloud:
+    nacos:
+      config:
+        file-extension: yml

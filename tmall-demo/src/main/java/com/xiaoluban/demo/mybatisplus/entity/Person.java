@@ -1,6 +1,8 @@
 package com.xiaoluban.demo.mybatisplus.entity;
 
 import java.io.Serializable;
+
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -13,16 +15,15 @@ import lombok.EqualsAndHashCode;
  * @since 2021-04-02
  */
 @Data
-@EqualsAndHashCode(callSuper = false)
-public class Person implements Serializable {
+public class Person {
 
-    private static final long serialVersionUID = 1L;
-
-    private String name;
+    @TableId(value = "user_id")
+    private Integer userId;
 
     private Integer age;
 
-    private Integer userId;
+    private String name;
+
 
 
 }
