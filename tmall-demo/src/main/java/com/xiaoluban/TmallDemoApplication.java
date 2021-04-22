@@ -1,15 +1,16 @@
-package com.xiaoluban.tmallsecurity;
+package com.xiaoluban;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @author txb
  * @date 2021/1/25 16:49
  */
 @SpringBootApplication
-@MapperScan("com.xiaoluban.tmallsecurity.mapper")
+@MapperScan("com.xiaoluban.**.**.mapper")
 public class TmallDemoApplication {
 
     public static void main(String[] args) {

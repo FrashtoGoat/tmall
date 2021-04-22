@@ -1,22 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5dac3152-19e1-400b-9020-a0bb62dc67d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tmall-demo/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/tmallsecurity/TmallDemoApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/tmallsecurity/config/IgnoreUrlsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/tmallsecurity/config/swagger/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/tmallsecurity/dto/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/tmallsecurity/interceptor/AuthenticationInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/tmallsecurity/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/resources/db/data-h2.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/resources/db/schema-h2.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmall-demo/src/test/java/com/xiaoluban/tmallsecurity/SampleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tmall-demo/tmall-demo.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/demo/excel/ExcelController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/demo/excel/vo/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-cloud-gateway/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-cloud-gateway/target/classes/com/xiaoluban/cloudgateway/TmallCloudGatewayApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-cloud-order-loadbalance/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-cloud-order-loadbalance/target/classes/com/xiaoluban/cloudorder/TmallCloudOrderLoadBalanceApplication$EchoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-cloud-order-loadbalance/target/classes/com/xiaoluban/cloudorder/TmallCloudOrderLoadBalanceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-cloud-order-loadbalance/target/classes/com/xiaoluban/cloudorder/controller/OrderController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-cloud-order-loadbalance/tmall-cloud-order-loadbalance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-cloud-order-loadbalance/tmall-cloud-order-loadbalance.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-cloud-order/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-cloud-order/target/classes/com/xiaoluban/cloudorder/TmallCloudOrderApplication$EchoController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-cloud-order/target/classes/com/xiaoluban/cloudorder/TmallCloudOrderApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-cloud-order/target/classes/com/xiaoluban/cloudorder/controller/OrderController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-cloud-order/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-cloud-order/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/tmallsecurity/TmallDemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/TmallDemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-demo/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-demo/tmall-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-demo/tmall-demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tmall.iml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,41 +43,40 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="D:\maven_dependencies" />
-        <option name="mavenHome" value="D:/Program Files for work/apache-maven-3.6.3" />
         <option name="userSettingsFile" value="D:\Program Files for work\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
-    </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectId" id="1qFm2pW8ewixhhvmFZAbOsZXkUo" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="JUnit.SampleTest.testSelect">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SampleTest.testSelect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tmall-demo" />
       <extension name="coverage">
@@ -133,6 +141,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -144,11 +153,12 @@
       <option name="presentableId" value="Default" />
       <updated>1616683507155</updated>
       <workItem from="1616683509140" duration="2102000" />
+      <workItem from="1619062351615" duration="107000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -160,6 +170,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
