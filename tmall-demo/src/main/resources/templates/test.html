@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--注意：引入thymeleaf的名称空间-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录page</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+<body>
+<button onclick="exprort()">
+    导出用户列表
+</button>
+</body>
+<script>
+
+function exprort(){
+    $.ajax({
+        type:"post",
+        url:"/webchat/backend/userManage/userListExport",
+        dataType: "json",
+        contentType:"application/json",
+        data:{
+            "companyName": "",
+            "memberName": "",
+            "mobile": "",
+            "pageIndex": 0,
+            "pageSize": 0,
+            "platfrom": "",
+            "realUserName": "",
+            "registerEndDate": "",
+            "registerPlatfrom": "",
+            "registerStartDate": "",
+            "userId": "100540",
+            "userName": ""
+        },
+        success:function (data) {
+            window.open(data);
+        },
+        error:function () {
+            // console.log("更新手机号失败");
+            alert("系统繁忙，请稍后重试");
+        }
+    })
+}
+
+
+</script>
+</html>

@@ -2,18 +2,24 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Maven default annotation processors profile" enabled="true">
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Annotation profile for tmall" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../../../maven_dependencies/org/mapstruct/mapstruct-processor/1.4.2.Final/mapstruct-processor-1.4.2.Final.jar" />
+          <entry name="$PROJECT_DIR$/../../../maven_dependencies/org/mapstruct/mapstruct/1.4.2.Final/mapstruct-1.4.2.Final.jar" />
+          <entry name="$PROJECT_DIR$/../../../maven_dependencies/org/projectlombok/lombok/1.18.12/lombok-1.18.12.jar" />
+        </processorPath>
         <module name="tmall-cloud-gateway" />
-        <module name="tmall-demo" />
         <module name="tmall-cloud-order-loadbalance" />
-        <module name="tmall-common" />
-        <module name="tmall-cloud-nacos-config" />
-        <module name="tmall-security" />
-        <module name="tmall-cloud-order" />
         <module name="tmall-protal" />
+        <module name="tmall-cloud-order" />
+        <module name="tmall-common" />
+        <module name="tmall-demo" />
+        <module name="tmall-security" />
+        <module name="tmall-cloud-nacos-config" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

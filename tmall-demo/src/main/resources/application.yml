@@ -1,4 +1,8 @@
 spring:
+  mvc:
+    view:
+      prefix: classpath:/templates/
+      suffix: .html
 
   application:
     name: tmall-demo
@@ -11,12 +15,18 @@ spring:
     username: root
     password: test
 
+  profiles:
+    active: dev
+
+
+
 logging:
   file:
-    path: /logs/
-    name: ${spring.application.name}.log
+    path: d:/log/tmall
+#    name: ${spring.application.name}.log
   level:
-    com : debug
+    com : info
+    org.springframework.web: "info"
 
 
 
@@ -36,3 +46,9 @@ jwt:
 
 server:
   port: 9090
+
+
+person:
+  name: txb
+  age: 25
+  company: 比地
