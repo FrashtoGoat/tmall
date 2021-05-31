@@ -207,6 +207,11 @@ public class RedisServiceImpl implements RedisService {
     }
 
     @Override
+    public boolean releaseLock(String lockName) {
+        return redisTemplate.delete(lockName);
+    }
+
+    @Override
     public Boolean zSortSet(String key, Object value, Double score) {
         return redisTemplate.opsForZSet().add(key, value, score);
     }

@@ -183,6 +183,8 @@ public interface RedisService {
 
     boolean gainLock(String lockName,long time,TimeUnit timeUnit);
 
+    boolean releaseLock(String lockName);
+
     Boolean zSortSet(String key, Object value, Double score);
 
     Set<Object> zRangByScore(String key,Double min,Double max);

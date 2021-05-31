@@ -36,18 +36,18 @@
       <artifactId>hutool-all</artifactId>
     </dependency>
 
-      <!--EXCEL导出-->
-      <dependency>
-          <groupId>org.apache.poi</groupId>
-          <artifactId>poi-ooxml</artifactId>
-          <version>4.1.1</version>
-      </dependency>
+<!--      &lt;!&ndash;EXCEL导出&ndash;&gt;-->
+<!--      <dependency>-->
+<!--          <groupId>org.apache.poi</groupId>-->
+<!--          <artifactId>poi-ooxml</artifactId>-->
+<!--          <version>4.1.1</version>-->
+<!--      </dependency>-->
 
-      <dependency>
-          <groupId>org.apache.poi</groupId>
-          <artifactId>poi-ooxml-schemas</artifactId>
-          <version>3.17</version>
-      </dependency>
+<!--      <dependency>-->
+<!--          <groupId>org.apache.poi</groupId>-->
+<!--          <artifactId>poi-ooxml-schemas</artifactId>-->
+<!--          <version>3.17</version>-->
+<!--      </dependency>-->
 
 
 
@@ -82,6 +82,12 @@
           <groupId>org.mapstruct</groupId>
           <artifactId>mapstruct</artifactId>
           <version>${org.mapstruct.version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>com.xiaoluban</groupId>
+          <artifactId>tmall-common</artifactId>
+          <version>${project.version}</version>
       </dependency>
 
 
