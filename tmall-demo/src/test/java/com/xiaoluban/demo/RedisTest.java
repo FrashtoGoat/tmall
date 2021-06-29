@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author txb
  * @date 2021/5/31 20:47
- * @describtion *
+ * @describtion redis相关测试
  */
 @Slf4j
 public class RedisTest extends BaseTestConfig {

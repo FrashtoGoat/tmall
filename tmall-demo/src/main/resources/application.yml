@@ -18,6 +18,11 @@ spring:
   profiles:
     active: dev
 
+  devtools:
+    restart:
+      enabled: true
+      exclude: WEB-INF/**
+
   #redis配置
 #  redis:
 #    host: 192.168.177.128

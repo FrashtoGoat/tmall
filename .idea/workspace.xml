@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dac3152-19e1-400b-9020-a0bb62dc67d7" name="Default Changelist" comment="" />
+    <list default="true" id="5dac3152-19e1-400b-9020-a0bb62dc67d7" name="Default Changelist" comment="热部署测试">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_06.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_19.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math3_3_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_4_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_4_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-demo/tmall-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-demo/tmall-demo.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,8 +44,8 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="D:\maven_dependencies" />
-        <option name="mavenHome" value="D:\Program Files\apache-maven-3.6.3" />
-        <option name="userSettingsFile" value="D:\Program Files for work\apache-maven-3.6.3\conf\settings.xml" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../../Program Files/apache-maven-3.8.1" />
+        <option name="userSettingsFile" value="D:\Program Files\apache-maven-3.8.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -54,159 +69,27 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tmall-demo/src/main/resources/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
-  <component name="ReactorSettings">
-    <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\backend\myproj\tmall\tmall-demo\src\main\resources\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Demo.passwordEncoder">
-    <configuration name="Demo.bcryptPasswordEncoder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tmall-security" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.xiaoluban.tmallsecurity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.xiaoluban.tmallsecurity" />
-      <option name="MAIN_CLASS_NAME" value="com.xiaoluban.tmallsecurity.Demo" />
-      <option name="METHOD_NAME" value="bcryptPasswordEncoder" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Demo.passwordEncoder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tmall-security" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.xiaoluban.tmallsecurity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.xiaoluban.tmallsecurity" />
-      <option name="MAIN_CLASS_NAME" value="com.xiaoluban.tmallsecurity.Demo" />
-      <option name="METHOD_NAME" value="passwordEncoder" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Demo.passwordEncoder2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tmall-security" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.xiaoluban.tmallsecurity.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.xiaoluban.tmallsecurity" />
-      <option name="MAIN_CLASS_NAME" value="com.xiaoluban.tmallsecurity.Demo" />
-      <option name="METHOD_NAME" value="passwordEncoder2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MapStructTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="TmallDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="tmall-demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.xiaoluban.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.xiaoluban.demo" />
-      <option name="MAIN_CLASS_NAME" value="com.xiaoluban.demo.MapStructTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TmallCloudGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="tmall-cloud-gateway" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoluban.cloudgateway.TmallCloudGatewayApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TmallCloudOrderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="tmall-cloud-order" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoluban.cloudorder.TmallCloudOrderApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TmallCloudOrderLoadBalanceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="tmall-cloud-order-loadbalance" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoluban.cloudorder.TmallCloudOrderLoadBalanceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TmallDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="tmall-demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.xiaoluban.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoluban.TmallDemoApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TmallProtalApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="tmall-protal" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoluban.tmallprotal.TmallProtalApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TmallSecurityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="tmall-security" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoluban.tmallsecurity.TmallSecurityApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="JUnit.MapStructTest.test" />
-      <item itemvalue="JUnit.Demo.bcryptPasswordEncoder" />
-      <item itemvalue="JUnit.Demo.passwordEncoder" />
-      <item itemvalue="JUnit.Demo.passwordEncoder2" />
-      <item itemvalue="Spring Boot.TmallSecurityApplication" />
-      <item itemvalue="Spring Boot.TmallProtalApplication" />
-      <item itemvalue="Spring Boot.TmallCloudOrderLoadBalanceApplication" />
-      <item itemvalue="Spring Boot.TmallCloudOrderApplication" />
-      <item itemvalue="Spring Boot.TmallCloudGatewayApplication" />
-      <item itemvalue="Spring Boot.TmallDemoApplication" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.Demo.passwordEncoder" />
-        <item itemvalue="JUnit.Demo.passwordEncoder2" />
-        <item itemvalue="JUnit.Demo.bcryptPasswordEncoder" />
-        <item itemvalue="Spring Boot.TmallDemoApplication" />
-        <item itemvalue="JUnit.MapStructTest.test" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -223,12 +106,18 @@
       <workItem from="1619062351615" duration="107000" />
       <workItem from="1619485253689" duration="8055000" />
       <workItem from="1619768259744" duration="6108000" />
-      <workItem from="1622530867102" duration="1179000" />
-      <workItem from="1622704399434" duration="4253000" />
-      <workItem from="1622775756244" duration="7000" />
-      <workItem from="1622777111372" duration="619000" />
-      <workItem from="1624357011803" duration="1039000" />
+      <workItem from="1622968612274" duration="925000" />
+      <workItem from="1623067337069" duration="615000" />
+      <workItem from="1623327164557" duration="1665000" />
     </task>
+    <task id="LOCAL-00001" summary="热部署测试">
+      <created>1622968784039</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1622968784039</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,17 +137,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/demo/weixin/controller/UploadController.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="热部署测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="热部署测试" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

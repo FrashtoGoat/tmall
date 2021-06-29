@@ -20,9 +20,10 @@ public class BootstartupUtil implements InitializingBean {
     private PersonConfig personConfig;
 
     @Override
-    public void afterPropertiesSet() throws Exception {
+    public void afterPropertiesSet(){
         log.info("personConfig------------:"+personConfig.getName());
         log.info("personConfig:"+personConfig.getAge());
         log.info("personConfig:"+personConfig.getCompany());
+
     }
 }
