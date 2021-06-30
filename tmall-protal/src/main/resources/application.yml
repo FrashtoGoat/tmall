@@ -16,11 +16,13 @@ spring:
     name: tmall-protal
 
   datasource:
-    url: jdbc:mysql://192.168.177.128:3306/mymall
+    url: jdbc:mysql://192.168.244.129:3306/demo?serverTimezone=UTC
+#    url: jdbc:mysql://192.168.177.128:3306/mymall
 #    url: jdbc:mysql://121.36.75.169:3306/mymall
     username: root
 #    password: Kobe111!
-    password: kobe111
+#    password: kobe111
+    password: kobe>1@R
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     druid:

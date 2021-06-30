@@ -56,4 +56,10 @@ public class NormalTest {
     public void now(){
         System.out.println(new Date());
     }
+
+    @Test
+    public void chufa(){
+        System.out.println(100/1000==0);
+        System.out.println(100%1000==0);
+    }
 }
