@@ -23,6 +23,21 @@ spring:
       enabled: true
       exclude: WEB-INF/**
 
+  #配置数据源
+  mail:
+    host: smtpdm.aliyun.com # 设置邮箱主机
+    username: vip1@email.bidizhaobiao.com  # 设置用户名
+    #    username: 喜鹊招标网<vip1@email.bidizhaobiao.com>  # 设置用户名
+    password: BiaoXun669  # 设置密码，该处的密码是QQ邮箱开启SMTP的授权码而非QQ密码
+    default-encoding: UTF-8 #邮件编码
+    properties:
+      mail.smtp.auth: true  # 设置是否需要认证，如果为true,那么用户名和密码就必须的。# 如果设置false，可以不设置用户名和密码，当然也得看你的对接的平台是否支持无密码进行访问的。
+      mail.smtp.timeout: 10000 #超时时间
+      # STARTTLS[1]  是对纯文本通信协议的扩展。它提供一种方式将纯文本连接升级为加密连接（TLS或SSL），而不是另外使用一个端口作加密通信。
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+      mail.smtp.ssl.enable: true  # QQ邮箱必须加此注解
+
   #redis配置
 #  redis:
 #    host: 192.168.177.128

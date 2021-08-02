@@ -16,4 +16,6 @@
 /*.gz
 /tmall-demo/target/
 /*/*.iml
-/.idea/
+/.idea/*
+/.idea
+/tmall.iml

@@ -5,20 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5dac3152-19e1-400b-9020-a0bb62dc67d7" name="Default Changelist" comment="热部署测试">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_06.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math3_3_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_4_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_4_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/demo/email/EmailUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/demo/email/MailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/demo/email/MailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/demo/email/ToEmail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/test/java/com/xiaoluban/demo/email/EmailTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-common/src/main/java/com/xiaoluban/tmallcommon/config/BaseSwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-common/src/main/java/com/xiaoluban/tmallcommon/config/BaseSwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-common/src/main/java/com/xiaoluban/tmallcommon/dao/ums/UmsMemberDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-common/src/main/java/com/xiaoluban/tmallcommon/dao/ums/UmsMemberDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/demo/mybatis/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/demo/mybatis/ProductDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/demo/mybatis/SqlScriptService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-demo/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-demo/src/main/resources/mybatis/mapper/ProductDao.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tmall-demo/tmall-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-demo/tmall-demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-protal/tmall-protal.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-protal/tmall-protal.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tmall.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +49,6 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="D:\maven_dependencies" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../../../Program Files/apache-maven-3.8.1" />
         <option name="userSettingsFile" value="D:\Program Files\apache-maven-3.8.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -60,6 +64,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -77,12 +82,106 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\backend\myproj\tmall\tmall-demo\src\main\resources\templates" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\backend\myproj\tmall\tmall-common\src\main\resources\mappers" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.xiaoluban.demo.email" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.EmailTest.sendEmail2">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmailTest.sendEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tmall-demo" />
+      <option name="PACKAGE_NAME" value="com.xiaoluban.demo.email" />
+      <option name="MAIN_CLASS_NAME" value="com.xiaoluban.demo.email.EmailTest" />
+      <option name="METHOD_NAME" value="sendEmail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmailTest.sendEmail2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tmall-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xiaoluban.demo.email.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.xiaoluban.demo.email" />
+      <option name="MAIN_CLASS_NAME" value="com.xiaoluban.demo.email.EmailTest" />
+      <option name="METHOD_NAME" value="sendEmail2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NormalTest.chufa" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tmall-protal" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xiaoluban.tmallprotal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.xiaoluban.tmallprotal" />
+      <option name="MAIN_CLASS_NAME" value="com.xiaoluban.tmallprotal.NormalTest" />
+      <option name="METHOD_NAME" value="chufa" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TmallProtalApplicationTest.createScript" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tmall-protal" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xiaoluban.tmallprotal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.xiaoluban.tmallprotal" />
+      <option name="MAIN_CLASS_NAME" value="com.xiaoluban.tmallprotal.TmallProtalApplicationTest" />
+      <option name="METHOD_NAME" value="createScript" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TmallProtalApplicationTest.productInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tmall-protal" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xiaoluban.tmallprotal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.xiaoluban.tmallprotal" />
+      <option name="MAIN_CLASS_NAME" value="com.xiaoluban.tmallprotal.TmallProtalApplicationTest" />
+      <option name="METHOD_NAME" value="productInsert" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TmallDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="tmall-demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoluban.TmallDemoApplication" />
@@ -90,6 +189,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.EmailTest.sendEmail2" />
+        <item itemvalue="JUnit.EmailTest.sendEmail" />
+        <item itemvalue="JUnit.TmallProtalApplicationTest.createScript" />
+        <item itemvalue="JUnit.NormalTest.chufa" />
+        <item itemvalue="JUnit.TmallProtalApplicationTest.productInsert" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -109,6 +217,14 @@
       <workItem from="1622968612274" duration="925000" />
       <workItem from="1623067337069" duration="615000" />
       <workItem from="1623327164557" duration="1665000" />
+      <workItem from="1625041147522" duration="4386000" />
+      <workItem from="1625102017699" duration="759000" />
+      <workItem from="1625195758946" duration="291000" />
+      <workItem from="1625196435031" duration="25000" />
+      <workItem from="1626254656311" duration="818000" />
+      <workItem from="1626847151112" duration="84000" />
+      <workItem from="1626922102567" duration="614000" />
+      <workItem from="1627869009337" duration="2056000" />
     </task>
     <task id="LOCAL-00001" summary="热部署测试">
       <created>1622968784039</created>
@@ -117,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622968784039</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="mysql测试脚本">
+      <created>1625046028126</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1625046028126</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,7 +261,25 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="热部署测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="热部署测试" />
+    <MESSAGE value="mysql测试脚本" />
+    <MESSAGE value="邮箱发送测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="邮箱发送测试" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tmall-protal/src/test/java/com/xiaoluban/tmallprotal/TmallProtalApplicationTest.java</url>
+          <line>165</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/demo/email/EmailUtil.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
