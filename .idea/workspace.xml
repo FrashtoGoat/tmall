@@ -5,7 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5dac3152-19e1-400b-9020-a0bb62dc67d7" name="Default Changelist" comment="热部署测试">
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/elasticjob/controller/OneOffJobController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/elasticjob/entity/Foo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/elasticjob/job/SpringBootDataflowJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/elasticjob/job/SpringBootOccurErrorNoticeDingtalkJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/elasticjob/job/SpringBootOccurErrorNoticeEmailJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/elasticjob/job/SpringBootOccurErrorNoticeWechatJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/elasticjob/job/SpringBootSimpleJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/java/com/xiaoluban/elasticjob/repository/FooRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmall-demo/src/main/resources/application_copy.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_200.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-demo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-demo/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmall-demo/tmall-demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tmall-demo/tmall-demo.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +61,8 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -56,27 +72,72 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tmall-demo/src/main/resources" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="reactor" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\backend\git\tmall\tmall-demo\src\main\resources" />
+      <recent name="D:\backend\git\tmall\tmall-demo\src\main\java\com\xiaoluban\elasticjob" />
+      <recent name="D:\backend\git\tmall\tmall-demo\src\main\java\com\xiaoluban\elasticjob\job" />
       <recent name="D:\backend\myproj\tmall\tmall-demo\src\main\resources\templates" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="TmallDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="tmall-demo" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoluban.TmallDemoApplication" />
+  <component name="RunManager" selected="Spring Boot.TmallProtalApplication">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TmallDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="tmall-demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoluban.TmallDemoApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TmallProtalApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="tmall-protal" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xiaoluban.tmallprotal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoluban.tmallprotal.TmallProtalApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.TmallDemoApplication" />
+      <item itemvalue="Spring Boot.TmallProtalApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.TmallProtalApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -98,6 +159,8 @@
       <workItem from="1623327164557" duration="1665000" />
       <workItem from="1624542403799" duration="164000" />
       <workItem from="1627993269043" duration="14000" />
+      <workItem from="1628419188611" duration="9717000" />
+      <workItem from="1628432255647" duration="2995000" />
     </task>
     <task id="LOCAL-00001" summary="热部署测试">
       <created>1622968784039</created>

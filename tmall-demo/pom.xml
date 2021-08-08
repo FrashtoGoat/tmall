@@ -17,8 +17,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-
-
+    <job.revision>3.0.0-RC1</job.revision>
+    <h2.version>1.4.184</h2.version>
   </properties>
 
   <dependencies>
@@ -36,20 +36,6 @@
       <artifactId>hutool-all</artifactId>
     </dependency>
 
-<!--      &lt;!&ndash;EXCEL导出&ndash;&gt;-->
-<!--      <dependency>-->
-<!--          <groupId>org.apache.poi</groupId>-->
-<!--          <artifactId>poi-ooxml</artifactId>-->
-<!--          <version>4.1.1</version>-->
-<!--      </dependency>-->
-
-<!--      <dependency>-->
-<!--          <groupId>org.apache.poi</groupId>-->
-<!--          <artifactId>poi-ooxml-schemas</artifactId>-->
-<!--          <version>3.17</version>-->
-<!--      </dependency>-->
-
-
 
       <!--mybatis-plus-->
     <dependency>
@@ -58,12 +44,6 @@
       <version>3.4.2</version>
     </dependency>
 
-
-      <dependency>
-          <groupId>com.h2database</groupId>
-          <artifactId>h2</artifactId>
-          <scope>runtime</scope>
-      </dependency>
 
       <dependency>
           <groupId>org.springframework.boot</groupId>
@@ -104,19 +84,89 @@
       </dependency>
 
 
+      <!-- elasticjob -->
+      <dependency>
+          <groupId>org.apache.shardingsphere.elasticjob</groupId>
+          <artifactId>elasticjob-lite-spring-boot-starter</artifactId>
+          <version>${job.revision}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.shardingsphere.elasticjob</groupId>
+          <artifactId>elasticjob-error-handler-dingtalk</artifactId>
+          <version>${job.revision}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.shardingsphere.elasticjob</groupId>
+          <artifactId>elasticjob-error-handler-wechat</artifactId>
+          <version>${job.revision}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.apache.shardingsphere.elasticjob</groupId>
+          <artifactId>elasticjob-error-handler-email</artifactId>
+          <version>${job.revision}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-actuator</artifactId>
+          <version>${spring.boot.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-configuration-processor</artifactId>
+          <version>${spring.boot.version}</version>
+          <optional>true</optional>
+      </dependency>
+
+      <!-- https://mvnrepository.com/artifact/org.apache.curator/curator-recipes -->
+      <dependency>
+          <groupId>org.apache.curator</groupId>
+          <artifactId>curator-recipes</artifactId>
+          <version>5.2.0</version>
+      </dependency>
+
+      <!--elasticjob-->
+
+      <dependency>
+          <groupId>com.alibaba</groupId>
+          <artifactId>druid-spring-boot-starter</artifactId>
+          <version>1.2.6</version>
+      </dependency>
+
+
+      <dependency>
+          <groupId>mysql</groupId>
+          <artifactId>mysql-connector-java</artifactId>
+          <scope>runtime</scope>
+      </dependency>
+
+
+<!--      <dependency>-->
+<!--          <groupId>org.springframework.boot</groupId>-->
+<!--          <artifactId>spring-boot-starter-jdbc</artifactId>-->
+<!--      </dependency>-->
+
+<!--      <dependency>-->
+<!--          <groupId>com.h2database</groupId>-->
+<!--          <artifactId>h2</artifactId>-->
+<!--          <version>${h2.version}</version>-->
+<!--      </dependency>-->
+
+
 
   </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <fork>true</fork>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                <version>${spring.boot.version}</version>-->
+<!--                <configuration>-->
+<!--                    <fork>true</fork>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
 
 </project>

@@ -8,11 +8,12 @@ spring:
     name: tmall-demo
 
 #  datasource:
-#    url: jdbc:mysql://192.168.177.128:3306/mymall?useUnicode=true&characterEncoding=utf-8&verifyServerCertificate=false&useSSL=false&requireSSL=false
-#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    driver-class-name: org.h2.Driver
+#    schema: classpath:db/schema-h2.sql
+#    data: classpath:db/data-h2.sql
+#    url: jdbc:h2:mem:test
 #    username: root
-#    password: kobe111
-
+#    password: test
 
   datasource:
     url: jdbc:mysql://192.168.177.128:3306/mymall?useUnicode=true&characterEncoding=utf-8&verifyServerCertificate=false&useSSL=false&requireSSL=false&serverTimeZone=GMT
@@ -37,6 +38,30 @@ spring:
       filters: stat
       connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 
+
+    datasource:
+      url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&verifyServerCertificate=false&useSSL=false&requireSSL=false
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: kobe111
+      tomcat:
+        max-wait: 10000
+        min-idle: 0
+        initial-size: 25
+        validation-query: SELECT 1
+        test-on-borrow: false
+        test-while-idle: true
+        time-between-eviction-runs-millis: 18800
+        remove-abandoned: true
+        remove-abandoned-timeout: 180
+
+#  datasource:
+#    url: jdbc:h2:mem:job_event_storage
+#    driver-class-name: org.h2.Driver
+#    username: sa
+#    password:
+
+
   profiles:
     active: dev
 
@@ -44,6 +69,16 @@ spring:
     restart:
       enabled: true
       exclude: WEB-INF/**
+
+  #redis配置
+#  redis:
+#    host: 192.168.177.128
+#    #    host: 121.36.75.169 # Redis服务器地址
+#    database: 0 # Redis数据库索引（默认为0）
+#    port: 6379 # Redis服务器连接端口
+#    password: # Redis服务器连接密码（默认为空）
+#    #    password: kobe111
+#    timeout: 5000 # 连接超时时间（毫秒）
 
   redis:
     database: 0
@@ -56,6 +91,8 @@ spring:
         min-idle: 0
     port: 6379
     timeout: 15000
+
+
 
 logging:
   file:
