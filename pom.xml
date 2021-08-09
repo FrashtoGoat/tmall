@@ -14,6 +14,7 @@
         <module>tmall-protal</module>
         <module>tmall-security</module>
         <module>tmall-demo</module>
+        <module>tmall-demo-elasticjob</module>
         <!--微服务-->
         <module>tmall-cloud-nacos-config</module>
         <module>tmall-cloud-order</module>

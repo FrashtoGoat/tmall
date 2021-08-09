@@ -8,18 +8,19 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$PROJECT_DIR$/../../../maven_dependencies/org/mapstruct/mapstruct-processor/1.4.2.Final/mapstruct-processor-1.4.2.Final.jar" />
-          <entry name="$PROJECT_DIR$/../../../maven_dependencies/org/mapstruct/mapstruct/1.4.2.Final/mapstruct-1.4.2.Final.jar" />
-          <entry name="$PROJECT_DIR$/../../../maven_dependencies/org/projectlombok/lombok/1.18.12/lombok-1.18.12.jar" />
+          <entry name="$PROJECT_DIR$/../../../document/mavenRepo/org/mapstruct/mapstruct-processor/1.4.2.Final/mapstruct-processor-1.4.2.Final.jar" />
+          <entry name="$PROJECT_DIR$/../../../document/mavenRepo/org/mapstruct/mapstruct/1.4.2.Final/mapstruct-1.4.2.Final.jar" />
+          <entry name="$PROJECT_DIR$/../../../document/mavenRepo/org/projectlombok/lombok/1.18.12/lombok-1.18.12.jar" />
         </processorPath>
         <module name="tmall-cloud-order-loadbalance" />
         <module name="tmall-cloud-gateway" />
+        <module name="tmall-demo-elasticjob" />
         <module name="tmall-protal" />
         <module name="tmall-cloud-order" />
         <module name="tmall-common" />
         <module name="tmall-demo" />
-        <module name="tmall-cloud-nacos-config" />
         <module name="tmall-security" />
+        <module name="tmall-cloud-nacos-config" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -30,6 +31,7 @@
       <module name="tmall-cloud-order-loadbalance" target="1.8" />
       <module name="tmall-common" target="1.8" />
       <module name="tmall-demo" target="1.8" />
+      <module name="tmall-demo-elasticjob" target="1.8" />
       <module name="tmall-protal" target="1.8" />
       <module name="tmall-security" target="1.8" />
     </bytecodeTargetLevel>
