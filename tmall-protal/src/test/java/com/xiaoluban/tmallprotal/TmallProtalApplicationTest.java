@@ -1,12 +1,16 @@
 package com.xiaoluban.tmallprotal;
 
+import com.xiaoluban.tmallcommon.dao.demo.ProductDao;
 import com.xiaoluban.tmallcommon.dao.oms.OmsOrderDao;
 import com.xiaoluban.tmallcommon.dao.pms.PmsProductDao;
 import com.xiaoluban.tmallcommon.service.RedisService;
+import com.xiaoluban.tmallcommon.vo.demo.Product;
 import com.xiaoluban.tmallcommon.vo.oms.OmsOrder;
 import com.xiaoluban.tmallcommon.vo.pms.PmsProduct;
 import com.xiaoluban.tmallprotal.scheduled.OrderTask;
 import com.xiaoluban.tmallprotal.vo.OrderStatus;
+import org.apache.ibatis.session.ExecutorType;
+import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,6 +19,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -140,5 +145,42 @@ public class TmallProtalApplicationTest {
         System.out.println(now-orderTimeout);
 
     }
+
+    //创建脚本
+    @Test
+    public void createScript(){
+
+        int count=10;
+
+        SqlSession session=sqlSessionFactory.openSession(ExecutorType.BATCH);
+        ProductDao productDao=session.getMapper(ProductDao.class);
+
+        Product vo;
+        for(int i=1;i<count+1;i++){
+            vo=new Product();
+            vo.setName("商品"+i);
+            vo.setPrice(2);
+            vo.setStock(100);
+            productDao.insertSelective(vo);
+
+            while (i/1000==0){
+                session.flushStatements();
+            }
+        }
+        session.flushStatements();
+    }
+
+    @Resource
+    private ProductDao productMapper;
+    @Test
+    public void productInsert(){
+        Product vo=new Product();
+        vo=new Product();
+        vo.setName("商品");
+        vo.setPrice(2);
+        vo.setStock(100);
+        productMapper.insertSelective(vo);
+    }
+
 
 }

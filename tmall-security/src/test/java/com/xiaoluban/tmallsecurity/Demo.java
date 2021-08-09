@@ -35,4 +35,19 @@ public class Demo {
         String result = encoder.encode("myPassword");
         System.out.println(encoder.matches("myPassword", result));
     }
+
+    @Test
+    public void passwordEncoder(){
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        String result = "$2a$10$nql9DzL47J6a1JPVkrUE8O3VN24VqgI5b0oEFvyuRjGiK8alZK2qO";
+        result="$2a$10$Egp1/gvFlt7zhlXVfEFw4OfWQCGPw0ClmMcc6FjTnvXNRVf9zdMRa";
+        System.out.println(encoder.matches("123456", result));
+    }
+
+    @Test
+    public void passwordEncoder2(){
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        System.out.println(encoder.encode("1234567"));
+        System.out.println(encoder.encode("xique666"));
+    }
 }
