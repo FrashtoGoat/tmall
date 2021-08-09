@@ -17,7 +17,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <job.revision>3.0.0-RC1</job.revision>
+<!--    <job.revision>3.0.0-RC1</job.revision>-->
+    <job.revision>3.0.0-alpha</job.revision>
     <h2.version>1.4.184</h2.version>
   </properties>
 
@@ -31,44 +32,11 @@
     </dependency>
 
 
-    <dependency>
-      <groupId>cn.hutool</groupId>
-      <artifactId>hutool-all</artifactId>
-    </dependency>
-
-
-      <!--mybatis-plus-->
-    <dependency>
-      <groupId>com.baomidou</groupId>
-      <artifactId>mybatis-plus-boot-starter</artifactId>
-      <version>3.4.2</version>
-    </dependency>
-
-
       <dependency>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-starter-web</artifactId>
       </dependency>
 
-      <!--支持跳转,springboot推荐使用thymeleaf模板引擎-->
-      <dependency>
-          <groupId>org.springframework.boot</groupId>
-          <artifactId>spring-boot-starter-thymeleaf</artifactId>
-      </dependency>
-
-
-      <!--mapStruct测试-->
-      <dependency>
-          <groupId>org.mapstruct</groupId>
-          <artifactId>mapstruct</artifactId>
-          <version>${org.mapstruct.version}</version>
-      </dependency>
-
-      <dependency>
-          <groupId>com.xiaoluban</groupId>
-          <artifactId>tmall-common</artifactId>
-          <version>${project.version}</version>
-      </dependency>
 
       <dependency>
           <groupId>org.springframework.boot</groupId>
@@ -90,21 +58,21 @@
           <artifactId>elasticjob-lite-spring-boot-starter</artifactId>
           <version>${job.revision}</version>
       </dependency>
-      <dependency>
-          <groupId>org.apache.shardingsphere.elasticjob</groupId>
-          <artifactId>elasticjob-error-handler-dingtalk</artifactId>
-          <version>${job.revision}</version>
-      </dependency>
-      <dependency>
-          <groupId>org.apache.shardingsphere.elasticjob</groupId>
-          <artifactId>elasticjob-error-handler-wechat</artifactId>
-          <version>${job.revision}</version>
-      </dependency>
-      <dependency>
-          <groupId>org.apache.shardingsphere.elasticjob</groupId>
-          <artifactId>elasticjob-error-handler-email</artifactId>
-          <version>${job.revision}</version>
-      </dependency>
+<!--      <dependency>-->
+<!--          <groupId>org.apache.shardingsphere.elasticjob</groupId>-->
+<!--          <artifactId>elasticjob-error-handler-dingtalk</artifactId>-->
+<!--          <version>${job.revision}</version>-->
+<!--      </dependency>-->
+<!--      <dependency>-->
+<!--          <groupId>org.apache.shardingsphere.elasticjob</groupId>-->
+<!--          <artifactId>elasticjob-error-handler-wechat</artifactId>-->
+<!--          <version>${job.revision}</version>-->
+<!--      </dependency>-->
+<!--      <dependency>-->
+<!--          <groupId>org.apache.shardingsphere.elasticjob</groupId>-->
+<!--          <artifactId>elasticjob-error-handler-email</artifactId>-->
+<!--          <version>${job.revision}</version>-->
+<!--      </dependency>-->
 
       <dependency>
           <groupId>org.springframework.boot</groupId>
@@ -139,19 +107,6 @@
           <artifactId>mysql-connector-java</artifactId>
           <scope>runtime</scope>
       </dependency>
-
-
-<!--      <dependency>-->
-<!--          <groupId>org.springframework.boot</groupId>-->
-<!--          <artifactId>spring-boot-starter-jdbc</artifactId>-->
-<!--      </dependency>-->
-
-<!--      <dependency>-->
-<!--          <groupId>com.h2database</groupId>-->
-<!--          <artifactId>h2</artifactId>-->
-<!--          <version>${h2.version}</version>-->
-<!--      </dependency>-->
-
 
 
   </dependencies>

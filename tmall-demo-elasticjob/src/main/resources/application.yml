@@ -2,7 +2,7 @@ spring:
   application:
     name: tmall-demo-elasticjob
   datasource:
-    url: jdbc:mysql://192.168.177.128:3306/mymall?useUnicode=true&characterEncoding=utf-8&verifyServerCertificate=false&useSSL=false&requireSSL=false&serverTimeZone=GMT
+    url: jdbc:mysql://192.168.177.128:3306/mymall?characterEncoding=utf-8&verifyServerCertificate=false&useSSL=false&requireSSL=false&serverTimeZone=GMT
     username: root
     password: kobe111
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -24,13 +24,6 @@ spring:
       filters: stat
       connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 
-  profiles:
-    active: dev
-
-  devtools:
-    restart:
-      enabled: true
-      exclude: WEB-INF/**
 
 logging:
   file:
@@ -40,8 +33,8 @@ logging:
     org.springframework.web: "info"
 
 elasticjob:
-  tracing:
-    type: RDB
+#  tracing:
+#    type: RDB
   regCenter:
     serverLists: 192.168.177.128:2181
     namespace: elasticjob-lite-springboot
