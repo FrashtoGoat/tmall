@@ -2,9 +2,10 @@ spring:
   application:
     name: tmall-demo-elasticjob
   datasource:
-    url: jdbc:mysql://192.168.177.128:3306/mymall?characterEncoding=utf-8&verifyServerCertificate=false&useSSL=false&requireSSL=false&serverTimeZone=GMT
+#    url: jdbc:mysql://192.168.177.128:3306/mymall?characterEncoding=utf-8&verifyServerCertificate=false&useSSL=false&requireSSL=false&serverTimeZone=GMT
+    url: jdbc:mysql://192.168.244.129:3306/demo?characterEncoding=utf-8&verifyServerCertificate=false&useSSL=false&requireSSL=false&serverTimeZone=GMT&allowPublicKeyRetrieval=true
     username: root
-    password: kobe111
+    password: kobe>1@R
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
@@ -36,7 +37,8 @@ elasticjob:
 #  tracing:
 #    type: RDB
   regCenter:
-    serverLists: 192.168.177.128:2181
+#    serverLists: 192.168.177.128:2181
+    serverLists: 192.168.244.129:2181
     namespace: elasticjob-lite-springboot
   jobs:
     simpleJob:
@@ -44,68 +46,68 @@ elasticjob:
       cron: 0/5 * * * * ?
       shardingTotalCount: 1
       shardingItemParameters: 0=Beijing,1=Shanghai,2=Guangzhou
-    dataflowJob:
-      elasticJobClass: com.xiaoluban.elasticjob.job.SpringBootDataflowJob
-      cron: 0/5 * * * * ?
-      shardingTotalCount: 1
-      shardingItemParameters: 0=Beijing,1=Shanghai,2=Guangzhou
-    scriptJob:
-      elasticJobType: SCRIPT
-      cron: 0/10 * * * * ?
-      shardingTotalCount: 1
-      props:
-        script.command.line: "echo SCRIPT Job: "
-    manualScriptJob:
-      elasticJobType: SCRIPT
-      jobBootstrapBeanName: manualScriptJobBean
-      shardingTotalCount: 1
-      props:
-        script.command.line: "echo Manual SCRIPT Job: "
-    occurErrorNoticeDingtalkJob:
-      elasticJobClass: com.xiaoluban.elasticjob.job.SpringBootOccurErrorNoticeDingtalkJob
-      overwrite: true
-      shardingTotalCount: 1
-      shardingItemParameters: 0=Beijing,1=Shanghai,2=Guangzhou
-      jobErrorHandlerType: DINGTALK
-      jobBootstrapBeanName: occurErrorNoticeDingtalkBean
-      props:
-        dingtalk:
-          webhook: you_webhook
-          keyword: you_keyword
-          secret: you_secret
-          connectTimeout: 3000
-          readTimeout: 5000
-    occurErrorNoticeWechatJob:
-      elasticJobClass: com.xiaoluban.elasticjob.job.SpringBootOccurErrorNoticeWechatJob
-      overwrite: true
-      shardingTotalCount: 1
-      shardingItemParameters: 0=Beijing,1=Shanghai,2=Guangzhou
-      jobErrorHandlerType: WECHAT
-      jobBootstrapBeanName: occurErrorNoticeWechatBean
-      props:
-        wechat:
-          webhook: you_webhook
-          connectTimeout: 3000
-          readTimeout: 5000
-    occurErrorNoticeEmailJob:
-      elasticJobClass: com.xiaoluban.elasticjob.job.SpringBootOccurErrorNoticeEmailJob
-      overwrite: true
-      shardingTotalCount: 1
-      shardingItemParameters: 0=Beijing,1=Shanghai,2=Guangzhou
-      jobErrorHandlerType: EMAIL
-      jobBootstrapBeanName: occurErrorNoticeEmailBean
-      props:
-        email:
-          host: host
-          port: 465
-          username: username
-          password: password
-          useSsl: true
-          subject: ElasticJob error message
-          from: from@xxx.xx
-          to: to1@xxx.xx,to2@xxx.xx
-          cc: cc@xxx.xx
-          bcc: bcc@xxx.xx
-          debug: false
-  dump:
-    port: 9888
+#    dataflowJob:
+#      elasticJobClass: com.xiaoluban.elasticjob.job.SpringBootDataflowJob
+#      cron: 0/5 * * * * ?
+#      shardingTotalCount: 1
+#      shardingItemParameters: 0=Beijing,1=Shanghai,2=Guangzhou
+#    scriptJob:
+#      elasticJobType: SCRIPT
+#      cron: 0/10 * * * * ?
+#      shardingTotalCount: 1
+#      props:
+#        script.command.line: "echo SCRIPT Job: "
+#    manualScriptJob:
+#      elasticJobType: SCRIPT
+#      jobBootstrapBeanName: manualScriptJobBean
+#      shardingTotalCount: 1
+#      props:
+#        script.command.line: "echo Manual SCRIPT Job: "
+#    occurErrorNoticeDingtalkJob:
+#      elasticJobClass: com.xiaoluban.elasticjob.job.SpringBootOccurErrorNoticeDingtalkJob
+#      overwrite: true
+#      shardingTotalCount: 1
+#      shardingItemParameters: 0=Beijing,1=Shanghai,2=Guangzhou
+#      jobErrorHandlerType: DINGTALK
+#      jobBootstrapBeanName: occurErrorNoticeDingtalkBean
+#      props:
+#        dingtalk:
+#          webhook: you_webhook
+#          keyword: you_keyword
+#          secret: you_secret
+#          connectTimeout: 3000
+#          readTimeout: 5000
+#    occurErrorNoticeWechatJob:
+#      elasticJobClass: com.xiaoluban.elasticjob.job.SpringBootOccurErrorNoticeWechatJob
+#      overwrite: true
+#      shardingTotalCount: 1
+#      shardingItemParameters: 0=Beijing,1=Shanghai,2=Guangzhou
+#      jobErrorHandlerType: WECHAT
+#      jobBootstrapBeanName: occurErrorNoticeWechatBean
+#      props:
+#        wechat:
+#          webhook: you_webhook
+#          connectTimeout: 3000
+#          readTimeout: 5000
+#    occurErrorNoticeEmailJob:
+#      elasticJobClass: com.xiaoluban.elasticjob.job.SpringBootOccurErrorNoticeEmailJob
+#      overwrite: true
+#      shardingTotalCount: 1
+#      shardingItemParameters: 0=Beijing,1=Shanghai,2=Guangzhou
+#      jobErrorHandlerType: EMAIL
+#      jobBootstrapBeanName: occurErrorNoticeEmailBean
+#      props:
+#        email:
+#          host: host
+#          port: 465
+#          username: username
+#          password: password
+#          useSsl: true
+#          subject: ElasticJob error message
+#          from: from@xxx.xx
+#          to: to1@xxx.xx,to2@xxx.xx
+#          cc: cc@xxx.xx
+#          bcc: bcc@xxx.xx
+#          debug: false
+#  dump:
+#    port: 9888

@@ -35,20 +35,7 @@
       <dependency>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-starter-web</artifactId>
-      </dependency>
-
-
-      <dependency>
-          <groupId>org.springframework.boot</groupId>
-          <artifactId>spring-boot-starter-test</artifactId>
-          <scope>test</scope>
-      </dependency>
-
-      <dependency>
-          <groupId>org.springframework.boot</groupId>
-          <artifactId>spring-boot-devtools</artifactId>
-          <!-- 有人说optional一定要配置成true才有效, 但我调试完感觉不加optional也有效 -->
-          <optional>true</optional>
+          <version>2.1.13.RELEASE</version>
       </dependency>
 
 
@@ -57,48 +44,40 @@
           <groupId>org.apache.shardingsphere.elasticjob</groupId>
           <artifactId>elasticjob-lite-spring-boot-starter</artifactId>
           <version>${job.revision}</version>
+<!--          <exclusions>-->
+<!--              <exclusion>-->
+<!--                  <artifactId>curator-client</artifactId>-->
+<!--                  <groupId>org.apache.curator</groupId>-->
+<!--              </exclusion>-->
+<!--          </exclusions>-->
       </dependency>
-<!--      <dependency>-->
-<!--          <groupId>org.apache.shardingsphere.elasticjob</groupId>-->
-<!--          <artifactId>elasticjob-error-handler-dingtalk</artifactId>-->
-<!--          <version>${job.revision}</version>-->
-<!--      </dependency>-->
-<!--      <dependency>-->
-<!--          <groupId>org.apache.shardingsphere.elasticjob</groupId>-->
-<!--          <artifactId>elasticjob-error-handler-wechat</artifactId>-->
-<!--          <version>${job.revision}</version>-->
-<!--      </dependency>-->
-<!--      <dependency>-->
-<!--          <groupId>org.apache.shardingsphere.elasticjob</groupId>-->
-<!--          <artifactId>elasticjob-error-handler-email</artifactId>-->
-<!--          <version>${job.revision}</version>-->
-<!--      </dependency>-->
 
-      <dependency>
-          <groupId>org.springframework.boot</groupId>
-          <artifactId>spring-boot-starter-actuator</artifactId>
-          <version>${spring.boot.version}</version>
-      </dependency>
-      <dependency>
-          <groupId>org.springframework.boot</groupId>
-          <artifactId>spring-boot-configuration-processor</artifactId>
-          <version>${spring.boot.version}</version>
-          <optional>true</optional>
-      </dependency>
+<!--      <dependency>-->
+<!--          <groupId>org.springframework.boot</groupId>-->
+<!--          <artifactId>spring-boot-starter-actuator</artifactId>-->
+<!--          <version>${spring.boot.version}</version>-->
+<!--      </dependency>-->
+<!--      <dependency>-->
+<!--          <groupId>org.springframework.boot</groupId>-->
+<!--          <artifactId>spring-boot-configuration-processor</artifactId>-->
+<!--          <version>${spring.boot.version}</version>-->
+<!--          <optional>true</optional>-->
+<!--      </dependency>-->
 
       <!-- https://mvnrepository.com/artifact/org.apache.curator/curator-recipes -->
-      <dependency>
-          <groupId>org.apache.curator</groupId>
-          <artifactId>curator-recipes</artifactId>
-          <version>5.2.0</version>
-      </dependency>
+<!--      <dependency>-->
+<!--          <groupId>org.apache.curator</groupId>-->
+<!--          <artifactId>curator-recipes</artifactId>-->
+<!--          <version>5.2.0</version>-->
+<!--      </dependency>-->
 
       <!--elasticjob-->
 
       <dependency>
           <groupId>com.alibaba</groupId>
           <artifactId>druid-spring-boot-starter</artifactId>
-          <version>1.2.6</version>
+          <version>1.1.22</version>
+<!--          <version>1.2.6</version>-->
       </dependency>
 
 
